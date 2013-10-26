@@ -29,8 +29,7 @@ namespace UnitTests
 
             var organic_chemistry_teachers = new List<Teacher>();
 
-            var s = new Subject(organic_room_types, organic_chemistry_teachers, "", 1);
-            
+            var s = new Subject(organic_room_types, organic_chemistry_teachers, "Organic Chemistry Lectures", 1);
         }
     }
 }
