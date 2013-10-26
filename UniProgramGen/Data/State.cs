@@ -13,7 +13,7 @@ namespace UniProgramGen.Data
 
         public Group[] Groups { get; set; }
         public Room[] Rooms { get; set; }
-        public Subject[] Subjects { get; set; }
+        public List<Subject> Subjects { get; set; }
         public Teacher[] Teachers { get; set; }
 
         public static State fromFile(String filepath)
@@ -42,7 +42,7 @@ namespace UniProgramGen.Data
                 new Room(new HashSet<RoomType>(), 20, new List<Helpers.TimeSlot>(), "200"),
                 new Room(new HashSet<RoomType>(), 20, new List<Helpers.TimeSlot>(), "325"),
             };
-            result.Subjects = new Subject[]
+            result.Subjects = new List<Subject>
             {
                 new Subject(new HashSet<RoomType>(), new List<Teacher>(), "Programming 101", 2),
                 new Subject(new HashSet<RoomType>(), new List<Teacher>(), "Calculus 101", 2),

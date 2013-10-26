@@ -18,12 +18,11 @@ namespace UniProgramGen
             List<Teacher> l = new List<Teacher>();
             HashSet<RoomType> r = new HashSet<RoomType>();
             subject = new Subject(r, l, "Algebra", 2);
-            listBoxSubjects.DisplayMember = "Name";
             Teacher teacher = new Teacher(null, "Dyadov");
             listBoxTeachers.DisplayMember = "Name";
-            listBoxTeachers.DataSource = new Teacher[] { teacher };
-            //Teachers = new Teacher[] { teacher };
-            listBoxSubjects.DataSource = new Subject[] { subject };
+            listBoxTeachers.DataSource = new List<Teacher> { teacher };
+            listBoxSubjects.DisplayMember = "Name";
+            listBoxSubjects.DataSource = new List<Subject> { subject };
 
         }
 
@@ -62,13 +61,17 @@ namespace UniProgramGen
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            //TODO
+            Subjects.Add(subject);
         }
 
-        private Subject[] subjects;
+        private List<Subject> subjects;
 
-        public Subject[] Subjects
+        public List<Subject> Subjects
         {
+            get
+            {
+                return Subjects;
+            }
             set
             {
                 subjects = value;

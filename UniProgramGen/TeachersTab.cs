@@ -19,11 +19,11 @@ namespace UniProgramGen
 
             teacher = new Teacher(null, "Dyadov");
             listBoxTeachers.DisplayMember = "Name";
-            listBoxTeachers.DataSource = new Teacher[] {teacher};
-            Teachers = new Teacher[] { teacher };
+            listBoxTeachers.DataSource = new List<Teacher> {teacher};
+            Teachers = new List<Teacher> { teacher };
         }
 
-        public Teacher[] Teachers
+        public List<Teacher> Teachers
         {
             get;
             set;
