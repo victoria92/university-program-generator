@@ -44,10 +44,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Group.cs" />
+    <Compile Include="Data\Requirements\Requirement.cs" />
+    <Compile Include="Data\Requirements\PlaceRequirement.cs" />
+    <Compile Include="Data\Requirements\TimeRequirement.cs" />
     <Compile Include="Data\Room.cs" />
     <Compile Include="Data\RoomType.cs" />
     <Compile Include="Data\Subject.cs" />
     <Compile Include="Data\Teacher.cs" />
+    <Compile Include="Data\TimeSlot.cs" />
+    <Compile Include="Helpers\Pair.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
