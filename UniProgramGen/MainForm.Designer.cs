@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.listBox2 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
@@ -37,48 +39,39 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listBox8 = new System.Windows.Forms.ListBox();
-            this.listBox7 = new System.Windows.Forms.ListBox();
-            this.listBox6 = new System.Windows.Forms.ListBox();
-            this.listBox5 = new System.Windows.Forms.ListBox();
-            this.listBox4 = new System.Windows.Forms.ListBox();
-            this.listBox3 = new System.Windows.Forms.ListBox();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.listBox9 = new System.Windows.Forms.ListBox();
-            this.listBox10 = new System.Windows.Forms.ListBox();
-            this.listBox11 = new System.Windows.Forms.ListBox();
-            this.listBox12 = new System.Windows.Forms.ListBox();
-            this.listBox13 = new System.Windows.Forms.ListBox();
-            this.listBox14 = new System.Windows.Forms.ListBox();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.listBox15 = new System.Windows.Forms.ListBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.listBox16 = new System.Windows.Forms.ListBox();
-            this.listBox17 = new System.Windows.Forms.ListBox();
-            this.listBox18 = new System.Windows.Forms.ListBox();
-            this.listBox19 = new System.Windows.Forms.ListBox();
-            this.listBox20 = new System.Windows.Forms.ListBox();
-            this.listBox21 = new System.Windows.Forms.ListBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
+            this.listBoxRoomSaturday = new System.Windows.Forms.ListBox();
+            this.listBoxRoomFriday = new System.Windows.Forms.ListBox();
+            this.listBoxRoomThursday = new System.Windows.Forms.ListBox();
+            this.listBoxRoomWednesday = new System.Windows.Forms.ListBox();
+            this.listBoxRoomTuesday = new System.Windows.Forms.ListBox();
+            this.listBoxRoomMonday = new System.Windows.Forms.ListBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.listBoxGroupSaturday = new System.Windows.Forms.ListBox();
+            this.listBoxGroupFriday = new System.Windows.Forms.ListBox();
+            this.listBoxGroupThursday = new System.Windows.Forms.ListBox();
+            this.listBoxGroupWednesday = new System.Windows.Forms.ListBox();
+            this.listBoxGroupTuesday = new System.Windows.Forms.ListBox();
+            this.listBoxGroupMonday = new System.Windows.Forms.ListBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.teachersTab1 = new UniProgramGen.TeachersTab();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -114,6 +107,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Предмети";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(391, 65);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(111, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Изисквания за зала";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(181, 65);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(86, 13);
+            this.label4.TabIndex = 7;
+            this.label4.Text = "Преподаватели";
             // 
             // listBox2
             // 
@@ -184,193 +195,13 @@
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.Location = new System.Drawing.Point(526, 320);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 26);
             this.button1.TabIndex = 0;
             this.button1.Text = "Добави";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.textBox2);
-            this.tabPage2.Controls.Add(this.listBox15);
-            this.tabPage2.Controls.Add(this.listBox8);
-            this.tabPage2.Controls.Add(this.listBox7);
-            this.tabPage2.Controls.Add(this.listBox6);
-            this.tabPage2.Controls.Add(this.listBox5);
-            this.tabPage2.Controls.Add(this.listBox4);
-            this.tabPage2.Controls.Add(this.listBox3);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(617, 357);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Преподаватели";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // listBox8
-            // 
-            this.listBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox8.FormattingEnabled = true;
-            this.listBox8.ItemHeight = 18;
-            this.listBox8.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox8.Location = new System.Drawing.Point(383, 71);
-            this.listBox8.Name = "listBox8";
-            this.listBox8.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox8.Size = new System.Drawing.Size(70, 274);
-            this.listBox8.TabIndex = 5;
-            // 
-            // listBox7
-            // 
-            this.listBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox7.FormattingEnabled = true;
-            this.listBox7.ItemHeight = 18;
-            this.listBox7.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox7.Location = new System.Drawing.Point(307, 71);
-            this.listBox7.Name = "listBox7";
-            this.listBox7.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox7.Size = new System.Drawing.Size(70, 274);
-            this.listBox7.TabIndex = 4;
-            // 
-            // listBox6
-            // 
-            this.listBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox6.FormattingEnabled = true;
-            this.listBox6.ItemHeight = 18;
-            this.listBox6.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox6.Location = new System.Drawing.Point(231, 71);
-            this.listBox6.Name = "listBox6";
-            this.listBox6.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox6.Size = new System.Drawing.Size(70, 274);
-            this.listBox6.TabIndex = 3;
-            // 
-            // listBox5
-            // 
-            this.listBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox5.FormattingEnabled = true;
-            this.listBox5.ItemHeight = 18;
-            this.listBox5.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox5.Location = new System.Drawing.Point(155, 71);
-            this.listBox5.Name = "listBox5";
-            this.listBox5.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox5.Size = new System.Drawing.Size(70, 274);
-            this.listBox5.TabIndex = 2;
-            // 
-            // listBox4
-            // 
-            this.listBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox4.FormattingEnabled = true;
-            this.listBox4.ItemHeight = 18;
-            this.listBox4.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox4.Location = new System.Drawing.Point(79, 71);
-            this.listBox4.Name = "listBox4";
-            this.listBox4.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox4.Size = new System.Drawing.Size(70, 274);
-            this.listBox4.TabIndex = 1;
-            // 
-            // listBox3
-            // 
-            this.listBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox3.FormattingEnabled = true;
-            this.listBox3.ItemHeight = 18;
-            this.listBox3.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox3.Location = new System.Drawing.Point(3, 71);
-            this.listBox3.Name = "listBox3";
-            this.listBox3.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox3.Size = new System.Drawing.Size(70, 274);
-            this.listBox3.TabIndex = 0;
-            this.listBox3.SelectedIndexChanged += new System.EventHandler(this.listBox3_SelectedIndexChanged);
             // 
             // tabPage3
             // 
@@ -379,12 +210,12 @@
             this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.checkedListBox2);
-            this.tabPage3.Controls.Add(this.listBox9);
-            this.tabPage3.Controls.Add(this.listBox10);
-            this.tabPage3.Controls.Add(this.listBox11);
-            this.tabPage3.Controls.Add(this.listBox12);
-            this.tabPage3.Controls.Add(this.listBox13);
-            this.tabPage3.Controls.Add(this.listBox14);
+            this.tabPage3.Controls.Add(this.listBoxRoomSaturday);
+            this.tabPage3.Controls.Add(this.listBoxRoomFriday);
+            this.tabPage3.Controls.Add(this.listBoxRoomThursday);
+            this.tabPage3.Controls.Add(this.listBoxRoomWednesday);
+            this.tabPage3.Controls.Add(this.listBoxRoomTuesday);
+            this.tabPage3.Controls.Add(this.listBoxRoomMonday);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
@@ -393,207 +224,39 @@
             this.tabPage3.Text = "Стаи";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // listBox9
+            // textBox3
             // 
-            this.listBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox9.FormattingEnabled = true;
-            this.listBox9.ItemHeight = 18;
-            this.listBox9.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox9.Location = new System.Drawing.Point(390, 73);
-            this.listBox9.Name = "listBox9";
-            this.listBox9.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox9.Size = new System.Drawing.Size(70, 274);
-            this.listBox9.TabIndex = 11;
+            this.textBox3.Location = new System.Drawing.Point(10, 18);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(180, 20);
+            this.textBox3.TabIndex = 16;
             // 
-            // listBox10
+            // numericUpDown2
             // 
-            this.listBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox10.FormattingEnabled = true;
-            this.listBox10.ItemHeight = 18;
-            this.listBox10.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox10.Location = new System.Drawing.Point(314, 73);
-            this.listBox10.Name = "listBox10";
-            this.listBox10.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox10.Size = new System.Drawing.Size(70, 274);
-            this.listBox10.TabIndex = 10;
+            this.numericUpDown2.Location = new System.Drawing.Point(533, 186);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(78, 20);
+            this.numericUpDown2.TabIndex = 15;
             // 
-            // listBox11
+            // label2
             // 
-            this.listBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox11.FormattingEnabled = true;
-            this.listBox11.ItemHeight = 18;
-            this.listBox11.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox11.Location = new System.Drawing.Point(238, 73);
-            this.listBox11.Name = "listBox11";
-            this.listBox11.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox11.Size = new System.Drawing.Size(70, 274);
-            this.listBox11.TabIndex = 9;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(466, 191);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 13);
+            this.label2.TabIndex = 14;
+            this.label2.Text = "Капацитет";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // listBox12
+            // button2
             // 
-            this.listBox12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox12.FormattingEnabled = true;
-            this.listBox12.ItemHeight = 18;
-            this.listBox12.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox12.Location = new System.Drawing.Point(162, 73);
-            this.listBox12.Name = "listBox12";
-            this.listBox12.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox12.Size = new System.Drawing.Size(70, 274);
-            this.listBox12.TabIndex = 8;
-            // 
-            // listBox13
-            // 
-            this.listBox13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox13.FormattingEnabled = true;
-            this.listBox13.ItemHeight = 18;
-            this.listBox13.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox13.Location = new System.Drawing.Point(86, 73);
-            this.listBox13.Name = "listBox13";
-            this.listBox13.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox13.Size = new System.Drawing.Size(70, 274);
-            this.listBox13.TabIndex = 7;
-            // 
-            // listBox14
-            // 
-            this.listBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox14.FormattingEnabled = true;
-            this.listBox14.ItemHeight = 18;
-            this.listBox14.Items.AddRange(new object[] {
-            "7:00",
-            "8:00",
-            "9:00",
-            "10:00",
-            "11:00",
-            "12:00",
-            "13:00",
-            "14:00",
-            "15:00",
-            "16:00",
-            "17:00",
-            "18:00",
-            "19:00",
-            "20:00",
-            "21:00"});
-            this.listBox14.Location = new System.Drawing.Point(10, 73);
-            this.listBox14.Name = "listBox14";
-            this.listBox14.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox14.Size = new System.Drawing.Size(70, 274);
-            this.listBox14.TabIndex = 6;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.button3);
-            this.tabPage4.Controls.Add(this.numericUpDown3);
-            this.tabPage4.Controls.Add(this.label3);
-            this.tabPage4.Controls.Add(this.textBox4);
-            this.tabPage4.Controls.Add(this.listBox16);
-            this.tabPage4.Controls.Add(this.listBox17);
-            this.tabPage4.Controls.Add(this.listBox18);
-            this.tabPage4.Controls.Add(this.listBox19);
-            this.tabPage4.Controls.Add(this.listBox20);
-            this.tabPage4.Controls.Add(this.listBox21);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(617, 357);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Групи";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // listBox15
-            // 
-            this.listBox15.FormattingEnabled = true;
-            this.listBox15.Items.AddRange(new object[] {
-            "Владимир Бабев",
-            "Надежда Рибарска",
-            "Минко Марков"});
-            this.listBox15.Location = new System.Drawing.Point(474, 27);
-            this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(120, 316);
-            this.listBox15.TabIndex = 6;
-            this.listBox15.SelectedIndexChanged += new System.EventHandler(this.listBox15_SelectedIndexChanged);
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(8, 27);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 20);
-            this.textBox2.TabIndex = 7;
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.Location = new System.Drawing.Point(526, 320);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(81, 26);
+            this.button2.TabIndex = 13;
+            this.button2.Text = "Добави";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // checkedListBox2
             // 
@@ -608,45 +271,14 @@
             this.checkedListBox2.Size = new System.Drawing.Size(141, 64);
             this.checkedListBox2.TabIndex = 12;
             // 
-            // button2
+            // listBoxRoomSaturday
             // 
-            this.button2.Location = new System.Drawing.Point(526, 320);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(81, 26);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Добави";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(466, 191);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Капацитет";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(533, 186);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(78, 20);
-            this.numericUpDown2.TabIndex = 15;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(10, 18);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(180, 20);
-            this.textBox3.TabIndex = 16;
-            // 
-            // listBox16
-            // 
-            this.listBox16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox16.FormattingEnabled = true;
-            this.listBox16.ItemHeight = 18;
-            this.listBox16.Items.AddRange(new object[] {
+            this.listBoxRoomSaturday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxRoomSaturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxRoomSaturday.FormattingEnabled = true;
+            this.listBoxRoomSaturday.ItemHeight = 18;
+            this.listBoxRoomSaturday.Items.AddRange(new object[] {
             "7:00",
             "8:00",
             "9:00",
@@ -662,18 +294,20 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBox16.Location = new System.Drawing.Point(389, 77);
-            this.listBox16.Name = "listBox16";
-            this.listBox16.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox16.Size = new System.Drawing.Size(70, 274);
-            this.listBox16.TabIndex = 17;
+            this.listBoxRoomSaturday.Location = new System.Drawing.Point(390, 73);
+            this.listBoxRoomSaturday.Name = "listBoxRoomSaturday";
+            this.listBoxRoomSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomSaturday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxRoomSaturday.TabIndex = 11;
             // 
-            // listBox17
+            // listBoxRoomFriday
             // 
-            this.listBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox17.FormattingEnabled = true;
-            this.listBox17.ItemHeight = 18;
-            this.listBox17.Items.AddRange(new object[] {
+            this.listBoxRoomFriday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxRoomFriday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxRoomFriday.FormattingEnabled = true;
+            this.listBoxRoomFriday.ItemHeight = 18;
+            this.listBoxRoomFriday.Items.AddRange(new object[] {
             "7:00",
             "8:00",
             "9:00",
@@ -689,18 +323,20 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBox17.Location = new System.Drawing.Point(313, 77);
-            this.listBox17.Name = "listBox17";
-            this.listBox17.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox17.Size = new System.Drawing.Size(70, 274);
-            this.listBox17.TabIndex = 16;
+            this.listBoxRoomFriday.Location = new System.Drawing.Point(314, 73);
+            this.listBoxRoomFriday.Name = "listBoxRoomFriday";
+            this.listBoxRoomFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomFriday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxRoomFriday.TabIndex = 10;
             // 
-            // listBox18
+            // listBoxRoomThursday
             // 
-            this.listBox18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox18.FormattingEnabled = true;
-            this.listBox18.ItemHeight = 18;
-            this.listBox18.Items.AddRange(new object[] {
+            this.listBoxRoomThursday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxRoomThursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxRoomThursday.FormattingEnabled = true;
+            this.listBoxRoomThursday.ItemHeight = 18;
+            this.listBoxRoomThursday.Items.AddRange(new object[] {
             "7:00",
             "8:00",
             "9:00",
@@ -716,18 +352,20 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBox18.Location = new System.Drawing.Point(237, 77);
-            this.listBox18.Name = "listBox18";
-            this.listBox18.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox18.Size = new System.Drawing.Size(70, 274);
-            this.listBox18.TabIndex = 15;
+            this.listBoxRoomThursday.Location = new System.Drawing.Point(238, 73);
+            this.listBoxRoomThursday.Name = "listBoxRoomThursday";
+            this.listBoxRoomThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomThursday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxRoomThursday.TabIndex = 9;
             // 
-            // listBox19
+            // listBoxRoomWednesday
             // 
-            this.listBox19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox19.FormattingEnabled = true;
-            this.listBox19.ItemHeight = 18;
-            this.listBox19.Items.AddRange(new object[] {
+            this.listBoxRoomWednesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxRoomWednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxRoomWednesday.FormattingEnabled = true;
+            this.listBoxRoomWednesday.ItemHeight = 18;
+            this.listBoxRoomWednesday.Items.AddRange(new object[] {
             "7:00",
             "8:00",
             "9:00",
@@ -743,18 +381,20 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBox19.Location = new System.Drawing.Point(161, 77);
-            this.listBox19.Name = "listBox19";
-            this.listBox19.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox19.Size = new System.Drawing.Size(70, 274);
-            this.listBox19.TabIndex = 14;
+            this.listBoxRoomWednesday.Location = new System.Drawing.Point(162, 73);
+            this.listBoxRoomWednesday.Name = "listBoxRoomWednesday";
+            this.listBoxRoomWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomWednesday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxRoomWednesday.TabIndex = 8;
             // 
-            // listBox20
+            // listBoxRoomTuesday
             // 
-            this.listBox20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox20.FormattingEnabled = true;
-            this.listBox20.ItemHeight = 18;
-            this.listBox20.Items.AddRange(new object[] {
+            this.listBoxRoomTuesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxRoomTuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxRoomTuesday.FormattingEnabled = true;
+            this.listBoxRoomTuesday.ItemHeight = 18;
+            this.listBoxRoomTuesday.Items.AddRange(new object[] {
             "7:00",
             "8:00",
             "9:00",
@@ -770,18 +410,20 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBox20.Location = new System.Drawing.Point(85, 77);
-            this.listBox20.Name = "listBox20";
-            this.listBox20.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox20.Size = new System.Drawing.Size(70, 274);
-            this.listBox20.TabIndex = 13;
+            this.listBoxRoomTuesday.Location = new System.Drawing.Point(86, 73);
+            this.listBoxRoomTuesday.Name = "listBoxRoomTuesday";
+            this.listBoxRoomTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomTuesday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxRoomTuesday.TabIndex = 7;
             // 
-            // listBox21
+            // listBoxRoomMonday
             // 
-            this.listBox21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listBox21.FormattingEnabled = true;
-            this.listBox21.ItemHeight = 18;
-            this.listBox21.Items.AddRange(new object[] {
+            this.listBoxRoomMonday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxRoomMonday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxRoomMonday.FormattingEnabled = true;
+            this.listBoxRoomMonday.ItemHeight = 18;
+            this.listBoxRoomMonday.Items.AddRange(new object[] {
             "7:00",
             "8:00",
             "9:00",
@@ -797,18 +439,48 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBox21.Location = new System.Drawing.Point(9, 77);
-            this.listBox21.Name = "listBox21";
-            this.listBox21.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox21.Size = new System.Drawing.Size(70, 274);
-            this.listBox21.TabIndex = 12;
+            this.listBoxRoomMonday.Location = new System.Drawing.Point(10, 73);
+            this.listBoxRoomMonday.Name = "listBoxRoomMonday";
+            this.listBoxRoomMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomMonday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxRoomMonday.TabIndex = 6;
             // 
-            // textBox4
+            // tabPage4
             // 
-            this.textBox4.Location = new System.Drawing.Point(9, 24);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(206, 20);
-            this.textBox4.TabIndex = 18;
+            this.tabPage4.Controls.Add(this.button3);
+            this.tabPage4.Controls.Add(this.numericUpDown3);
+            this.tabPage4.Controls.Add(this.label3);
+            this.tabPage4.Controls.Add(this.textBox4);
+            this.tabPage4.Controls.Add(this.listBoxGroupSaturday);
+            this.tabPage4.Controls.Add(this.listBoxGroupFriday);
+            this.tabPage4.Controls.Add(this.listBoxGroupThursday);
+            this.tabPage4.Controls.Add(this.listBoxGroupWednesday);
+            this.tabPage4.Controls.Add(this.listBoxGroupTuesday);
+            this.tabPage4.Controls.Add(this.listBoxGroupMonday);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(617, 357);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Групи";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.Location = new System.Drawing.Point(526, 325);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(81, 26);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "Добави";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(551, 72);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
+            this.numericUpDown3.TabIndex = 20;
             // 
             // label3
             // 
@@ -820,39 +492,204 @@
             this.label3.Text = "Брой студенти";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // numericUpDown3
+            // textBox4
             // 
-            this.numericUpDown3.Location = new System.Drawing.Point(551, 72);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
-            this.numericUpDown3.TabIndex = 20;
+            this.textBox4.Location = new System.Drawing.Point(9, 24);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(206, 20);
+            this.textBox4.TabIndex = 18;
             // 
-            // button3
+            // listBoxGroupSaturday
             // 
-            this.button3.Location = new System.Drawing.Point(526, 325);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(81, 26);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "Добави";
-            this.button3.UseVisualStyleBackColor = true;
+            this.listBoxGroupSaturday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxGroupSaturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxGroupSaturday.FormattingEnabled = true;
+            this.listBoxGroupSaturday.ItemHeight = 18;
+            this.listBoxGroupSaturday.Items.AddRange(new object[] {
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00"});
+            this.listBoxGroupSaturday.Location = new System.Drawing.Point(389, 77);
+            this.listBoxGroupSaturday.Name = "listBoxGroupSaturday";
+            this.listBoxGroupSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxGroupSaturday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxGroupSaturday.TabIndex = 17;
             // 
-            // label4
+            // listBoxGroupFriday
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(181, 65);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 13);
-            this.label4.TabIndex = 7;
-            this.label4.Text = "Преподаватели";
+            this.listBoxGroupFriday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxGroupFriday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxGroupFriday.FormattingEnabled = true;
+            this.listBoxGroupFriday.ItemHeight = 18;
+            this.listBoxGroupFriday.Items.AddRange(new object[] {
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00"});
+            this.listBoxGroupFriday.Location = new System.Drawing.Point(313, 77);
+            this.listBoxGroupFriday.Name = "listBoxGroupFriday";
+            this.listBoxGroupFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxGroupFriday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxGroupFriday.TabIndex = 16;
             // 
-            // label5
+            // listBoxGroupThursday
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(391, 65);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(111, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Изисквания за зала";
+            this.listBoxGroupThursday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxGroupThursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxGroupThursday.FormattingEnabled = true;
+            this.listBoxGroupThursday.ItemHeight = 18;
+            this.listBoxGroupThursday.Items.AddRange(new object[] {
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00"});
+            this.listBoxGroupThursday.Location = new System.Drawing.Point(237, 77);
+            this.listBoxGroupThursday.Name = "listBoxGroupThursday";
+            this.listBoxGroupThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxGroupThursday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxGroupThursday.TabIndex = 15;
+            // 
+            // listBoxGroupWednesday
+            // 
+            this.listBoxGroupWednesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxGroupWednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxGroupWednesday.FormattingEnabled = true;
+            this.listBoxGroupWednesday.ItemHeight = 18;
+            this.listBoxGroupWednesday.Items.AddRange(new object[] {
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00"});
+            this.listBoxGroupWednesday.Location = new System.Drawing.Point(161, 77);
+            this.listBoxGroupWednesday.Name = "listBoxGroupWednesday";
+            this.listBoxGroupWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxGroupWednesday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxGroupWednesday.TabIndex = 14;
+            // 
+            // listBoxGroupTuesday
+            // 
+            this.listBoxGroupTuesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxGroupTuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxGroupTuesday.FormattingEnabled = true;
+            this.listBoxGroupTuesday.ItemHeight = 18;
+            this.listBoxGroupTuesday.Items.AddRange(new object[] {
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00"});
+            this.listBoxGroupTuesday.Location = new System.Drawing.Point(85, 77);
+            this.listBoxGroupTuesday.Name = "listBoxGroupTuesday";
+            this.listBoxGroupTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxGroupTuesday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxGroupTuesday.TabIndex = 13;
+            // 
+            // listBoxGroupMonday
+            // 
+            this.listBoxGroupMonday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxGroupMonday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listBoxGroupMonday.FormattingEnabled = true;
+            this.listBoxGroupMonday.ItemHeight = 18;
+            this.listBoxGroupMonday.Items.AddRange(new object[] {
+            "7:00",
+            "8:00",
+            "9:00",
+            "10:00",
+            "11:00",
+            "12:00",
+            "13:00",
+            "14:00",
+            "15:00",
+            "16:00",
+            "17:00",
+            "18:00",
+            "19:00",
+            "20:00",
+            "21:00"});
+            this.listBoxGroupMonday.Location = new System.Drawing.Point(9, 77);
+            this.listBoxGroupMonday.Name = "listBoxGroupMonday";
+            this.listBoxGroupMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxGroupMonday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxGroupMonday.TabIndex = 12;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.teachersTab1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(617, 357);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Преподаватели";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // teachersTab1
+            // 
+            this.teachersTab1.Location = new System.Drawing.Point(8, 6);
+            this.teachersTab1.Name = "teachersTab1";
+            this.teachersTab1.Size = new System.Drawing.Size(679, 436);
+            this.teachersTab1.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -862,18 +699,18 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "MainForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -882,7 +719,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ListBox listBox1;
@@ -892,20 +728,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listBox2;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.ListBox listBox8;
-        private System.Windows.Forms.ListBox listBox7;
-        private System.Windows.Forms.ListBox listBox6;
-        private System.Windows.Forms.ListBox listBox5;
-        private System.Windows.Forms.ListBox listBox4;
-        private System.Windows.Forms.ListBox listBox3;
-        private System.Windows.Forms.ListBox listBox9;
-        private System.Windows.Forms.ListBox listBox10;
-        private System.Windows.Forms.ListBox listBox11;
-        private System.Windows.Forms.ListBox listBox12;
-        private System.Windows.Forms.ListBox listBox13;
-        private System.Windows.Forms.ListBox listBox14;
-        private System.Windows.Forms.ListBox listBox15;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.ListBox listBoxRoomSaturday;
+        private System.Windows.Forms.ListBox listBoxRoomFriday;
+        private System.Windows.Forms.ListBox listBoxRoomThursday;
+        private System.Windows.Forms.ListBox listBoxRoomWednesday;
+        private System.Windows.Forms.ListBox listBoxRoomTuesday;
+        private System.Windows.Forms.ListBox listBoxRoomMonday;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
@@ -913,16 +741,18 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ListBox listBox16;
-        private System.Windows.Forms.ListBox listBox17;
-        private System.Windows.Forms.ListBox listBox18;
-        private System.Windows.Forms.ListBox listBox19;
-        private System.Windows.Forms.ListBox listBox20;
-        private System.Windows.Forms.ListBox listBox21;
+        private System.Windows.Forms.ListBox listBoxGroupSaturday;
+        private System.Windows.Forms.ListBox listBoxGroupFriday;
+        private System.Windows.Forms.ListBox listBoxGroupThursday;
+        private System.Windows.Forms.ListBox listBoxGroupWednesday;
+        private System.Windows.Forms.ListBox listBoxGroupTuesday;
+        private System.Windows.Forms.ListBox listBoxGroupMonday;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.TabPage tabPage2;
+        private TeachersTab teachersTab1;
     }
 }
 
