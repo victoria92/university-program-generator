@@ -50,9 +50,7 @@
     <Compile Include="Data\RoomType.cs" />
     <Compile Include="Data\Subject.cs" />
     <Compile Include="Data\Teacher.cs" />
-    <Compile Include="Data\TimeSlot.cs" />
     <Compile Include="Generator\ProgramGenerator.cs" />
-    <Compile Include="Helpers\Pair.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
