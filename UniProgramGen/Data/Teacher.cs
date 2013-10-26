@@ -4,10 +4,10 @@ namespace UniProgramGen.Data
 {
     public class Teacher
     {
-        public List<Requirement> requirements;
+        public Requirements requirements;
         public readonly string name;
 
-        public Teacher(List<Requirement> requirements, string name)
+        public Teacher(Requirements requirements, string name)
         {
             this.requirements = requirements;
             this.name = name;
