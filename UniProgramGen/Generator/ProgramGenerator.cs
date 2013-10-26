@@ -12,7 +12,17 @@ namespace UniProgramGen.Generator
         {
             CalculateRequirementInternalWeights(rooms.Count, teachers.Select(t => t.requirements));
 
-            //teachers.Sort((teacher1, teacher2) => teacher1.requirements < teacher2.requirements);
+            SortTeachersByWeight(teachers);
+        }
+
+        private void SortTeachersByWeight(List<Teacher> teachers)
+        {
+            teachers.Sort((teacher1, teacher2) =>
+                {
+                    var res = teacher1.requirements.weight - teacher2.requirements.weight;
+                    return Math.Sign(res != 0 ? res :
+                        teacher1.requirements.internalWeight - teacher2.requirements.internalWeight);
+                });
         }
 
         private void CalculateRequirementInternalWeights(int roomsLength, IEnumerable<Requirements> requirements)
