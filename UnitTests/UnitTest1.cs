@@ -54,6 +54,7 @@ namespace UnitTests
         [TestMethod]
         public void testSerialization()
         {
+            initalizeExampleData();
             string organic_room_types_serialized = Newtonsoft.Json.JsonConvert.SerializeObject(organic_room_types);
             List<RoomType> organic_room_types_deserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<List<RoomType>>(organic_room_types_serialized);
             Assert.AreEqual(organic_room_types_deserialized, organic_room_types);
