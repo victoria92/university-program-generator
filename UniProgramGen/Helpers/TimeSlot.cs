@@ -5,7 +5,7 @@ namespace UniProgramGen.Helpers
 {
     public class TimeSlot
     {
-        public const uint START_HOUR = 8;
+        public const uint START_HOUR = 7;
         public const uint END_HOUR = 22;
         public const uint TOTAL_DAY_HOURS = END_HOUR - START_HOUR;
 

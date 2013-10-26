@@ -74,7 +74,7 @@ namespace UniProgramGen
             }
             set
             {
-                Subjects = value;
+                subjects = value;
                 listBoxSubjects.DataSource = value;
             }
         }

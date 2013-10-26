@@ -18,6 +18,8 @@ namespace UniProgramGen
 
             State state = State.ExampleData();
             subjectsTab1.Subjects = state.Subjects;
+            teachersTab1.Teachers = state.Teachers;
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)

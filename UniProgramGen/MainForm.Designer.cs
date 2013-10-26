@@ -552,7 +552,7 @@
             // 
             this.teachersTab1.Location = new System.Drawing.Point(6, 5);
             this.teachersTab1.Name = "teachersTab1";
-            this.teachersTab1.Size = new System.Drawing.Size(632, 349);
+            this.teachersTab1.Size = new System.Drawing.Size(630, 349);
             this.teachersTab1.TabIndex = 0;
             // 
             // subjectsTab1
