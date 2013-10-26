@@ -22,7 +22,7 @@ namespace UniProgramGen.Generator
 
     public class ProgramGenerator
     {
-        private readonly List<ScheduledTimeSlot> currentSolution = new List<ScheduledTimeSlot>();
+        private readonly LinkedList<ScheduledTimeSlot> currentSolution = new LinkedList<ScheduledTimeSlot>();
         private readonly List<List<ScheduledTimeSlot>> allSolutions = new List<List<ScheduledTimeSlot>>();
 
         private List<Room> rooms;
@@ -59,9 +59,9 @@ namespace UniProgramGen.Generator
                 {
                     if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
                     {
-                        currentSolution.Add(new ScheduledTimeSlot(subject, room, windowTimeSlot));
+                        currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot));
                         TryPutSubjects(subjects.Skip(1));
-                        currentSolution.RemoveAt(currentSolution.Count - 1);
+                        currentSolution.RemoveLast();
                     }
                 }
             }
