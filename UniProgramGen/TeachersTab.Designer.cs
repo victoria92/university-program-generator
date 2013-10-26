@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.listBox15 = new System.Windows.Forms.ListBox();
+            this.listBoxTeachers = new System.Windows.Forms.ListBox();
             this.listBoxTeacherSaturday = new System.Windows.Forms.ListBox();
             this.listBoxTeacherFriday = new System.Windows.Forms.ListBox();
             this.listBoxTeacherThursday = new System.Windows.Forms.ListBox();
@@ -45,23 +45,25 @@
             this.textBox2.Size = new System.Drawing.Size(262, 20);
             this.textBox2.TabIndex = 15;
             // 
-            // listBox15
+            // listBoxTeachers
             // 
-            this.listBox15.FormattingEnabled = true;
-            this.listBox15.Items.AddRange(new object[] {
+            this.listBoxTeachers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxTeachers.FormattingEnabled = true;
+            this.listBoxTeachers.Items.AddRange(new object[] {
             "Владимир Бабев",
             "Надежда Рибарска",
             "Минко Марков"});
-            this.listBox15.Location = new System.Drawing.Point(466, 0);
-            this.listBox15.Name = "listBox15";
-            this.listBox15.Size = new System.Drawing.Size(120, 316);
-            this.listBox15.TabIndex = 14;
-            this.listBox15.SelectedIndexChanged += new System.EventHandler(this.listBox15_SelectedIndexChanged);
+            this.listBoxTeachers.Location = new System.Drawing.Point(456, 0);
+            this.listBoxTeachers.Name = "listBoxTeachers";
+            this.listBoxTeachers.Size = new System.Drawing.Size(169, 355);
+            this.listBoxTeachers.TabIndex = 14;
+            this.listBoxTeachers.SelectedIndexChanged += new System.EventHandler(this.listBoxTeachers_SelectedIndexChanged);
             // 
             // listBoxTeacherSaturday
             // 
-            this.listBoxTeacherSaturday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxTeacherSaturday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxTeacherSaturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherSaturday.FormattingEnabled = true;
             this.listBoxTeacherSaturday.ItemHeight = 18;
@@ -84,14 +86,14 @@
             this.listBoxTeacherSaturday.Location = new System.Drawing.Point(375, 44);
             this.listBoxTeacherSaturday.Name = "listBoxTeacherSaturday";
             this.listBoxTeacherSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxTeacherSaturday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxTeacherSaturday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherSaturday.TabIndex = 13;
             this.listBoxTeacherSaturday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacherSaturday_SelectedIndexChanged);
             // 
             // listBoxTeacherFriday
             // 
-            this.listBoxTeacherFriday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxTeacherFriday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxTeacherFriday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherFriday.FormattingEnabled = true;
             this.listBoxTeacherFriday.ItemHeight = 18;
@@ -114,14 +116,14 @@
             this.listBoxTeacherFriday.Location = new System.Drawing.Point(299, 44);
             this.listBoxTeacherFriday.Name = "listBoxTeacherFriday";
             this.listBoxTeacherFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxTeacherFriday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxTeacherFriday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherFriday.TabIndex = 12;
             this.listBoxTeacherFriday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacherFriday_SelectedIndexChanged);
             // 
             // listBoxTeacherThursday
             // 
-            this.listBoxTeacherThursday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxTeacherThursday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxTeacherThursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherThursday.FormattingEnabled = true;
             this.listBoxTeacherThursday.ItemHeight = 18;
@@ -144,14 +146,14 @@
             this.listBoxTeacherThursday.Location = new System.Drawing.Point(223, 44);
             this.listBoxTeacherThursday.Name = "listBoxTeacherThursday";
             this.listBoxTeacherThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxTeacherThursday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxTeacherThursday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherThursday.TabIndex = 11;
             this.listBoxTeacherThursday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacherThursday_SelectedIndexChanged);
             // 
             // listBoxTeacherWednesday
             // 
-            this.listBoxTeacherWednesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxTeacherWednesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxTeacherWednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherWednesday.FormattingEnabled = true;
             this.listBoxTeacherWednesday.ItemHeight = 18;
@@ -174,14 +176,14 @@
             this.listBoxTeacherWednesday.Location = new System.Drawing.Point(147, 44);
             this.listBoxTeacherWednesday.Name = "listBoxTeacherWednesday";
             this.listBoxTeacherWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxTeacherWednesday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxTeacherWednesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherWednesday.TabIndex = 10;
             this.listBoxTeacherWednesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacherWednesday_SelectedIndexChanged);
             // 
             // listBoxTeacherTuesday
             // 
-            this.listBoxTeacherTuesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxTeacherTuesday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxTeacherTuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherTuesday.FormattingEnabled = true;
             this.listBoxTeacherTuesday.ItemHeight = 18;
@@ -204,14 +206,14 @@
             this.listBoxTeacherTuesday.Location = new System.Drawing.Point(71, 44);
             this.listBoxTeacherTuesday.Name = "listBoxTeacherTuesday";
             this.listBoxTeacherTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxTeacherTuesday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxTeacherTuesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherTuesday.TabIndex = 9;
             this.listBoxTeacherTuesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacherTuesday_SelectedIndexChanged);
             // 
             // listBoxTeacherMonday
             // 
-            this.listBoxTeacherMonday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.listBoxTeacherMonday.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.listBoxTeacherMonday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherMonday.FormattingEnabled = true;
             this.listBoxTeacherMonday.ItemHeight = 18;
@@ -234,7 +236,7 @@
             this.listBoxTeacherMonday.Location = new System.Drawing.Point(-5, 44);
             this.listBoxTeacherMonday.Name = "listBoxTeacherMonday";
             this.listBoxTeacherMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxTeacherMonday.Size = new System.Drawing.Size(70, 274);
+            this.listBoxTeacherMonday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherMonday.TabIndex = 8;
             this.listBoxTeacherMonday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacherMonday_SelectedIndexChanged);
             // 
@@ -243,7 +245,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.listBox15);
+            this.Controls.Add(this.listBoxTeachers);
             this.Controls.Add(this.listBoxTeacherSaturday);
             this.Controls.Add(this.listBoxTeacherFriday);
             this.Controls.Add(this.listBoxTeacherThursday);
@@ -251,7 +253,8 @@
             this.Controls.Add(this.listBoxTeacherTuesday);
             this.Controls.Add(this.listBoxTeacherMonday);
             this.Name = "TeachersTab";
-            this.Size = new System.Drawing.Size(638, 436);
+            this.Size = new System.Drawing.Size(628, 361);
+            this.Load += new System.EventHandler(this.TeachersTab_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,7 +263,7 @@
         #endregion
 
         private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ListBox listBox15;
+        private System.Windows.Forms.ListBox listBoxTeachers;
         private System.Windows.Forms.ListBox listBoxTeacherSaturday;
         private System.Windows.Forms.ListBox listBoxTeacherFriday;
         private System.Windows.Forms.ListBox listBoxTeacherThursday;

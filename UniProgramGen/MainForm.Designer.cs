@@ -39,6 +39,7 @@
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
@@ -62,16 +63,15 @@
             this.listBoxGroupWednesday = new System.Windows.Forms.ListBox();
             this.listBoxGroupTuesday = new System.Windows.Forms.ListBox();
             this.listBoxGroupMonday = new System.Windows.Forms.ListBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.teachersTab1 = new UniProgramGen.TeachersTab();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
-            this.tabPage2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -202,6 +202,17 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Добави";
             this.button1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.teachersTab1);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(617, 357);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Преподаватели";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage3
             // 
@@ -673,22 +684,11 @@
             this.listBoxGroupMonday.Size = new System.Drawing.Size(70, 274);
             this.listBoxGroupMonday.TabIndex = 12;
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.teachersTab1);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(617, 357);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Преподаватели";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // teachersTab1
             // 
-            this.teachersTab1.Location = new System.Drawing.Point(8, 6);
+            this.teachersTab1.Location = new System.Drawing.Point(6, 5);
             this.teachersTab1.Name = "teachersTab1";
-            this.teachersTab1.Size = new System.Drawing.Size(679, 436);
+            this.teachersTab1.Size = new System.Drawing.Size(632, 349);
             this.teachersTab1.TabIndex = 0;
             // 
             // MainForm
@@ -704,13 +704,13 @@
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPage2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
-            this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
