@@ -34,7 +34,6 @@
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.checkedListBox2 = new System.Windows.Forms.CheckedListBox();
             this.listBoxRoomSaturday = new System.Windows.Forms.ListBox();
@@ -46,7 +45,6 @@
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.button3 = new System.Windows.Forms.Button();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.listBoxGroupSaturday = new System.Windows.Forms.ListBox();
             this.listBoxGroupFriday = new System.Windows.Forms.ListBox();
@@ -106,7 +104,6 @@
             // 
             this.tabPage3.Controls.Add(this.textBox3);
             this.tabPage3.Controls.Add(this.numericUpDown2);
-            this.tabPage3.Controls.Add(this.label2);
             this.tabPage3.Controls.Add(this.button2);
             this.tabPage3.Controls.Add(this.checkedListBox2);
             this.tabPage3.Controls.Add(this.listBoxRoomSaturday);
@@ -136,16 +133,6 @@
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(78, 20);
             this.numericUpDown2.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(466, 191);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 13);
-            this.label2.TabIndex = 14;
-            this.label2.Text = "Капацитет";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // button2
             // 
@@ -348,7 +335,6 @@
             // 
             this.tabPage4.Controls.Add(this.button3);
             this.tabPage4.Controls.Add(this.numericUpDown3);
-            this.tabPage4.Controls.Add(this.label3);
             this.tabPage4.Controls.Add(this.textBox4);
             this.tabPage4.Controls.Add(this.listBoxGroupSaturday);
             this.tabPage4.Controls.Add(this.listBoxGroupFriday);
@@ -380,16 +366,6 @@
             this.numericUpDown3.Name = "numericUpDown3";
             this.numericUpDown3.Size = new System.Drawing.Size(56, 20);
             this.numericUpDown3.TabIndex = 20;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(465, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(80, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Брой студенти";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // textBox4
             // 
@@ -620,12 +596,10 @@
         private System.Windows.Forms.ListBox listBoxRoomWednesday;
         private System.Windows.Forms.ListBox listBoxRoomTuesday;
         private System.Windows.Forms.ListBox listBoxRoomMonday;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckedListBox checkedListBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ListBox listBoxGroupSaturday;
         private System.Windows.Forms.ListBox listBoxGroupFriday;
