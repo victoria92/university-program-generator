@@ -1,13 +1,12 @@
 ﻿using System.Collections.Generic;
-using UniProgramGen;
 using System.Linq;
+using UniProgramGen.Helpers;
 
 namespace UniProgramGen.Data
 {
     public class Requirements
     {
-        public const uint TOTAL_HOURS = 15;
-        public const uint TOTAL_WEEK_HOURS = 5 * TOTAL_HOURS;
+        public const uint TOTAL_WEEK_HOURS = 7 * TimeSlot.TOTAL_DAY_HOURS;
 
         public readonly double weight;
         public readonly List<Helpers.TimeSlot> availableTimeSlots;
