@@ -5,6 +5,6 @@ namespace UniProgramGen.Data
     {
         public readonly double weight;
 
-        public virtual bool isSatisfied();
+        public abstract bool isSatisfied();
     }
 }
