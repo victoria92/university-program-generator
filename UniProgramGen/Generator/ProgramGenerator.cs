@@ -31,17 +31,17 @@ namespace UniProgramGen.Generator
         {
             this.rooms = rooms;
 
-            SetSubjectGroups(subjects, groups);
+            SetSubjectsGroups(subjects, groups);
 
-            TryPutSubjects(subjects);
+            FindSolutions(subjects);
 
             allSolutions.Sort((solution1, solution2) =>
-                Math.Sign(SumTeacherWeights(solution2) - SumTeacherWeights(solution1)));
+                Math.Sign(SumTeachersWeights(solution2) - SumTeachersWeights(solution1)));
 
             return allSolutions.Take(10);
         }
 
-        private double SumTeacherWeights(ScheduledTimeSlot[] solution)
+        private double SumTeachersWeights(ScheduledTimeSlot[] solution)
         {
             return solution.Sum(s =>
                 s.subject.teachers.Sum(t =>
@@ -49,7 +49,7 @@ namespace UniProgramGen.Generator
                     (t.requirements.requiredRooms.Any(r => r == s.room)                 ? t.requirements.weight : 0)));
         }
 
-        private void TryPutSubjects(IEnumerable<Subject> subjects)
+        private void FindSolutions(IEnumerable<Subject> subjects)
         {
             var subject = subjects.FirstOrDefault();
             if (subject == null)
@@ -71,7 +71,7 @@ namespace UniProgramGen.Generator
                         if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
                         {
                             currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot));
-                            TryPutSubjects(subjects.Skip(1));
+                            FindSolutions(subjects.Skip(1));
                             currentSolution.RemoveLast();
                         }
                     }
@@ -79,7 +79,7 @@ namespace UniProgramGen.Generator
             }
         }
 
-        private void SetSubjectGroups(List<Subject> subjects, List<Group> groups)
+        private void SetSubjectsGroups(List<Subject> subjects, List<Group> groups)
         {
             var hash = new Dictionary<string, Subject>(subjects.Count);
 
