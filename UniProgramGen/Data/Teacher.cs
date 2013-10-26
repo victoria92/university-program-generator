@@ -9,16 +9,13 @@ namespace UniProgramGen.Data
     {
         // TODO: add list of requirements
 
-        private readonly List<Room> _subjects;
-        public List<Room> subjects { get { return _subjects; } }
-
-        private readonly string _name;
-        public string name { get { return _name; } }
+        public readonly List<Room> subjects;
+        public readonly string name;
 
         public Teacher(List<Room> subjects, string name)
         {
-            _subjects = subjects;
-            _name = name;
+            this.subjects = subjects;
+            this.name = name;
         }
     }
 }

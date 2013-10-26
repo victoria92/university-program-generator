@@ -7,24 +7,17 @@ namespace UniProgramGen.Data
 {
     public class Subject
     {
-        private readonly List<RoomType> _roomTypes;
-        public List<RoomType> roomTypes { get { return _roomTypes; } }
-
-        private readonly List<Teacher> _teachers;
-        public List<Teacher> teachers { get { return _teachers; } }
-
-        private readonly string _name;
-        public string name { get { return _name; } }
-
-        private readonly uint _duration;
-        public uint duration { get { return _duration; } }
+        public readonly List<RoomType> roomTypes;
+        public readonly List<Teacher> teachers;
+        public readonly string name;
+        public readonly uint duration;
 
         public Subject(List<RoomType> roomTypes, List<Teacher> teachers, string name, uint duration)
         {
-            _roomTypes = roomTypes;
-            _teachers = teachers;
-            _name = name;
-            _duration = duration;
+            this.roomTypes = roomTypes;
+            this.teachers = teachers;
+            this.name = name;
+            this.duration = duration;
         }
     }
 }

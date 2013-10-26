@@ -7,22 +7,16 @@ namespace UniProgramGen.Data
 {
     public class Room
     {
-        private readonly List<RoomType> _types;
-        public List<RoomType> types { get { return _types; } }
-
-        private readonly uint _capacity;
-        public uint capacity { get { return _capacity; } }
-
+        public readonly List<RoomType> types;
+        public readonly uint capacity;
         // TODO: add availability (as TimeSlots)
-
-        private readonly string _nameOrNumber;
-        public string nameOrNumber { get { return _nameOrNumber; } }
+        public readonly string nameOrNumber;
 
         public Room(List<RoomType> types, uint capacity, string nameOrNumber)
         {
-            _types = types;
-            _capacity = capacity;
-            _nameOrNumber = nameOrNumber;
+            this.types = types;
+            this.capacity = capacity;
+            this.nameOrNumber = nameOrNumber;
         }
     }
 }

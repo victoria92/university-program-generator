@@ -4,20 +4,15 @@ namespace UniProgramGen.Data
 {
     public class Group
     {
-        private readonly List<Room> _horarium;
-        public List<Room> horarium { get { return _horarium; } }
-
-        private readonly uint _size;
-        public uint size { get { return _size; } }
-
-        private readonly string _name;
-        public string name { get { return _name; } }
+        public readonly List<Room> horarium;
+        public readonly uint size;
+        public readonly string name;
 
         public Group(List<Room> horarium, uint size, string name)
         {
-            _horarium = horarium;
-            _size = size;
-            _name = name;
+            this.horarium = horarium;
+            this.size = size;
+            this.name = name;
         }
     }
 }
