@@ -4,11 +4,12 @@ namespace UniProgramGen.Data
 {
     public class Teacher
     {
-        // TODO: add list of requirements (as Requirement)
+        public List<Requirement> requirements;
         public readonly string name;
 
-        public Teacher(string name)
+        public Teacher(List<Requirement> requirements, string name)
         {
+            this.requirements = requirements;
             this.name = name;
         }
     }
