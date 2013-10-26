@@ -4,10 +4,10 @@ namespace UniProgramGen.Data
 {
     public class Room
     {
-        public List<RoomType> types { get; internal set; }
-        public uint capacity { get; internal set; }
-        public List<Helpers.TimeSlot> availability { get; internal set; }
-        public string nameOrNumber { get; internal set; }
+        public List<RoomType> types { get; set; }
+        public uint capacity { get; set; }
+        public List<Helpers.TimeSlot> availability { get; set; }
+        public string nameOrNumber { get; set; }
 
         public Room(List<RoomType> types, uint capacity,
             List<Helpers.TimeSlot> availability, string nameOrNumber)

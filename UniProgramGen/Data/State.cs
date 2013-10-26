@@ -11,10 +11,22 @@ namespace UniProgramGen.Data
         {
         }
 
-        public Group[] Groups { get; internal set; }
-        public Room[] Rooms { get; internal set; }
-        public Subject[] Subjects { get; internal set; }
-        public Teacher[] Teachers { get; internal set; }
+        public Group[] Groups { get; set; }
+        public Room[] Rooms { get; set; }
+        public Subject[] Subjects { get; set; }
+        public Teacher[] Teachers { get; set; }
+
+        public static State fromFile(String filepath)
+        {
+            String stateJson = System.IO.File.ReadAllText(filepath);
+            return JsonConvert.DeserializeObject<State>(stateJson);
+        }
+
+        public void toFile(String filepath)
+        {
+            string stateJson = JsonConvert.SerializeObject(this);
+            System.IO.File.WriteAllText(filepath, stateJson);
+        }
 
         public static State ExampleData()
         {

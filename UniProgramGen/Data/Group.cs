@@ -4,9 +4,9 @@ namespace UniProgramGen.Data
 {
     public class Group
     {
-        public List<Subject> horarium { get; internal set; }
-        public uint size { get; internal set; }
-        public string name { get; internal set; }
+        public List<Subject> horarium { get; set; }
+        public uint size { get; set; }
+        public string name { get; set; }
 
         public Group(List<Subject> horarium, uint size, string name)
         {
