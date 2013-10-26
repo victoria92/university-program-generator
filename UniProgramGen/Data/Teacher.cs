@@ -4,8 +4,8 @@ namespace UniProgramGen.Data
 {
     public class Teacher
     {
-        public Requirements requirements { get; internal set; }
-        public string name { get; internal set; }
+        public Requirements requirements { get; set; }
+        public string name { get; set; }
 
         public string Name
         {
