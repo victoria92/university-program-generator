@@ -12,7 +12,8 @@ namespace UniProgramGen.Helpers
         {
             validateHour(startHour);
             validateHour(endHour);
-            if (startHour >= endHour) {
+            if (startHour >= endHour)
+            {
                 throw new ArgumentException("Start hour has to be before end hour");
             }
 
@@ -23,17 +24,17 @@ namespace UniProgramGen.Helpers
 
         public uint Duration()
         {
-            return (uint)EndHour - StartHour;
+            return EndHour - StartHour;
         }
 
         public bool Overlaps(TimeSlot other)
         {
-            return inSlot(other.StartHour) || inSlot(other.EndHour);
+            return other.Day == Day && (inSlot(other.StartHour) || inSlot(other.EndHour));
         }
 
         public bool Includes(TimeSlot other)
         {
-            return other.StartHour >= StartHour && other.EndHour <= EndHour;
+            return other.Day == Day && other.StartHour >= StartHour && other.EndHour <= EndHour;
         }
 
         public DayOfWeek Day { get; private set; }
@@ -42,7 +43,8 @@ namespace UniProgramGen.Helpers
 
         private static void validateHour(uint hour)
         {
-            if (hour < START_HOUR || hour > END_HOUR) {
+            if (hour < START_HOUR || hour > END_HOUR)
+            {
                 throw new ArgumentOutOfRangeException("Hour outside of working hours");
             }
         }
@@ -52,5 +54,10 @@ namespace UniProgramGen.Helpers
             return hour > StartHour && hour < EndHour;
         }
 
+
+        internal TimeSlot MoveOneHour()
+        {
+            return new TimeSlot(Day, StartHour + 1, EndHour + 1);
+        }
     }
 }
