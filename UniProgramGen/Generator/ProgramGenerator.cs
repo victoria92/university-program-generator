@@ -6,7 +6,7 @@ using UniProgramGen.Helpers;
 
 namespace UniProgramGen.Generator
 {
-    struct ScheduledTimeSlot
+    public struct ScheduledTimeSlot
     {
         public Subject subject;
         public Room room;
@@ -23,23 +23,30 @@ namespace UniProgramGen.Generator
     public class ProgramGenerator
     {
         private readonly LinkedList<ScheduledTimeSlot> currentSolution = new LinkedList<ScheduledTimeSlot>();
-        private readonly List<List<ScheduledTimeSlot>> allSolutions = new List<List<ScheduledTimeSlot>>();
+        private readonly List<ScheduledTimeSlot[]> allSolutions = new List<ScheduledTimeSlot[]>();
 
         private List<Room> rooms;
 
-        public void GenerateProgram(List<Room> rooms, List<Subject> subjects, List<Teacher> teachers, List<Group> groups)
+        public IEnumerable<ScheduledTimeSlot[]> GenerateProgram(List<Room> rooms, List<Subject> subjects, List<Teacher> teachers, List<Group> groups)
         {
             this.rooms = rooms;
 
-            CalculateRequirementInternalWeights(rooms.Count, teachers.Select(t => t.requirements));
-
-            // SortTeachersByWeight(teachers);
-            // SortSubjectTeachersByWeight(subjects);
-
-            // SetTeacherSubjects(teachers, subjects);
             SetSubjectGroups(subjects, groups);
 
             TryPutSubjects(subjects);
+
+            allSolutions.Sort((solution1, solution2) =>
+                Math.Sign(SumTeacherWeights(solution2) - SumTeacherWeights(solution1)));
+
+            return allSolutions.Take(10);
+        }
+
+        private double SumTeacherWeights(ScheduledTimeSlot[] solution)
+        {
+            return solution.Sum(s =>
+                s.subject.teachers.Sum(t =>
+                    (t.requirements.availableTimeSlots.Any(a => a.Includes(s.timeSlot)) ? t.requirements.weight : 0) +
+                    (t.requirements.requiredRooms.Any(r => r == s.room)                 ? t.requirements.weight : 0)));
         }
 
         private void TryPutSubjects(IEnumerable<Subject> subjects)
@@ -47,7 +54,9 @@ namespace UniProgramGen.Generator
             var subject = subjects.FirstOrDefault();
             if (subject == null)
             {
-                // TODO: we have solution
+                ScheduledTimeSlot[] copy = new ScheduledTimeSlot[currentSolution.Count];
+                currentSolution.CopyTo(copy, 0);
+                allSolutions.Add(copy);
                 return;
             }
 
@@ -70,32 +79,6 @@ namespace UniProgramGen.Generator
             }
         }
 
-        private void SortSubjectTeachersByWeight(List<Subject> subjects)
-        {
-            foreach (var subject in subjects)
-            {
-                SortTeachersByWeight(subject.teachers);
-            }
-        }
-
-        private void SetTeacherSubjects(List<Teacher> teachers, List<Subject> subjects)
-        {
-            var hash = new Dictionary<string, Teacher>(teachers.Count);
-
-            foreach (var teacher in teachers)
-            {
-                hash[teacher.name] = teacher;
-            }
-
-            foreach (var subject in subjects)
-            {
-                foreach (var teacher in subject.teachers)
-                {
-                    hash[teacher.name].AddSubject(subject);
-                }
-            }
-        }
-
         private void SetSubjectGroups(List<Subject> subjects, List<Group> groups)
         {
             var hash = new Dictionary<string, Subject>(subjects.Count);
@@ -111,24 +94,6 @@ namespace UniProgramGen.Generator
                 {
                     hash[subject.name].AddGroup(group);
                 }
-            }
-        }
-
-        private void SortTeachersByWeight(List<Teacher> teachers)
-        {
-            teachers.Sort((teacher1, teacher2) =>
-                {
-                    var res = teacher1.requirements.weight - teacher2.requirements.weight;
-                    return Math.Sign(res != 0 ? res :
-                        teacher1.requirements.internalWeight - teacher2.requirements.internalWeight);
-                });
-        }
-
-        private void CalculateRequirementInternalWeights(int roomsLength, IEnumerable<Requirements> requirements)
-        {
-            foreach (var requirement in requirements)
-            {
-                requirement.CalculateInternalWeight(roomsLength);
             }
         }
     }

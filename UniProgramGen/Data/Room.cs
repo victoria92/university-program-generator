@@ -17,5 +17,21 @@ namespace UniProgramGen.Data
             this.availability = availability;
             this.nameOrNumber = nameOrNumber;
         }
+
+        public override int GetHashCode()
+        {
+            return nameOrNumber.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            Room room = obj as Room;
+            if (room != null)
+            {
+                return room.nameOrNumber == nameOrNumber;
+            }
+
+            return base.Equals(obj);
+        }
     }
 }

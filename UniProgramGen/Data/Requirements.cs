@@ -12,19 +12,11 @@ namespace UniProgramGen.Data
         public readonly List<Helpers.TimeSlot> availableTimeSlots;
         public readonly List<Room> requiredRooms;
 
-        internal double internalWeight { get; private set; }
-
         public Requirements(double weight, List<Helpers.TimeSlot> availableTimeSlots, List<Room> requiredRooms)
         {
             this.weight = weight;
             this.availableTimeSlots = availableTimeSlots;
             this.requiredRooms = requiredRooms;
-        }
-
-        internal void CalculateInternalWeight(int roomsLength)
-        {
-            var availableTime = availableTimeSlots.Aggregate((uint) 0, (total, timeSlot) => total + timeSlot.EndHour - timeSlot.StartHour);
-            internalWeight = ((availableTime / TOTAL_WEEK_HOURS) + (requiredRooms.Count / roomsLength)) / 2;
         }
     }
 }
