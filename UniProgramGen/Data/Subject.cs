@@ -4,10 +4,10 @@ namespace UniProgramGen.Data
 {
     public class Subject
     {
-        public HashSet<RoomType> roomTypes { get; internal set; }
-        public List<Teacher> teachers { get; internal set; }
-        public string name { get; internal set; }
-        public uint duration { get; internal set; }
+        public HashSet<RoomType> roomTypes { get; set; }
+        public List<Teacher> teachers { get; set; }
+        public string name { get; set; }
+        public uint duration { get; set; }
 
         public string Name
         {
