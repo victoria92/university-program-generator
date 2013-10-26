@@ -5,6 +5,8 @@ namespace UniProgramGen.Data
     {
         // TODO: add more types
         Lecture,
-        Computer
+        Computer,
+        Projector,
+        Komin
     }
 }
