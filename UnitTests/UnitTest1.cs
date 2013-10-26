@@ -3,6 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using UniProgramGen.Data;
 using UniProgramGen.Helpers;
+using Newtonsoft.Json;
 
 namespace UnitTests
 {
@@ -48,6 +49,14 @@ namespace UnitTests
             var organic_chemistry_teachers = new List<Teacher>();
 
             var s = new Subject(organic_room_types, organic_chemistry_teachers, "Organic Chemistry Lectures", 1);
+        }
+
+        [TestMethod]
+        public void testSerialization()
+        {
+            string organic_room_types_serialized = Newtonsoft.Json.JsonConvert.SerializeObject(organic_room_types);
+            List<RoomType> organic_room_types_deserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<List<RoomType>>(organic_room_types_serialized);
+            Assert.AreEqual(organic_room_types_deserialized, organic_room_types);
         }
 
         [TestMethod]

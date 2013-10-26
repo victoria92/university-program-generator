@@ -19,6 +19,7 @@ namespace UniProgramGen.Data
         public static State ExampleData()
         {
             State result = new State();
+            
             result.Groups = new Group[]
             {
                 new Group(new List<Subject>(), 20, "Informatics, year 1, group 2"),
