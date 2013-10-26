@@ -55,18 +55,15 @@ namespace UniProgramGen.Generator
                 Where(r => r.types.IsSupersetOf(subject.roomTypes)).
                 Where(r => r.capacity >= subject.attendingPeopleCount))
             {
-                foreach (var timeSlot in room.availability.Where(t => t.Duration() >= subject.duration))
-	            {
-                    foreach (var windowTimeSlot in timeSlot.GetAllWindows(subject.duration))
+                foreach (var windowTimeSlot in room.availability.SelectMany(a => a.GetAllWindows(subject.duration)))
+                {
+                    if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
                     {
-                        if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
-                        {
-                            currentSolution.Add(new ScheduledTimeSlot(subject, room, windowTimeSlot));
-                            TryPutSubjects(subjects.Skip(1));
-                            currentSolution.RemoveAt(currentSolution.Count - 1);
-                        }
+                        currentSolution.Add(new ScheduledTimeSlot(subject, room, windowTimeSlot));
+                        TryPutSubjects(subjects.Skip(1));
+                        currentSolution.RemoveAt(currentSolution.Count - 1);
                     }
-	            }
+                }
             }
         }
 
