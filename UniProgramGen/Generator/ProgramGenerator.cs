@@ -44,24 +44,27 @@ namespace UniProgramGen.Generator
 
         private void TryPutSubjects(IEnumerable<Subject> subjects)
         {
-            if (subjects.Count() == 0)
+            var subject = subjects.FirstOrDefault();
+            if (subject == null)
             {
                 // TODO: we have solution
                 return;
             }
 
-            var subject = subjects.First();
             foreach (var room in rooms.
                 Where(r => r.types.IsSupersetOf(subject.roomTypes)).
                 Where(r => r.capacity >= subject.attendingPeopleCount))
             {
                 foreach (var windowTimeSlot in room.availability.SelectMany(a => a.GetAllWindows(subject.duration)))
                 {
-                    if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
+                    if (subject.teachers.All(t => t.requirements.weight != 1 || t.requirements.availableTimeSlots.Any(a => a.Includes(windowTimeSlot))))
                     {
-                        currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot));
-                        TryPutSubjects(subjects.Skip(1));
-                        currentSolution.RemoveLast();
+                        if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
+                        {
+                            currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot));
+                            TryPutSubjects(subjects.Skip(1));
+                            currentSolution.RemoveLast();
+                        }
                     }
                 }
             }
