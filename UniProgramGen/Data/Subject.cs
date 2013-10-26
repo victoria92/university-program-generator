@@ -9,6 +9,11 @@ namespace UniProgramGen.Data
         public string name { get; internal set; }
         public uint duration { get; internal set; }
 
+        public string Name
+        {
+            get { return name; }
+        }
+
         public Subject(List<RoomType> roomTypes, List<Teacher> teachers, string name, uint duration)
         {
             this.roomTypes = roomTypes;
