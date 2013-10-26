@@ -49,8 +49,6 @@
     <Compile Include="Data\RoomType.cs" />
     <Compile Include="Data\Subject.cs" />
     <Compile Include="Data\Teacher.cs" />
-    <Compile Include="Data\TimeSlot.cs" />
-    <Compile Include="Helpers\Pair.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +78,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Helpers\TimeSlot.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
