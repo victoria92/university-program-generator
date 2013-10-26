@@ -57,6 +57,15 @@ namespace UnitTests
             string organic_room_types_serialized = Newtonsoft.Json.JsonConvert.SerializeObject(organic_room_types);
             List<RoomType> organic_room_types_deserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<List<RoomType>>(organic_room_types_serialized);
             Assert.AreEqual(organic_room_types_deserialized, organic_room_types);
+
+            string available_timeslots_serialized = Newtonsoft.Json.JsonConvert.SerializeObject(available_timeslots);
+            List<TimeSlot> deserialized_available_timeslots = Newtonsoft.Json.JsonConvert.DeserializeObject<List<TimeSlot>>(available_timeslots_serialized);
+            Assert.AreEqual(deserialized_available_timeslots, available_timeslots);
+
+            string rooms_serialized = Newtonsoft.Json.JsonConvert.SerializeObject(rooms);
+            List<Room> deserialized_rooms = Newtonsoft.Json.JsonConvert.DeserializeObject<List<Room>>(rooms_serialized);
+
+            Assert.AreEqual(deserialized_available_timeslots, available_timeslots);
         }
 
         [TestMethod]
