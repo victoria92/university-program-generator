@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using UniProgramGen.Data;
 
 namespace UniProgramGen
 {
@@ -14,6 +15,9 @@ namespace UniProgramGen
         public MainForm()
         {
             InitializeComponent();
+
+            State state = State.ExampleData();
+            subjectsTab1.Subjects = state.Subjects;
         }
 
         /*private void listBoxTeacherMonday_SelectedIndexChanged(object sender, EventArgs e)
