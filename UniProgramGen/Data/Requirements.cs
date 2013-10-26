@@ -13,7 +13,7 @@ namespace UniProgramGen.Data
         public readonly List<Helpers.TimeSlot> availableTimeSlots;
         public readonly List<Room> requiredRooms;
 
-        private double internalWeight;
+        internal double internalWeight { get; private set; }
 
         public Requirements(double weight, List<Helpers.TimeSlot> availableTimeSlots, List<Room> requiredRooms)
         {
