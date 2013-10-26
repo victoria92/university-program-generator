@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
 using UniProgramGen.Helpers;
 
 namespace UniProgramGen.Data

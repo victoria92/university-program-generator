@@ -1,7 +1,7 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UniProgramGen.Data;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
+using UniProgramGen.Data;
 using UniProgramGen.Generator;
 
 namespace UnitTests
