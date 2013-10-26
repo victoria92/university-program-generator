@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace UniProgramGen.Helpers
 {
@@ -55,9 +56,12 @@ namespace UniProgramGen.Helpers
         }
 
 
-        internal TimeSlot MoveOneHour()
+        internal IEnumerable<TimeSlot> GetAllWindows(uint duration)
         {
-            return new TimeSlot(Day, StartHour + 1, EndHour + 1);
+            for (uint i = StartHour; i <= EndHour - duration; i++)
+            {
+                yield return new TimeSlot(Day, i, i + duration);
+            }
         }
     }
 }

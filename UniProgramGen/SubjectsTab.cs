@@ -16,7 +16,7 @@ namespace UniProgramGen
         {
             InitializeComponent();
             List<Teacher> l = new List<Teacher>();
-            List<RoomType> r = new List<RoomType>();
+            HashSet<RoomType> r = new HashSet<RoomType>();
             subject = new Subject(r, l, "Algebra", 2);
             listBoxSubjects.DisplayMember = "Name";
             Teacher teacher = new Teacher(null, "Dyadov");

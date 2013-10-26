@@ -4,12 +4,12 @@ namespace UniProgramGen.Data
 {
     public class Room
     {
-        public List<RoomType> types { get; set; }
+        public HashSet<RoomType> types { get; set; }
         public uint capacity { get; set; }
         public List<Helpers.TimeSlot> availability { get; set; }
         public string nameOrNumber { get; set; }
 
-        public Room(List<RoomType> types, uint capacity,
+        public Room(HashSet<RoomType> types, uint capacity,
             List<Helpers.TimeSlot> availability, string nameOrNumber)
         {
             this.types = types;

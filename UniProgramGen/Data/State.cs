@@ -39,13 +39,13 @@ namespace UniProgramGen.Data
             };
             result.Rooms = new Room[]
             {
-                new Room(new List<RoomType>(), 20, new List<Helpers.TimeSlot>(), "200"),
-                new Room(new List<RoomType>(), 20, new List<Helpers.TimeSlot>(), "325"),
+                new Room(new HashSet<RoomType>(), 20, new List<Helpers.TimeSlot>(), "200"),
+                new Room(new HashSet<RoomType>(), 20, new List<Helpers.TimeSlot>(), "325"),
             };
             result.Subjects = new Subject[]
             {
-                new Subject(new List<RoomType>(), new List<Teacher>(), "Programming 101", 2),
-                new Subject(new List<RoomType>(), new List<Teacher>(), "Calculus 101", 2),
+                new Subject(new HashSet<RoomType>(), new List<Teacher>(), "Programming 101", 2),
+                new Subject(new HashSet<RoomType>(), new List<Teacher>(), "Calculus 101", 2),
             };
             result.Teachers = new Teacher[]
             {

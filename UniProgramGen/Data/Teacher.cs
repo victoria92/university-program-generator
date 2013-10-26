@@ -12,10 +12,24 @@ namespace UniProgramGen.Data
             get { return name; }
         }
 
+        private readonly List<Subject> subjects;
+
         public Teacher(Requirements requirements, string name)
         {
             this.requirements = requirements;
             this.name = name;
+
+            this.subjects = new List<Subject>(2);
+        }
+
+        internal void AddSubject(Subject subject)
+        {
+            this.subjects.Add(subject);
+        }
+
+        public IEnumerable<Subject> GetSubjects()
+        {
+            return subjects;
         }
     }
 }
