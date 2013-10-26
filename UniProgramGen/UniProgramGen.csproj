@@ -44,9 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Group.cs" />
-    <Compile Include="Data\Requirements\Requirement.cs" />
-    <Compile Include="Data\Requirements\PlaceRequirement.cs" />
-    <Compile Include="Data\Requirements\TimeRequirement.cs" />
+    <Compile Include="Data\Requirement.cs" />
     <Compile Include="Data\Room.cs" />
     <Compile Include="Data\RoomType.cs" />
     <Compile Include="Data\Subject.cs" />
