@@ -87,6 +87,7 @@
             // 
             // checkedListRoomTypes
             // 
+            this.checkedListRoomTypes.CheckOnClick = true;
             this.checkedListRoomTypes.FormattingEnabled = true;
             this.checkedListRoomTypes.Items.AddRange(new object[] {
             "Лекционна зала",
@@ -124,9 +125,10 @@
             this.listBoxRoomSaturday.Location = new System.Drawing.Point(401, 154);
             this.listBoxRoomSaturday.Name = "listBoxRoomSaturday";
             this.listBoxRoomSaturday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBoxRoomSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomSaturday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomSaturday.TabIndex = 22;
+            this.listBoxRoomSaturday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomFriday
             // 
@@ -154,9 +156,10 @@
             this.listBoxRoomFriday.Location = new System.Drawing.Point(325, 154);
             this.listBoxRoomFriday.Name = "listBoxRoomFriday";
             this.listBoxRoomFriday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBoxRoomFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomFriday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomFriday.TabIndex = 21;
+            this.listBoxRoomFriday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomThursday
             // 
@@ -184,9 +187,10 @@
             this.listBoxRoomThursday.Location = new System.Drawing.Point(249, 154);
             this.listBoxRoomThursday.Name = "listBoxRoomThursday";
             this.listBoxRoomThursday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBoxRoomThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomThursday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomThursday.TabIndex = 20;
+            this.listBoxRoomThursday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomWednesday
             // 
@@ -214,9 +218,10 @@
             this.listBoxRoomWednesday.Location = new System.Drawing.Point(173, 154);
             this.listBoxRoomWednesday.Name = "listBoxRoomWednesday";
             this.listBoxRoomWednesday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBoxRoomWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomWednesday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomWednesday.TabIndex = 19;
+            this.listBoxRoomWednesday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomTuesday
             // 
@@ -244,9 +249,10 @@
             this.listBoxRoomTuesday.Location = new System.Drawing.Point(97, 154);
             this.listBoxRoomTuesday.Name = "listBoxRoomTuesday";
             this.listBoxRoomTuesday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBoxRoomTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomTuesday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomTuesday.TabIndex = 18;
+            this.listBoxRoomTuesday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomMonday
             // 
@@ -274,9 +280,10 @@
             this.listBoxRoomMonday.Location = new System.Drawing.Point(21, 154);
             this.listBoxRoomMonday.Name = "listBoxRoomMonday";
             this.listBoxRoomMonday.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.listBoxRoomMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRoomMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomMonday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomMonday.TabIndex = 17;
+            this.listBoxRoomMonday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRooms
             // 
@@ -284,7 +291,7 @@
             this.listBoxRooms.FormattingEnabled = true;
             this.listBoxRooms.Location = new System.Drawing.Point(535, 24);
             this.listBoxRooms.Name = "listBoxRooms";
-            this.listBoxRooms.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxRooms.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRooms.Size = new System.Drawing.Size(51, 95);
             this.listBoxRooms.TabIndex = 28;
             this.listBoxRooms.SelectedIndexChanged += new System.EventHandler(this.listBoxRooms_SelectedIndexChanged);

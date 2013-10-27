@@ -14,9 +14,9 @@ namespace UniProgramGen.Helpers
 
             List<TimeSlot> result = new List<TimeSlot>();
 
-            foreach (string selectedItem in listBox.SelectedItems)
+            foreach (int selectedIndex in listBox.SelectedIndices)
             {
-                uint hour = Convert.ToUInt32(selectedItem.Remove(selectedItem.Length - 3));
+                uint hour = (uint) selectedIndex + 7;
                 if (hour != previousHour + 1) // new Timeslot
                 {
                     if (startHour != 0)
@@ -29,6 +29,11 @@ namespace UniProgramGen.Helpers
                 endHour = hour + 1;
                 previousHour = hour;
             }
+            if (startHour != 0)
+            {
+                result.Add(new TimeSlot(dayOfWeek, startHour, endHour));
+            }
+
             return result;
         }
     }
