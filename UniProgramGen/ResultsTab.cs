@@ -53,5 +53,16 @@ namespace UniProgramGen
             string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(firstSolution, Newtonsoft.Json.Formatting.Indented);
             System.IO.File.WriteAllText("../../datafiles/example_solution.json", firstSolutionJson);
         }
+
+        private void buttonSync_Click(object sender, EventArgs e)
+        {
+            listBoxTeachers.DisplayMember = "";
+            listBoxRooms.DisplayMember = "";
+            listBoxGroups.DisplayMember = "";
+
+            listBoxTeachers.DisplayMember = "name";
+            listBoxRooms.DisplayMember = "nameOrNumber";
+            listBoxGroups.DisplayMember = "name";
+        }
     }
 }

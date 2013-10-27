@@ -38,6 +38,7 @@
             this.listBoxRooms = new System.Windows.Forms.ListBox();
             this.groupBoxGroups = new System.Windows.Forms.GroupBox();
             this.listBoxGroups = new System.Windows.Forms.ListBox();
+            this.buttonSync = new System.Windows.Forms.Button();
             this.groupBoxActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).BeginInit();
             this.splitResults.Panel1.SuspendLayout();
@@ -56,6 +57,7 @@
             // 
             this.groupBoxActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxActions.Controls.Add(this.buttonSync);
             this.groupBoxActions.Controls.Add(this.buttonGenerate);
             this.groupBoxActions.Location = new System.Drawing.Point(0, 0);
             this.groupBoxActions.Name = "groupBoxActions";
@@ -173,6 +175,16 @@
             this.listBoxGroups.Size = new System.Drawing.Size(207, 362);
             this.listBoxGroups.TabIndex = 0;
             // 
+            // buttonSync
+            // 
+            this.buttonSync.Location = new System.Drawing.Point(284, 19);
+            this.buttonSync.Name = "buttonSync";
+            this.buttonSync.Size = new System.Drawing.Size(75, 23);
+            this.buttonSync.TabIndex = 1;
+            this.buttonSync.Text = "Sync!";
+            this.buttonSync.UseVisualStyleBackColor = true;
+            this.buttonSync.Click += new System.EventHandler(this.buttonSync_Click);
+            // 
             // ResultsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,5 +221,6 @@
         private System.Windows.Forms.ListBox listBoxRooms;
         private System.Windows.Forms.ListBox listBoxGroups;
         private System.Windows.Forms.Button buttonGenerate;
+        private System.Windows.Forms.Button buttonSync;
     }
 }
