@@ -14,7 +14,7 @@ namespace UniProgramGen.Data
         public IEnumerable<Teacher> teachers;
         public IEnumerable<Group> groups;
 
-        IEnumerable<ScheduledTimeSlot[]> solutions;
+        public IEnumerable<ScheduledTimeSlot[]> solutions;
 
         public TestData()
         {

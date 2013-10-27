@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UniProgramGen.Data;
 using UniProgramGen.Helpers;
 using Newtonsoft.Json;
+using UniProgramGen.Generator;
 
 namespace UnitTests
 {
@@ -72,7 +73,8 @@ namespace UnitTests
         [TestMethod]
         public void generateCalendar()
         {
-
+            var iCalGen = new ICalGenerator();
+            iCalGen.ExportSolution();
         }
     }
 }
