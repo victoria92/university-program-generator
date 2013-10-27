@@ -16,7 +16,7 @@ namespace UniProgramGen.Data
 
         public IEnumerable<ScheduledTimeSlot[]> solutions;
 
-        public void getTestData()
+        public void initInputData()
         {
             rooms = new List<Room>();
 
@@ -605,7 +605,10 @@ namespace UniProgramGen.Data
             group4subjects.Add(subjects[22]);
             group4subjects.Add(subjects[23]);
             groups.Add(new Group(group4subjects, 18, "Group 4"));
+        }
 
+        public void initOutputData()
+        {
             solutions = new ProgramGenerator().GenerateProgram(rooms, subjects, teachers, groups);
         }
     }

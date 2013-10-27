@@ -107,7 +107,7 @@ namespace UnitTests
         {
             var d = new DBManager();
 
-            d.getTestData();
+            d.initOutputData();
 
             var ser = new Newtonsoft.Json.JsonSerializer();
 
