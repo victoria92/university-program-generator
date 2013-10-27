@@ -14,5 +14,21 @@ namespace UniProgramGen.Data
             this.size = size;
             this.name = name;
         }
+
+        public override int GetHashCode()
+        {
+            return name.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            var group = obj as Group;
+            if (group != null)
+            {
+                return group.name == name;
+            }
+
+            return base.Equals(obj);
+        }
     }
 }

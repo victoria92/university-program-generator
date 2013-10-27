@@ -12,5 +12,21 @@ namespace UniProgramGen.Data
             this.requirements = requirements;
             this.name = name;
         }
+
+        public override int GetHashCode()
+        {
+            return name.GetHashCode();
+        }
+
+        public override bool Equals(object obj)
+        {
+            var teacher = obj as Teacher;
+            if (teacher != null)
+            {
+                return teacher.name == name;
+            }
+
+            return base.Equals(obj);
+        }
     }
 }
