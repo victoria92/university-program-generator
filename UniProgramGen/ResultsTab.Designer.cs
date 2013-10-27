@@ -34,20 +34,29 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBoxRooms = new System.Windows.Forms.GroupBox();
             this.groupBoxGroups = new System.Windows.Forms.GroupBox();
+            this.listBoxTeachers = new System.Windows.Forms.ListBox();
+            this.listBoxRooms = new System.Windows.Forms.ListBox();
+            this.listBoxGroups = new System.Windows.Forms.ListBox();
+            this.buttonGenerate = new System.Windows.Forms.Button();
+            this.groupBoxActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).BeginInit();
             this.splitResults.Panel1.SuspendLayout();
             this.splitResults.Panel2.SuspendLayout();
             this.splitResults.SuspendLayout();
+            this.groupBoxTeachers.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.groupBoxRooms.SuspendLayout();
+            this.groupBoxGroups.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBoxActions
             // 
             this.groupBoxActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxActions.Controls.Add(this.buttonGenerate);
             this.groupBoxActions.Location = new System.Drawing.Point(0, 0);
             this.groupBoxActions.Name = "groupBoxActions";
             this.groupBoxActions.Size = new System.Drawing.Size(650, 70);
@@ -76,6 +85,7 @@
             // 
             // groupBoxTeachers
             // 
+            this.groupBoxTeachers.Controls.Add(this.listBoxTeachers);
             this.groupBoxTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxTeachers.Location = new System.Drawing.Point(0, 0);
             this.groupBoxTeachers.Name = "groupBoxTeachers";
@@ -103,6 +113,7 @@
             // 
             // groupBoxRooms
             // 
+            this.groupBoxRooms.Controls.Add(this.listBoxRooms);
             this.groupBoxRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxRooms.Location = new System.Drawing.Point(0, 0);
             this.groupBoxRooms.Name = "groupBoxRooms";
@@ -113,6 +124,7 @@
             // 
             // groupBoxGroups
             // 
+            this.groupBoxGroups.Controls.Add(this.listBoxGroups);
             this.groupBoxGroups.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBoxGroups.Location = new System.Drawing.Point(0, 0);
             this.groupBoxGroups.Name = "groupBoxGroups";
@@ -120,6 +132,42 @@
             this.groupBoxGroups.TabIndex = 0;
             this.groupBoxGroups.TabStop = false;
             this.groupBoxGroups.Text = "Групи";
+            // 
+            // listBoxTeachers
+            // 
+            this.listBoxTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxTeachers.FormattingEnabled = true;
+            this.listBoxTeachers.Location = new System.Drawing.Point(3, 16);
+            this.listBoxTeachers.Name = "listBoxTeachers";
+            this.listBoxTeachers.Size = new System.Drawing.Size(209, 362);
+            this.listBoxTeachers.TabIndex = 0;
+            // 
+            // listBoxRooms
+            // 
+            this.listBoxRooms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxRooms.FormattingEnabled = true;
+            this.listBoxRooms.Location = new System.Drawing.Point(3, 16);
+            this.listBoxRooms.Name = "listBoxRooms";
+            this.listBoxRooms.Size = new System.Drawing.Size(208, 362);
+            this.listBoxRooms.TabIndex = 0;
+            // 
+            // listBoxGroups
+            // 
+            this.listBoxGroups.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxGroups.FormattingEnabled = true;
+            this.listBoxGroups.Location = new System.Drawing.Point(3, 16);
+            this.listBoxGroups.Name = "listBoxGroups";
+            this.listBoxGroups.Size = new System.Drawing.Size(207, 362);
+            this.listBoxGroups.TabIndex = 0;
+            // 
+            // buttonGenerate
+            // 
+            this.buttonGenerate.Location = new System.Drawing.Point(440, 19);
+            this.buttonGenerate.Name = "buttonGenerate";
+            this.buttonGenerate.Size = new System.Drawing.Size(204, 45);
+            this.buttonGenerate.TabIndex = 0;
+            this.buttonGenerate.Text = "Генерирай Програма";
+            this.buttonGenerate.UseVisualStyleBackColor = true;
             // 
             // ResultsTab
             // 
@@ -129,14 +177,18 @@
             this.Controls.Add(this.splitResults);
             this.Name = "ResultsTab";
             this.Size = new System.Drawing.Size(650, 450);
+            this.groupBoxActions.ResumeLayout(false);
             this.splitResults.Panel1.ResumeLayout(false);
             this.splitResults.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).EndInit();
             this.splitResults.ResumeLayout(false);
+            this.groupBoxTeachers.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.groupBoxRooms.ResumeLayout(false);
+            this.groupBoxGroups.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -149,5 +201,9 @@
         private System.Windows.Forms.GroupBox groupBoxTeachers;
         private System.Windows.Forms.GroupBox groupBoxRooms;
         private System.Windows.Forms.GroupBox groupBoxGroups;
+        private System.Windows.Forms.ListBox listBoxTeachers;
+        private System.Windows.Forms.ListBox listBoxRooms;
+        private System.Windows.Forms.ListBox listBoxGroups;
+        private System.Windows.Forms.Button buttonGenerate;
     }
 }

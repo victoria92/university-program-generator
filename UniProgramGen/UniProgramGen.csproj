@@ -89,6 +89,7 @@
     <Compile Include="GroupTab.Designer.cs">
       <DependentUpon>GroupTab.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PersonalSchedule.cs" />
     <Compile Include="Helpers\UIHelpers.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
