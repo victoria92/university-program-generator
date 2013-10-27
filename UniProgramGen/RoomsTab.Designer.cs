@@ -55,10 +55,10 @@
             // 
             this.roomName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.roomName.BackColor = System.Drawing.SystemColors.Window;
-            this.roomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.roomName.Location = new System.Drawing.Point(190, 20);
+            this.roomName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.roomName.Location = new System.Drawing.Point(190, 16);
             this.roomName.Name = "roomName";
-            this.roomName.Size = new System.Drawing.Size(457, 30);
+            this.roomName.Size = new System.Drawing.Size(457, 29);
             this.roomName.TabIndex = 27;
             this.roomName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -299,7 +299,7 @@
             this.listBoxRooms.Location = new System.Drawing.Point(3, 16);
             this.listBoxRooms.Name = "listBoxRooms";
             this.listBoxRooms.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBoxRooms.Size = new System.Drawing.Size(177, 424);
+            this.listBoxRooms.Size = new System.Drawing.Size(177, 428);
             this.listBoxRooms.TabIndex = 28;
             this.listBoxRooms.SelectedIndexChanged += new System.EventHandler(this.listBoxRooms_SelectedIndexChanged);
             // 
@@ -369,9 +369,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxRooms.Controls.Add(this.listBoxRooms);
-            this.groupBoxRooms.Location = new System.Drawing.Point(4, 4);
+            this.groupBoxRooms.Location = new System.Drawing.Point(4, 0);
             this.groupBoxRooms.Name = "groupBoxRooms";
-            this.groupBoxRooms.Size = new System.Drawing.Size(183, 443);
+            this.groupBoxRooms.Size = new System.Drawing.Size(183, 447);
             this.groupBoxRooms.TabIndex = 35;
             this.groupBoxRooms.TabStop = false;
             this.groupBoxRooms.Text = "Стаи";

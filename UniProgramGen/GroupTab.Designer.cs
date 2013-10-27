@@ -34,13 +34,16 @@
             this.listBoxGroups = new System.Windows.Forms.ListBox();
             this.size = new System.Windows.Forms.Label();
             this.listBoxSubjectsOfGroups = new System.Windows.Forms.ListBox();
+            this.groupBoxGroups = new System.Windows.Forms.GroupBox();
+            this.labelSubjectsOfGroups = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStudents)).BeginInit();
+            this.groupBoxGroups.SuspendLayout();
             this.SuspendLayout();
             // 
             // AddGroup
             // 
             this.AddGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddGroup.Location = new System.Drawing.Point(553, 409);
+            this.AddGroup.Location = new System.Drawing.Point(566, 418);
             this.AddGroup.Name = "AddGroup";
             this.AddGroup.Size = new System.Drawing.Size(81, 26);
             this.AddGroup.TabIndex = 24;
@@ -50,7 +53,7 @@
             // 
             // numericUpDownStudents
             // 
-            this.numericUpDownStudents.Location = new System.Drawing.Point(265, 152);
+            this.numericUpDownStudents.Location = new System.Drawing.Point(193, 84);
             this.numericUpDownStudents.Name = "numericUpDownStudents";
             this.numericUpDownStudents.Size = new System.Drawing.Size(56, 20);
             this.numericUpDownStudents.TabIndex = 23;
@@ -58,25 +61,27 @@
             // 
             // groupName
             // 
-            this.groupName.Location = new System.Drawing.Point(15, 36);
+            this.groupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupName.Location = new System.Drawing.Point(190, 16);
             this.groupName.Name = "groupName";
-            this.groupName.Size = new System.Drawing.Size(206, 20);
+            this.groupName.Size = new System.Drawing.Size(457, 29);
             this.groupName.TabIndex = 22;
             this.groupName.TextChanged += new System.EventHandler(this.groupName_TextChanged);
             // 
             // listBoxGroups
             // 
+            this.listBoxGroups.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxGroups.FormattingEnabled = true;
-            this.listBoxGroups.Location = new System.Drawing.Point(440, 27);
+            this.listBoxGroups.Location = new System.Drawing.Point(3, 16);
             this.listBoxGroups.Name = "listBoxGroups";
-            this.listBoxGroups.Size = new System.Drawing.Size(149, 303);
+            this.listBoxGroups.Size = new System.Drawing.Size(177, 428);
             this.listBoxGroups.TabIndex = 25;
             this.listBoxGroups.SelectedIndexChanged += new System.EventHandler(this.listBoxGroups_SelectedIndexChanged);
             // 
             // size
             // 
             this.size.AutoSize = true;
-            this.size.Location = new System.Drawing.Point(262, 119);
+            this.size.Location = new System.Drawing.Point(190, 68);
             this.size.Name = "size";
             this.size.Size = new System.Drawing.Size(80, 13);
             this.size.TabIndex = 26;
@@ -85,19 +90,42 @@
             // listBoxSubjectsOfGroups
             // 
             this.listBoxSubjectsOfGroups.FormattingEnabled = true;
-            this.listBoxSubjectsOfGroups.Location = new System.Drawing.Point(15, 71);
+            this.listBoxSubjectsOfGroups.Location = new System.Drawing.Point(322, 84);
             this.listBoxSubjectsOfGroups.Name = "listBoxSubjectsOfGroups";
-            this.listBoxSubjectsOfGroups.Size = new System.Drawing.Size(210, 316);
+            this.listBoxSubjectsOfGroups.Size = new System.Drawing.Size(325, 316);
             this.listBoxSubjectsOfGroups.TabIndex = 27;
             this.listBoxSubjectsOfGroups.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjectsOfGroups_SelectedIndexChanged);
+            // 
+            // groupBoxGroups
+            // 
+            this.groupBoxGroups.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxGroups.Controls.Add(this.listBoxGroups);
+            this.groupBoxGroups.Location = new System.Drawing.Point(4, 0);
+            this.groupBoxGroups.Name = "groupBoxGroups";
+            this.groupBoxGroups.Size = new System.Drawing.Size(183, 447);
+            this.groupBoxGroups.TabIndex = 28;
+            this.groupBoxGroups.TabStop = false;
+            this.groupBoxGroups.Text = "Групи";
+            // 
+            // labelSubjectsOfGroups
+            // 
+            this.labelSubjectsOfGroups.AutoSize = true;
+            this.labelSubjectsOfGroups.Location = new System.Drawing.Point(319, 68);
+            this.labelSubjectsOfGroups.Name = "labelSubjectsOfGroups";
+            this.labelSubjectsOfGroups.Size = new System.Drawing.Size(57, 13);
+            this.labelSubjectsOfGroups.TabIndex = 29;
+            this.labelSubjectsOfGroups.Text = "Хорариум";
             // 
             // GroupTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.labelSubjectsOfGroups);
+            this.Controls.Add(this.groupBoxGroups);
             this.Controls.Add(this.listBoxSubjectsOfGroups);
             this.Controls.Add(this.size);
-            this.Controls.Add(this.listBoxGroups);
             this.Controls.Add(this.AddGroup);
             this.Controls.Add(this.numericUpDownStudents);
             this.Controls.Add(this.groupName);
@@ -105,6 +133,7 @@
             this.Size = new System.Drawing.Size(650, 450);
             this.Load += new System.EventHandler(this.GroupTab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStudents)).EndInit();
+            this.groupBoxGroups.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -118,5 +147,7 @@
         private System.Windows.Forms.ListBox listBoxGroups;
         private System.Windows.Forms.Label size;
         private System.Windows.Forms.ListBox listBoxSubjectsOfGroups;
+        private System.Windows.Forms.GroupBox groupBoxGroups;
+        private System.Windows.Forms.Label labelSubjectsOfGroups;
     }
 }
