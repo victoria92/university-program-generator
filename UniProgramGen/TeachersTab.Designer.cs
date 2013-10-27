@@ -52,6 +52,7 @@
             // 
             // textBoxTeacherName
             // 
+            this.textBoxTeacherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTeacherName.Location = new System.Drawing.Point(192, 12);
             this.textBoxTeacherName.Name = "textBoxTeacherName";
@@ -71,7 +72,7 @@
             // 
             // listBoxTeacherSaturday
             // 
-            this.listBoxTeacherSaturday.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.listBoxTeacherSaturday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxTeacherSaturday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherSaturday.FormattingEnabled = true;
             this.listBoxTeacherSaturday.ItemHeight = 18;
@@ -100,7 +101,7 @@
             // 
             // listBoxTeacherFriday
             // 
-            this.listBoxTeacherFriday.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.listBoxTeacherFriday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxTeacherFriday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherFriday.FormattingEnabled = true;
             this.listBoxTeacherFriday.ItemHeight = 18;
@@ -129,7 +130,7 @@
             // 
             // listBoxTeacherThursday
             // 
-            this.listBoxTeacherThursday.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.listBoxTeacherThursday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxTeacherThursday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherThursday.FormattingEnabled = true;
             this.listBoxTeacherThursday.ItemHeight = 18;
@@ -158,7 +159,7 @@
             // 
             // listBoxTeacherWednesday
             // 
-            this.listBoxTeacherWednesday.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.listBoxTeacherWednesday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxTeacherWednesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherWednesday.FormattingEnabled = true;
             this.listBoxTeacherWednesday.ItemHeight = 18;
@@ -187,7 +188,7 @@
             // 
             // listBoxTeacherTuesday
             // 
-            this.listBoxTeacherTuesday.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.listBoxTeacherTuesday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxTeacherTuesday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherTuesday.FormattingEnabled = true;
             this.listBoxTeacherTuesday.ItemHeight = 18;
@@ -216,7 +217,7 @@
             // 
             // listBoxTeacherMonday
             // 
-            this.listBoxTeacherMonday.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.listBoxTeacherMonday.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxTeacherMonday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxTeacherMonday.FormattingEnabled = true;
             this.listBoxTeacherMonday.ItemHeight = 18;
@@ -245,6 +246,7 @@
             // 
             // label6
             // 
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(586, 58);
             this.label6.Name = "label6";
@@ -254,6 +256,7 @@
             // 
             // label5
             // 
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(511, 58);
             this.label5.Name = "label5";
@@ -263,6 +266,7 @@
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(427, 58);
             this.label4.Name = "label4";
@@ -272,6 +276,7 @@
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(361, 58);
             this.label3.Name = "label3";
@@ -281,6 +286,7 @@
             // 
             // label2
             // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(280, 58);
             this.label2.Name = "label2";
@@ -290,6 +296,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(193, 58);
             this.label1.Name = "label1";
@@ -310,6 +317,9 @@
             // 
             // groupBoxTeachers
             // 
+            this.groupBoxTeachers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxTeachers.Controls.Add(this.listBoxTeachers);
             this.groupBoxTeachers.Location = new System.Drawing.Point(3, 3);
             this.groupBoxTeachers.Name = "groupBoxTeachers";
