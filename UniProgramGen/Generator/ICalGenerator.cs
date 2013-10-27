@@ -21,6 +21,7 @@ namespace UniProgramGen.Generator
             DDay.iCal.iCalendar iCal = new DDay.iCal.iCalendar();
             var t = new DBManager();
             t.initOutputData();
+            t.initOutputData();
             foreach(ScheduledTimeSlot[] solution in (t.solutions))
             {
                 for (int i = 0; i < solution.Length; i++)
