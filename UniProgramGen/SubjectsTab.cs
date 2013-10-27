@@ -23,7 +23,6 @@ namespace UniProgramGen
             listBoxTeachers.DataSource = new List<Teacher> { teacher };
             listBoxSubjects.DisplayMember = "Name";
             listBoxSubjects.DataSource = new List<Subject> { subject };
-
         }
 
         private Subject subject;
@@ -48,10 +47,7 @@ namespace UniProgramGen
 
         private void checkedListBoxRoomRequirements_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < checkedListBoxRoomRequirements.Items.Count; i++)
-            {
-                subject.roomTypes.Add((RoomType)checkedListBoxRoomRequirements.Items[i]);
-            }
+            subject.roomTypes.Add((RoomType)checkedListBoxRoomRequirements.SelectedIndex);
         }
 
         private void numericUpDownDuration_ValueChanged(object sender, EventArgs e)

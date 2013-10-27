@@ -39,10 +39,9 @@ namespace UniProgramGen
 
         private void checkedListRoomTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < checkedListRoomTypes.Items.Count; i++)
-            {
-                room.types.Add((RoomType)checkedListRoomTypes.Items[i]);
-            }
+            if (room.types == null)
+                room.types = new HashSet<RoomType>();
+            room.types.Add((RoomType)checkedListRoomTypes.SelectedIndex);
         }
 
         private void numericUpDownCapacity_ValueChanged(object sender, EventArgs e)
