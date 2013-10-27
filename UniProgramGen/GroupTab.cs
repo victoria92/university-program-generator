@@ -11,10 +11,12 @@ namespace UniProgramGen
         public GroupTab()
         {
             InitializeComponent();
+
+            Groups = new List<Group>();
             bindingSource.DataSource = Groups;
 
-            listBoxSubjectsOfGroups.DisplayMember = "name";
-            listBoxSubjectsOfGroups.DataSource = bindingSource;
+            listBoxGroups.DisplayMember = "name";
+            listBoxGroups.DataSource = bindingSource;
         }
 
         public List<Group> Groups { get; private set; }
@@ -23,7 +25,19 @@ namespace UniProgramGen
 
         private Group previouslySelectedGroup = null;
 
-        private void listBoxSubjectsOfGroups_SelectedIndexChanged(object sender, EventArgs e)
+        public void RefreshSubjects()
+        {
+            listBoxSubjectsOfGroups.DisplayMember = "";
+            listBoxSubjectsOfGroups.DisplayMember = "name";
+        }
+
+        public void InitializeBindingSources(BindingSource subjectsBindingSource)
+        {
+            listBoxSubjectsOfGroups.DisplayMember = "name";
+            listBoxSubjectsOfGroups.DataSource = subjectsBindingSource;
+        }
+
+        private void listBoxGroups_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedGroup = listBoxGroups.SelectedItem as Group;
 
@@ -66,8 +80,8 @@ namespace UniProgramGen
             group.name = groupName.Text;
             group.size = (uint) numericUpDownStudents.Value;
 
-            listBoxSubjectsOfGroups.DisplayMember = "";
-            listBoxSubjectsOfGroups.DisplayMember = "name";
+            listBoxGroups.DisplayMember = "";
+            listBoxGroups.DisplayMember = "name";
         }
 
         private void AddGroup_Click(object sender, EventArgs e)
@@ -75,8 +89,8 @@ namespace UniProgramGen
             Groups.Add(new Group(null, 0, null));
             UpdateGroup(Groups.Last());
 
-            listBoxSubjectsOfGroups.ClearSelected();
-            listBoxSubjectsOfGroups_SelectedIndexChanged(null, null);
+            listBoxGroups.ClearSelected();
+            listBoxGroups_SelectedIndexChanged(null, null);
         }
     }
 }

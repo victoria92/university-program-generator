@@ -20,6 +20,8 @@ namespace UniProgramGen
             listBoxTeachers.DataSource = bindingSource;
         }
 
+        private Action refreshSubjectsTab;
+
         public List<Teacher> Teachers { get; private set; }
 
         public BindingSource bindingSource = new BindingSource();
@@ -32,10 +34,9 @@ namespace UniProgramGen
 
             if (selectedTeacher == null)
             {
-                if (previouslySelectedTeacher!= null)
+                if (previouslySelectedTeacher != null)
                 {
                     UpdateTeacher(previouslySelectedTeacher);
-                    previouslySelectedTeacher = null;
                 }
 
                 listBoxTeacherMonday.ClearSelected();
@@ -91,11 +92,20 @@ namespace UniProgramGen
 
         private void UpdateTeacher(Teacher teacher)
         {
+            previouslySelectedTeacher = null;
+
             teacher.requirements = new Requirements(1, GetTeacherAvailability(), null);
             teacher.name = textBoxTeacherName.Text;
 
             listBoxTeachers.DisplayMember = "";
             listBoxTeachers.DisplayMember = "name";
+
+            refreshSubjectsTab();
+        }
+
+        internal void SetSubjectsRefreshTeachers(Action action)
+        {
+            refreshSubjectsTab = action;
         }
     }
 }

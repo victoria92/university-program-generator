@@ -77,6 +77,7 @@
             this.listBoxGroups.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxGroups.Size = new System.Drawing.Size(177, 428);
             this.listBoxGroups.TabIndex = 25;
+            this.listBoxGroups.SelectedIndexChanged += new System.EventHandler(this.listBoxGroups_SelectedIndexChanged);
             // 
             // size
             // 
@@ -97,7 +98,6 @@
             this.listBoxSubjectsOfGroups.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxSubjectsOfGroups.Size = new System.Drawing.Size(325, 316);
             this.listBoxSubjectsOfGroups.TabIndex = 27;
-            this.listBoxSubjectsOfGroups.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjectsOfGroups_SelectedIndexChanged);
             // 
             // groupBoxGroups
             // 

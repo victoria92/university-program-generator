@@ -19,15 +19,25 @@ namespace UniProgramGen
             listBoxSubjects.DataSource = subjectsBindingSource;
         }
 
+        public void RefreshTeachers()
+        {
+            LB_Teachers.DisplayMember = "";
+            LB_Teachers.DisplayMember = "name";
+        }
+
         public void InitializeBindingSources(BindingSource teachersBindingSource)
         {
             LB_Teachers.DisplayMember = "name";
             LB_Teachers.DataSource = teachersBindingSource;
         }
 
+        private Action refreshGroupsTabSubjects;
+
         public BindingSource subjectsBindingSource = new BindingSource();
 
         private Subject previouslySelectedSubject = null;
+
+        public List<Subject> Subjects { get; private set; }
 
         private void ClearCheckedListRoomTypes()
         {
@@ -103,8 +113,13 @@ namespace UniProgramGen
 
             listBoxSubjects.DisplayMember = "";
             listBoxSubjects.DisplayMember = "name";
+
+            refreshGroupsTabSubjects();
         }
 
-        public List<Subject> Subjects { get; private set; }
+        internal void SetSubjectsRefreshTeachers(Action action)
+        {
+            refreshGroupsTabSubjects = action;
+        }
     }
 }

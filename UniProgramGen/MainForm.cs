@@ -17,6 +17,10 @@ namespace UniProgramGen
             InitializeComponent();
 
             TAB_Subjects.InitializeBindingSources(TABS_Teachers.bindingSource);
+            TABS_Teachers.SetSubjectsRefreshTeachers(TAB_Subjects.RefreshTeachers);
+
+            TAB_Groups.InitializeBindingSources(TAB_Subjects.subjectsBindingSource);
+            TAB_Subjects.SetSubjectsRefreshTeachers(TAB_Groups.RefreshSubjects);
         }
     }
 }
