@@ -8,7 +8,8 @@ using UniProgramGen.Generator;
 
 namespace UnitTests
 {
-    class ICalGenUnitTests
+    [TestClass]
+    public class ICalGenUnitTests
     {
         [TestMethod]
         public void testReadingFile()

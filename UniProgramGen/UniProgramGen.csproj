@@ -67,6 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\Group.cs" />
+    <Compile Include="Data\GroupSolution.cs" />
     <Compile Include="Data\Requirements.cs" />
     <Compile Include="Data\Room.cs" />
     <Compile Include="Data\RoomType.cs" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -8,18 +9,20 @@ namespace UniProgramGen.Generator
 {
     public class ICalGenerator
     {
-        byte[] buffer;
         
         public ICalGenerator()
         {
 
         }
+        public string loadGeneratedJSON()
+        {
+            string json_output = File.ReadAllText(@"..\..\..\UniProgramGen\db\program_generated_example.js");
+            return json_output;
+        }
 
         public void readGeneratedJSON()
         {
-            string json_output = File.ReadAllText(@"db\program_is.json");
-            Console.WriteLine(json_output);
-
+            DDay.iCal.iCalendar iCal = new DDay.iCal.iCalendar();
         }
     }
 }
