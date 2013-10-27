@@ -20,7 +20,7 @@ namespace UniProgramGen.Generator
         {
             DDay.iCal.iCalendar iCal = new DDay.iCal.iCalendar();
             var t = new DBManager();
-            t.initOutputData();
+            t.initInputData();
             t.initOutputData();
             foreach(ScheduledTimeSlot[] solution in (t.solutions))
             {
