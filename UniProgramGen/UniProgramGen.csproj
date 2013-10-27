@@ -135,6 +135,7 @@
       <DependentUpon>TeachersTab.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="db\program_is.json" />
+    <None Include="Properties\DataSources\UniProgramGen.Data.Teacher.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

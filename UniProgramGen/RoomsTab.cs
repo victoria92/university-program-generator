@@ -16,103 +16,69 @@ namespace UniProgramGen
         public RoomsTab()
         {
             InitializeComponent();
-            TimeSlot time = new TimeSlot(DayOfWeek.Monday, 7, 9);
-            List<TimeSlot> available = new List<TimeSlot> { time };
-            Room r = new Room(null, 20, available, "200");
-            listBoxRooms.DisplayMember = "NameOrNumber";
-            listBoxRooms.DataSource = new List<Room> { r };
-        }
 
-        Room room;
+            Rooms = new List<Room>();
+        }
 
         private void listBoxRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Room curItem = (Room)listBoxRooms.SelectedItem;
-            room = curItem;
         }
 
-        private void roomName_TextChanged(object sender, EventArgs e)
+        private List<TimeSlot> getListBoxRoomDayTimeSlot(ListBox listBox, DayOfWeek dayOfWeek)
         {
-            string curItem = roomName.Text;
-            room.nameOrNumber = curItem;
+            uint startHour = 0;
+            uint endHour = 0;
+            uint previousHour = 0;
+
+            List<TimeSlot> result = new List<TimeSlot>();
+
+            foreach (string selectedItem in listBox.SelectedItems)
+            {
+                uint hour = Convert.ToUInt32(selectedItem.Remove(selectedItem.Length - 3));
+                if (hour != previousHour + 1) // new Timeslot
+                {
+                    if (startHour != 0)
+                    {
+                        result.Add(new TimeSlot(dayOfWeek, startHour, endHour));
+                    }
+                    startHour = hour;
+                }
+
+                endHour = hour + 1;
+                previousHour = hour;
+            }
+            return result;
         }
 
-        private void checkedListRoomTypes_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (room.types == null)
-                room.types = new HashSet<RoomType>();
-            room.types.Add((RoomType)checkedListRoomTypes.SelectedIndex);
-        }
-
-        private void numericUpDownCapacity_ValueChanged(object sender, EventArgs e)
-        {
-            room.capacity = (UInt32)numericUpDownCapacity.Value;
-        }
-
-        private void listBoxRoomMonday_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string curItem = listBoxRoomMonday.SelectedItem.ToString();
-            uint start_hour = Convert.ToUInt32(curItem);
-            TimeSlot time = new TimeSlot(DayOfWeek.Monday, start_hour, start_hour + 1);
-            room.availability.Add(time);
-        }
-
-        private void listBoxRoomTuesday_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string curItem = listBoxRoomTuesday.SelectedItem.ToString();
-            uint start_hour = Convert.ToUInt32(curItem);
-            TimeSlot time = new TimeSlot(DayOfWeek.Tuesday, start_hour, start_hour + 1);
-            room.availability.Add(time);
-        }
-
-        private void listBoxRoomWednesday_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string curItem = listBoxRoomWednesday.SelectedItem.ToString();
-            uint start_hour = Convert.ToUInt32(curItem);
-            TimeSlot time = new TimeSlot(DayOfWeek.Wednesday, start_hour, start_hour + 1);
-            room.availability.Add(time);
-        }
-
-        private void listBoxRoomThursday_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string curItem = listBoxRoomThursday.SelectedItem.ToString();
-            uint start_hour = Convert.ToUInt32(curItem);
-            TimeSlot time = new TimeSlot(DayOfWeek.Thursday, start_hour, start_hour + 1);
-            room.availability.Add(time);
-        }
-
-        private void listBoxRoomFriday_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string curItem = listBoxRoomFriday.SelectedItem.ToString();
-            uint start_hour = Convert.ToUInt32(curItem);
-            TimeSlot time = new TimeSlot(DayOfWeek.Friday, start_hour, start_hour + 1);
-            room.availability.Add(time);
-        }
-
-        private void listBoxRoomSaturday_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string curItem = listBoxRoomSaturday.SelectedItem.ToString();
-            uint start_hour = Convert.ToUInt32(curItem);
-            TimeSlot time = new TimeSlot(DayOfWeek.Saturday, start_hour, start_hour + 1);
-            room.availability.Add(time);
-        }
+        public List<Room> Rooms { get; private set; }
 
         private void buttonAddRoom_Click(object sender, EventArgs e)
         {
-            Rooms.Add(room);
-        }
+            var mondayAvailableTime = getListBoxRoomDayTimeSlot(listBoxRoomMonday, DayOfWeek.Monday);
+            var tuesdayAvailableTime = getListBoxRoomDayTimeSlot(listBoxRoomTuesday, DayOfWeek.Monday);
+            var wednesdayAvailableTime = getListBoxRoomDayTimeSlot(listBoxRoomWednesday, DayOfWeek.Monday);
+            var thursdayAvailableTime = getListBoxRoomDayTimeSlot(listBoxRoomThursday, DayOfWeek.Monday);
+            var fridayAvailableTime = getListBoxRoomDayTimeSlot(listBoxRoomFriday, DayOfWeek.Monday);
+            var saturdayAvailableTime = getListBoxRoomDayTimeSlot(listBoxRoomSaturday, DayOfWeek.Monday);
 
-        public List<Room> Rooms
-        {
-            get
+            List<TimeSlot> roomAvailability = new List<TimeSlot>();
+            roomAvailability.AddRange(mondayAvailableTime);
+            roomAvailability.AddRange(mondayAvailableTime);
+            roomAvailability.AddRange(mondayAvailableTime);
+            roomAvailability.AddRange(mondayAvailableTime);
+            roomAvailability.AddRange(mondayAvailableTime);
+            roomAvailability.AddRange(mondayAvailableTime);
+
+            HashSet<RoomType> roomTypes = new HashSet<RoomType>();
+            foreach (int selectedIndex in checkedListRoomTypes.SelectedIndices)
             {
-                return Rooms;
+                roomTypes.Add((RoomType)selectedIndex);
             }
-            set
-            {
-                Rooms = value;
-                listBoxRooms.DataSource = value;
-            }
+
+            Rooms.Add(new Room(roomTypes, (uint) numericUpDownCapacity.Value, roomAvailability, roomName.Text));
+
+            listBoxRooms.DisplayMember = "NameOrNumber";
+            listBoxRooms.DataSource = Rooms;
         }
     }
 }

@@ -17,47 +17,35 @@ namespace UniProgramGen
             InitializeComponent();
             List<Teacher> l = new List<Teacher>();
             HashSet<RoomType> r = new HashSet<RoomType>();
-            subject = new Subject(r, l, "Algebra", 2);
             Teacher teacher = new Teacher(null, "Dyadov");
             listBoxTeachers.DisplayMember = "Name";
             listBoxTeachers.DataSource = new List<Teacher> { teacher };
             listBoxSubjects.DisplayMember = "Name";
-            listBoxSubjects.DataSource = new List<Subject> { subject };
         }
-
-        private Subject subject;
 
         private void listBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
             Subject curItem = (Subject)listBoxSubjects.SelectedItem;
-            subject = curItem;
-        }
-
-        private void textBoxSubjectName_TextChanged(object sender, EventArgs e)
-        {
-            string curItem = textBoxSubjectName.Text;
-            subject.name = curItem;
-        }
-
-        private void listBoxTeachers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Teacher curItem = (Teacher)listBoxTeachers.SelectedItem;
-            subject.teachers.Add(curItem);
         }
 
         private void checkedListBoxRoomRequirements_SelectedIndexChanged(object sender, EventArgs e)
         {
-            subject.roomTypes.Add((RoomType)checkedListBoxRoomRequirements.SelectedIndex);
-        }
-
-        private void numericUpDownDuration_ValueChanged(object sender, EventArgs e)
-        {
-            subject.duration = (UInt32)numericUpDownDuration.Value;
+            //int index = checkedListBoxRoomRequirements.SelectedIndex;
+            //CheckState state = checkedListBoxRoomRequirements.GetItemCheckState(index);
+            //if (state == CheckState.Unchecked)
+            //{
+            //    subject.roomTypes.Add((RoomType)index);
+            //    checkedListBoxRoomRequirements.SetItemCheckState(index, CheckState.Checked);
+            //}
+            //else
+            //{
+            //    subject.roomTypes.Remove((RoomType)index);
+            //    checkedListBoxRoomRequirements.SetItemCheckState(index, CheckState.Unchecked);
+            //}
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Subjects.Add(subject);
         }
 
         private List<Subject> subjects;
@@ -66,7 +54,7 @@ namespace UniProgramGen
         {
             get
             {
-                return Subjects;
+                return subjects;
             }
             set
             {

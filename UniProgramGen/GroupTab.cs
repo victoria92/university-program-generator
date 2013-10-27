@@ -50,15 +50,17 @@ namespace UniProgramGen
             Groups.Add(group);
         }
 
+        private List<Group> groups;
+
         public List<Group> Groups
         {
             get
             {
-                return Groups;
+                return groups;
             }
             set
             {
-                Groups = value;
+                groups = value;
                 listBoxGroups.DataSource = value;
             }
         }

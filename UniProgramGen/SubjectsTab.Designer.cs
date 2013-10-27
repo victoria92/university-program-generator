@@ -70,7 +70,6 @@
             this.listBoxTeachers.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTeachers.Size = new System.Drawing.Size(120, 95);
             this.listBoxTeachers.TabIndex = 15;
-            this.listBoxTeachers.SelectedIndexChanged += new System.EventHandler(this.listBoxTeachers_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -87,7 +86,6 @@
             this.numericUpDownDuration.Name = "numericUpDownDuration";
             this.numericUpDownDuration.Size = new System.Drawing.Size(48, 20);
             this.numericUpDownDuration.TabIndex = 13;
-            this.numericUpDownDuration.ValueChanged += new System.EventHandler(this.numericUpDownDuration_ValueChanged);
             // 
             // textBoxSubjectName
             // 
@@ -95,7 +93,6 @@
             this.textBoxSubjectName.Name = "textBoxSubjectName";
             this.textBoxSubjectName.Size = new System.Drawing.Size(313, 20);
             this.textBoxSubjectName.TabIndex = 12;
-            this.textBoxSubjectName.TextChanged += new System.EventHandler(this.textBoxSubjectName_TextChanged);
             // 
             // listBoxSubjects
             // 
@@ -112,7 +109,7 @@
             "УП, Биров, Инф, 7курс лекции"});
             this.listBoxSubjects.Location = new System.Drawing.Point(7, 21);
             this.listBoxSubjects.Name = "listBoxSubjects";
-            this.listBoxSubjects.Size = new System.Drawing.Size(163, 329);
+            this.listBoxSubjects.Size = new System.Drawing.Size(163, 394);
             this.listBoxSubjects.TabIndex = 11;
             this.listBoxSubjects.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjects_SelectedIndexChanged);
             // 
@@ -133,7 +130,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(530, 334);
+            this.buttonAdd.Location = new System.Drawing.Point(561, 404);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(81, 26);
             this.buttonAdd.TabIndex = 9;
@@ -155,7 +152,7 @@
             this.Controls.Add(this.checkedListBoxRoomRequirements);
             this.Controls.Add(this.buttonAdd);
             this.Name = "SubjectsTab";
-            this.Size = new System.Drawing.Size(619, 380);
+            this.Size = new System.Drawing.Size(650, 450);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDuration)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

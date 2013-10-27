@@ -40,7 +40,7 @@
             // AddGroup
             // 
             this.AddGroup.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.AddGroup.Location = new System.Drawing.Point(508, 361);
+            this.AddGroup.Location = new System.Drawing.Point(553, 409);
             this.AddGroup.Name = "AddGroup";
             this.AddGroup.Size = new System.Drawing.Size(81, 26);
             this.AddGroup.TabIndex = 24;
@@ -102,7 +102,7 @@
             this.Controls.Add(this.numericUpDownStudents);
             this.Controls.Add(this.groupName);
             this.Name = "GroupTab";
-            this.Size = new System.Drawing.Size(605, 402);
+            this.Size = new System.Drawing.Size(650, 450);
             this.Load += new System.EventHandler(this.GroupTab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStudents)).EndInit();
             this.ResumeLayout(false);
