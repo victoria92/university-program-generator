@@ -61,6 +61,7 @@
             // 
             // listBoxTeachers
             // 
+            this.listBoxTeachers.DisplayMember = "name";
             this.listBoxTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxTeachers.FormattingEnabled = true;
             this.listBoxTeachers.Location = new System.Drawing.Point(3, 16);

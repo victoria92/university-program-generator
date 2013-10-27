@@ -288,6 +288,7 @@
             // 
             // listBoxRooms
             // 
+            this.listBoxRooms.DisplayMember = "nameOrNumber";
             this.listBoxRooms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxRooms.FormattingEnabled = true;
             this.listBoxRooms.Location = new System.Drawing.Point(3, 16);

@@ -17,9 +17,8 @@ namespace UniProgramGen
 
         public void RefreshTeachers()
         {
-            string displayMember = LB_Teachers.DisplayMember;
             LB_Teachers.DisplayMember = "";
-            LB_Teachers.DisplayMember = displayMember;
+            LB_Teachers.DisplayMember = "name";
         }
 
         public void RefreshSubjects()

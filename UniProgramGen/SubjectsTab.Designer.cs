@@ -46,6 +46,7 @@
             // 
             // LB_Teachers
             // 
+            this.LB_Teachers.DisplayMember = "name";
             this.LB_Teachers.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LB_Teachers.FormattingEnabled = true;
             this.LB_Teachers.Location = new System.Drawing.Point(3, 16);
@@ -121,7 +122,7 @@
             // 
             // listBoxSubjects
             // 
-            this.listBoxSubjects.DisplayMember = "Name";
+            this.listBoxSubjects.DisplayMember = "name";
             this.listBoxSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxSubjects.FormattingEnabled = true;
             this.listBoxSubjects.Location = new System.Drawing.Point(3, 16);
