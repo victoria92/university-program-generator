@@ -5,9 +5,8 @@ using System.Text;
 
 namespace UniProgramGen.Data
 {
-    class GroupSolution
+    interface MongoDocument
     {
-        public string group_name;
-        
+        string Id();
     }
 }

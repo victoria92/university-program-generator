@@ -5,6 +5,7 @@ using UniProgramGen.Data;
 using UniProgramGen.Helpers;
 using Newtonsoft.Json;
 using UniProgramGen.Generator;
+using MongoDB.Driver;
 
 namespace UnitTests
 {
@@ -16,6 +17,17 @@ namespace UnitTests
         private List<Room> rooms;
         private List<Requirements> requirements_list;
         private List<Teacher> teachers;
+
+        public void SetUp()
+        {
+            Connect();
+        }
+
+        private void Connect()
+        {
+            var server = MongoServer.Create();
+            var moviesDatabase = server.GetDatabase("movies_db");
+        }
 
         public void initalizeExampleData()
         {

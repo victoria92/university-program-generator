@@ -6,7 +6,7 @@ using UniProgramGen.Generator;
 
 namespace UniProgramGen.Data
 {
-    public class TestData
+    public class DBManager
     {
         // rooms, subjects, teachers, groups
         public IEnumerable<Room> rooms;
@@ -16,7 +16,7 @@ namespace UniProgramGen.Data
 
         public IEnumerable<ScheduledTimeSlot[]> solutions;
 
-        public TestData()
+        public void tTestData()
         {
             List<Room> rooms = new List<Room>();
 

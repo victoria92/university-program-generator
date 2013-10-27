@@ -21,8 +21,9 @@ namespace UniProgramGen.Generator
         public void ExportSolution()
         {
             DDay.iCal.iCalendar iCal = new DDay.iCal.iCalendar();
-
-            foreach(ScheduledTimeSlot[] solution in (new TestData().solutions))
+            var t = new DBManager();
+            t.tTestData();
+            foreach(ScheduledTimeSlot[] solution in (t.solutions))
             {
             for (int i = 0; i < solution.Length; i++)
             {
