@@ -124,7 +124,7 @@ namespace UniProgramGen
             var iCalGen = new ICalGenerator();
             iCalGen.ExportSolution();
             string pr = System.Environment.GetEnvironmentVariable("PROGRAMFILES");
-            System.Diagnostics.Process.Start(pr + @"\Microsoft Office 15\root\office15\OUTLOOK.EXE", "/vcal solution.ics");
+            System.Diagnostics.Process.Start("explorer", "solution.ics");
         }
     }
 }
