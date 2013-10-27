@@ -45,7 +45,7 @@ namespace UnitTests
             var teacher1freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Monday, 12, 13));
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 12, 20));
-            var teacher1rooms = new List<Room>();
+            var teacher1rooms = new HashSet<Room>();
             teacher1rooms.Add(rooms[1]);
             teacher1rooms.Add(rooms[2]);
             var teacher1requirements = new Requirements(0.3, teacher1freeTime, teacher1rooms);
@@ -54,7 +54,7 @@ namespace UnitTests
             var teacher2freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
             teacher2freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Sunday, 11, 18));
             teacher2freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Tuesday, 12, 20));
-            var teacher2rooms = new List<Room>();
+            var teacher2rooms = new HashSet<Room>();
             teacher2rooms.Add(rooms[0]);
             var teacher2requirements = new Requirements(1, teacher2freeTime, teacher2rooms);
             teachers.Add(new Teacher(teacher2requirements, "Pesho Kelesho"));

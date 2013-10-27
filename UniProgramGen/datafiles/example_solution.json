@@ -64,6 +64,50 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
+      "Day": 2,
+      "StartHour": 7,
+      "EndHour": 10
+    },
+    "groups": [
+      {
+        "size": 22,
+        "name": "Group 1"
+      },
+      {
+        "size": 20,
+        "name": "Group 2"
+      },
+      {
+        "size": 20,
+        "name": "Group 3"
+      },
+      {
+        "size": 18,
+        "name": "Group 4"
+      }
+    ]
+  },
+  {
+    "subject": {
+      "roomTypes": [
+        "Lecture"
+      ],
+      "teachers": [
+        {
+          "name": "M. Todorova"
+        }
+      ],
+      "name": "UP",
+      "duration": 3
+    },
+    "room": {
+      "types": [
+        "Lecture"
+      ],
+      "capacity": 100,
+      "nameOrNumber": "101"
+    },
+    "timeSlot": {
       "Day": 1,
       "StartHour": 11,
       "EndHour": 14
@@ -94,51 +138,7 @@
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
-        }
-      ],
-      "name": "UP",
-      "duration": 3
-    },
-    "room": {
-      "types": [
-        "Lecture"
-      ],
-      "capacity": 100,
-      "nameOrNumber": "229"
-    },
-    "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 17
-    },
-    "groups": [
-      {
-        "size": 22,
-        "name": "Group 1"
-      },
-      {
-        "size": 20,
-        "name": "Group 2"
-      },
-      {
-        "size": 20,
-        "name": "Group 3"
-      },
-      {
-        "size": 18,
-        "name": "Group 4"
-      }
-    ]
-  },
-  {
-    "subject": {
-      "roomTypes": [
-        "Lecture"
-      ],
-      "teachers": [
-        {
-          "name": "E. Velikova"
+          "name": "G. Georgiev"
         }
       ],
       "name": "DStr",
@@ -152,9 +152,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 17,
-      "EndHour": 20
+      "Day": 3,
+      "StartHour": 7,
+      "EndHour": 10
     },
     "groups": [
       {
@@ -178,11 +178,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDis1"
         }
       ],
       "name": "DIS-upr-1",
@@ -190,15 +190,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
       "Day": 1,
-      "StartHour": 20,
-      "EndHour": 22
+      "StartHour": 14,
+      "EndHour": 16
     },
     "groups": [
       {
@@ -210,11 +210,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "E. Velikova"
+          "name": "AsistentAlgebra1"
         }
       ],
       "name": "Algebra-upr-1",
@@ -222,15 +222,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
       "Day": 2,
-      "StartHour": 7,
-      "EndHour": 9
+      "StartHour": 10,
+      "EndHour": 12
     },
     "groups": [
       {
@@ -242,11 +242,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "Computer"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentUP1"
         }
       ],
       "name": "UP-upr-1",
@@ -254,15 +254,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
-      "Day": 2,
-      "StartHour": 9,
-      "EndHour": 11
+      "Day": 1,
+      "StartHour": 16,
+      "EndHour": 18
     },
     "groups": [
       {
@@ -274,11 +274,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "Computer"
       ],
       "teachers": [
         {
-          "name": "E. Velikova"
+          "name": "AsistentUPp1"
         }
       ],
       "name": "UP-pr-1",
@@ -286,15 +286,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
       "Day": 2,
-      "StartHour": 11,
-      "EndHour": 13
+      "StartHour": 12,
+      "EndHour": 14
     },
     "groups": [
       {
@@ -306,11 +306,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDStr1"
         }
       ],
       "name": "DStr-upr-1",
@@ -318,15 +318,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
-      "Day": 2,
-      "StartHour": 13,
-      "EndHour": 15
+      "Day": 3,
+      "StartHour": 10,
+      "EndHour": 12
     },
     "groups": [
       {
@@ -338,11 +338,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDis2"
         }
       ],
       "name": "DIS-upr-2",
@@ -350,15 +350,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
-      "Day": 2,
-      "StartHour": 15,
-      "EndHour": 17
+      "Day": 4,
+      "StartHour": 7,
+      "EndHour": 9
     },
     "groups": [
       {
@@ -370,11 +370,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "E. Velikova"
+          "name": "AsistentAlgebra2"
         }
       ],
       "name": "Algebra-upr-2",
@@ -382,15 +382,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
-      "Day": 2,
-      "StartHour": 17,
-      "EndHour": 19
+      "Day": 5,
+      "StartHour": 7,
+      "EndHour": 9
     },
     "groups": [
       {
@@ -402,11 +402,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "Computer"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentUP2"
         }
       ],
       "name": "UP-upr-2",
@@ -414,15 +414,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
-      "Day": 2,
-      "StartHour": 19,
-      "EndHour": 21
+      "Day": 3,
+      "StartHour": 10,
+      "EndHour": 12
     },
     "groups": [
       {
@@ -434,11 +434,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "Computer"
       ],
       "teachers": [
         {
-          "name": "E. Velikova"
+          "name": "AsistentUPp2"
         }
       ],
       "name": "UP-pr-2",
@@ -446,15 +446,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
-      "Day": 3,
-      "StartHour": 7,
-      "EndHour": 9
+      "Day": 4,
+      "StartHour": 9,
+      "EndHour": 11
     },
     "groups": [
       {
@@ -466,11 +466,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDStr2"
         }
       ],
       "name": "DStr-upr-2",
@@ -478,15 +478,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
-      "Day": 3,
-      "StartHour": 9,
-      "EndHour": 11
+      "Day": 1,
+      "StartHour": 16,
+      "EndHour": 18
     },
     "groups": [
       {
@@ -498,11 +498,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDis3"
         }
       ],
       "name": "DIS-upr-3",
@@ -510,15 +510,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
-      "Day": 3,
-      "StartHour": 11,
-      "EndHour": 13
+      "Day": 2,
+      "StartHour": 12,
+      "EndHour": 14
     },
     "groups": [
       {
@@ -530,11 +530,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "E. Velikova"
+          "name": "AsistentAlgebra3"
         }
       ],
       "name": "Algebra-upr-3",
@@ -542,15 +542,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
       "Day": 3,
-      "StartHour": 13,
-      "EndHour": 15
+      "StartHour": 12,
+      "EndHour": 14
     },
     "groups": [
       {
@@ -562,11 +562,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "Computer"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentUP3"
         }
       ],
       "name": "UP-upr-3",
@@ -574,15 +574,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
-      "Day": 3,
-      "StartHour": 15,
-      "EndHour": 17
+      "Day": 5,
+      "StartHour": 7,
+      "EndHour": 9
     },
     "groups": [
       {
@@ -594,11 +594,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "Computer"
       ],
       "teachers": [
         {
-          "name": "E. Velikova"
+          "name": "AsistentUPp3"
         }
       ],
       "name": "UP-pr-3",
@@ -606,15 +606,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
-      "Day": 3,
-      "StartHour": 17,
-      "EndHour": 19
+      "Day": 1,
+      "StartHour": 14,
+      "EndHour": 16
     },
     "groups": [
       {
@@ -626,11 +626,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDStr3"
         }
       ],
       "name": "DStr-upr-3",
@@ -638,15 +638,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
-      "Day": 3,
-      "StartHour": 19,
-      "EndHour": 21
+      "Day": 4,
+      "StartHour": 9,
+      "EndHour": 11
     },
     "groups": [
       {
@@ -658,11 +658,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDis4"
         }
       ],
       "name": "DIS-upr-4",
@@ -670,45 +670,13 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "03"
     },
     "timeSlot": {
-      "Day": 4,
-      "StartHour": 7,
-      "EndHour": 9
-    },
-    "groups": [
-      {
-        "size": 18,
-        "name": "Group 4"
-      }
-    ]
-  },
-  {
-    "subject": {
-      "roomTypes": [
-        "Lecture"
-      ],
-      "teachers": [
-        {
-          "name": "E. Velikova"
-        }
-      ],
-      "name": "Algebra-upr-4",
-      "duration": 2
-    },
-    "room": {
-      "types": [
-        "Lecture"
-      ],
-      "capacity": 100,
-      "nameOrNumber": "229"
-    },
-    "timeSlot": {
-      "Day": 4,
+      "Day": 5,
       "StartHour": 9,
       "EndHour": 11
     },
@@ -722,11 +690,43 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentAlgebra4"
+        }
+      ],
+      "name": "Algebra-upr-4",
+      "duration": 2
+    },
+    "room": {
+      "types": [
+        "SmallRoom"
+      ],
+      "capacity": 24,
+      "nameOrNumber": "03"
+    },
+    "timeSlot": {
+      "Day": 1,
+      "StartHour": 18,
+      "EndHour": 20
+    },
+    "groups": [
+      {
+        "size": 18,
+        "name": "Group 4"
+      }
+    ]
+  },
+  {
+    "subject": {
+      "roomTypes": [
+        "Computer"
+      ],
+      "teachers": [
+        {
+          "name": "AsistentUP4"
         }
       ],
       "name": "UP-upr-4",
@@ -734,15 +734,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
-      "Day": 4,
-      "StartHour": 11,
-      "EndHour": 13
+      "Day": 2,
+      "StartHour": 10,
+      "EndHour": 12
     },
     "groups": [
       {
@@ -754,11 +754,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "Computer"
       ],
       "teachers": [
         {
-          "name": "E. Velikova"
+          "name": "AsistentUPp4"
         }
       ],
       "name": "UP-pr-4",
@@ -766,15 +766,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "Computer"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 24,
+      "nameOrNumber": "321"
     },
     "timeSlot": {
-      "Day": 4,
-      "StartHour": 13,
-      "EndHour": 15
+      "Day": 2,
+      "StartHour": 14,
+      "EndHour": 16
     },
     "groups": [
       {
@@ -786,11 +786,11 @@
   {
     "subject": {
       "roomTypes": [
-        "Lecture"
+        "SmallRoom"
       ],
       "teachers": [
         {
-          "name": "G. Aleksandrov"
+          "name": "AsistentDStr4"
         }
       ],
       "name": "DStr-upr-4",
@@ -798,15 +798,15 @@
     },
     "room": {
       "types": [
-        "Lecture"
+        "SmallRoom"
       ],
-      "capacity": 100,
-      "nameOrNumber": "229"
+      "capacity": 20,
+      "nameOrNumber": "308"
     },
     "timeSlot": {
-      "Day": 4,
-      "StartHour": 15,
-      "EndHour": 17
+      "Day": 1,
+      "StartHour": 14,
+      "EndHour": 16
     },
     "groups": [
       {

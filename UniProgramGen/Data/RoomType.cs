@@ -10,6 +10,7 @@ namespace UniProgramGen.Data
         Lecture,
         Computer,
         Projector,
-        Komin
+        Komin,
+        SmallRoom,
     }
 }

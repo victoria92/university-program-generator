@@ -14,7 +14,7 @@ namespace UnitTests
     {
         private HashSet<RoomType> organic_room_types;
         private List<TimeSlot> available_timeslots;
-        private List<Room> rooms;
+        private HashSet<Room> rooms;
         private List<Requirements> requirements_list;
         private List<Teacher> teachers;
 
@@ -48,7 +48,7 @@ namespace UnitTests
             if(rooms == null)
             {
                 var room = new Room(organic_room_types, 150, available_timeslots, "ХФ210");
-                rooms = new List<Room>();
+                rooms = new HashSet<Room>();
                 rooms.Add(room);
             }
 

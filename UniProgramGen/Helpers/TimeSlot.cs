@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace UniProgramGen.Helpers
 {
@@ -56,6 +57,59 @@ namespace UniProgramGen.Helpers
             for (uint i = StartHour; i <= EndHour - duration; i++)
             {
                 yield return new TimeSlot(Day, i, i + duration);
+            }
+        }
+
+        internal IEnumerable<TimeSlot> Remove(TimeSlot timeSlot)
+        {
+            if (timeSlot.StartHour != StartHour)
+            {
+                yield return new TimeSlot(Day, StartHour, timeSlot.StartHour);
+            }
+
+            if (timeSlot.EndHour != EndHour)
+            {
+                yield return new TimeSlot(Day, timeSlot.EndHour, EndHour);
+            }
+        }
+
+        internal void AddAfter(TimeSlot timeSlot)
+        {
+            EndHour = timeSlot.EndHour;
+        }
+
+        internal void AddBefore(TimeSlot timeSlot)
+        {
+            StartHour = timeSlot.StartHour;
+        }
+
+        public static void RemoveTimeSlotFromAvailability(List<TimeSlot> availability, TimeSlot timeSlot)
+        {
+            for (int i = 0; i < availability.Count; i++)
+            {
+                var ts = availability[i];
+                if (ts.Includes(timeSlot))
+                {
+                    availability.RemoveAt(i);
+                    availability.AddRange(ts.Remove(timeSlot));
+                    break;
+                }
+
+            }
+        }
+
+        public static void AddTimeSlotToAvailability(List<TimeSlot> availability, TimeSlot timeSlot)
+        {
+            foreach (var ts in availability.Where(a => a.Day == timeSlot.Day))
+            {
+                if (ts.EndHour == timeSlot.StartHour)
+                {
+                    ts.AddAfter(timeSlot);
+                }
+                if (ts.StartHour == timeSlot.EndHour)
+                {
+                    ts.AddBefore(timeSlot);
+                }
             }
         }
     }

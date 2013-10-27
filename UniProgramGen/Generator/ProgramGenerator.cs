@@ -12,9 +12,9 @@ namespace UniProgramGen.Generator
         public Subject subject;
         public Room room;
         public TimeSlot timeSlot;
-        public IEnumerable<Group> groups;
+        public HashSet<Group> groups;
 
-        public ScheduledTimeSlot(Subject subject, Room room, TimeSlot timeSlot, IEnumerable<Group> groups)
+        public ScheduledTimeSlot(Subject subject, Room room, TimeSlot timeSlot, HashSet<Group> groups)
         {
             this.subject = subject;
             this.room = room;
@@ -28,6 +28,8 @@ namespace UniProgramGen.Generator
         private readonly LinkedList<ScheduledTimeSlot> currentSolution = new LinkedList<ScheduledTimeSlot>();
         private readonly LinkedList<Tuple<ScheduledTimeSlot[], double>> bestSolutions = new LinkedList<Tuple<ScheduledTimeSlot[], double>>();
 
+        private readonly Dictionary<Group, List<TimeSlot>[]> groupAvailabilities = new Dictionary<Group, List<TimeSlot>[]>();
+
         private List<Room> rooms;
         private List<Group> groups;
 
@@ -35,6 +37,16 @@ namespace UniProgramGen.Generator
         {
             this.rooms = rooms;
             this.groups = groups;
+
+            foreach (var group in groups)
+            {
+                groupAvailabilities[group] = new List<TimeSlot>[6];
+                for (int i = 0; i < 6; i++)
+			    {
+                    var groupAvailability = groupAvailabilities[group][i] = new List<TimeSlot>();
+                    groupAvailability.Add(new TimeSlot((DayOfWeek) i + 1, 7, 22));
+			    }
+            }
 
             SetSubjectsGroups(subjects, groups);
 
@@ -116,25 +128,34 @@ namespace UniProgramGen.Generator
             foreach (var room in rooms.
                 Where(r => r.types.IsSupersetOf(subject.roomTypes)).
                 Where(r => r.capacity >= subject.attendingPeopleCount).
-                Where(r => subject.teachers.All(t => t.requirements.requiredRooms.IndexOf(r) != -1)))
+                Where(r => subject.teachers.All(t => t.requirements.requiredRooms.Contains(r))))
             {
-                foreach (var windowTimeSlot in room.availability.SelectMany(a => a.GetAllWindows(subject.duration)))
+                var roomAvailabilities = room.availability.SelectMany(a => a.GetAllWindows(subject.duration)).ToList();
+                foreach (var windowTimeSlot in roomAvailabilities)
                 {
                     if (subject.teachers.All(t => t.requirements.weight != 1 ||
                         t.requirements.availableTimeSlots.Any(a => a.Includes(windowTimeSlot))))
                     {
-                        if (currentSolution.All(s =>
-                            (s.room != room && s.groups.Intersect(subject.GetGroups()).FirstOrDefault() == null) ||
-                                !s.timeSlot.Overlaps(windowTimeSlot)))
+                        TimeSlot.RemoveTimeSlotFromAvailability(room.availability, windowTimeSlot);
+                        foreach (var group in subject.GetGroups())
+	                    {
+                            TimeSlot.RemoveTimeSlotFromAvailability(groupAvailabilities[group][(int) windowTimeSlot.Day - 1], windowTimeSlot);
+	                    }
+                        currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot, subject.GetGroups()));
+
+                        if (!FindSolutions(subjects.Skip(1)))
                         {
-                            currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot, subject.GetGroups()));
-                            if (!FindSolutions(subjects.Skip(1)))
-                            {
-                                return false;
-                            }
-                            currentSolution.RemoveLast();
+                            return false;
                         }
+
+                        currentSolution.RemoveLast();
+                        foreach (var group in subject.GetGroups())
+                        {
+                            TimeSlot.AddTimeSlotToAvailability(groupAvailabilities[group][(int)windowTimeSlot.Day - 1], windowTimeSlot);
+                        }
+                        TimeSlot.AddTimeSlotToAvailability(room.availability, windowTimeSlot);
                     }
+                    
                 }
             }
 

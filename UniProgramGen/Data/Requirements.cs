@@ -9,9 +9,9 @@ namespace UniProgramGen.Data
 
         public readonly double weight;
         public List<Helpers.TimeSlot> availableTimeSlots;
-        public readonly List<Room> requiredRooms;
+        public readonly HashSet<Room> requiredRooms;
 
-        public Requirements(double weight, List<Helpers.TimeSlot> availableTimeSlots, List<Room> requiredRooms)
+        public Requirements(double weight, List<Helpers.TimeSlot> availableTimeSlots, HashSet<Room> requiredRooms)
         {
             this.weight = weight;
             this.availableTimeSlots = availableTimeSlots;

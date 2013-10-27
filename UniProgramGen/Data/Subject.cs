@@ -9,7 +9,7 @@ namespace UniProgramGen.Data
         public string name { get; set; }
         public uint duration { get; set; }
 
-        private readonly List<Group> groups;
+        private readonly HashSet<Group> groups;
         internal uint attendingPeopleCount;
 
         public Subject(HashSet<RoomType> roomTypes, List<Teacher> teachers, string name, uint duration)
@@ -18,7 +18,7 @@ namespace UniProgramGen.Data
             this.teachers = teachers;
             this.name = name;
             this.duration = duration;
-            this.groups = new List<Group>();
+            this.groups = new HashSet<Group>();
             this.attendingPeopleCount = 0;
         }
 
@@ -27,7 +27,7 @@ namespace UniProgramGen.Data
             return name.GetHashCode();
         }
 
-        public IEnumerable<Group> GetGroups()
+        public HashSet<Group> GetGroups()
         {
             return groups;
         }
