@@ -94,6 +94,12 @@ namespace UnitTests
             groups.Add(new Group(group3subjects, 12, "KompNauki"));
 
             var generatorRessult = new ProgramGenerator().GenerateProgram(rooms, subjects, teachers, groups);
+            
+            var ser = new Newtonsoft.Json.JsonSerializer();
+            
+            var ser_string = Newtonsoft.Json.JsonConvert.SerializeObject(generatorRessult);
+            System.IO.File.WriteAllText(@"..\..\program_generated_test.js", ser_string);
+                        
         }
     }
 }

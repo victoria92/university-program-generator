@@ -16,7 +16,7 @@ namespace UniProgramGen.Generator
         }
         public string loadGeneratedJSON()
         {
-            string json_output = File.ReadAllText(@"..\..\..\UniProgramGen\db\program_generated_example.js");
+            string json_output = File.ReadAllText(@"..\..\..\UniProgramGen\datafiles\program_generated.js");
             return json_output;
         }
 
