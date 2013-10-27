@@ -26,28 +26,24 @@ namespace UniProgramGen.Generator
     public class ProgramGenerator
     {
         private readonly LinkedList<ScheduledTimeSlot> currentSolution = new LinkedList<ScheduledTimeSlot>();
-        private readonly List<ScheduledTimeSlot[]> allSolutions = new List<ScheduledTimeSlot[]>();
+        private readonly LinkedList<Tuple<ScheduledTimeSlot[], double>> bestSolutions = new LinkedList<Tuple<ScheduledTimeSlot[], double>>();
 
         private List<Room> rooms;
+        private List<Group> groups;
 
         public IEnumerable<ScheduledTimeSlot[]> GenerateProgram(List<Room> rooms, List<Subject> subjects, List<Teacher> teachers, List<Group> groups)
         {
             this.rooms = rooms;
+            this.groups = groups;
 
             SetSubjectsGroups(subjects, groups);
 
             FindSolutions(subjects);
 
-            var solutionsWeightsList = allSolutions.Select(s =>
-                new Tuple<ScheduledTimeSlot[], double>(s, GetSolutionWeight(s, groups))).ToList();
-
-            solutionsWeightsList.Sort((solution1, solution2) =>
-                Math.Sign(solution2.Item2 - solution1.Item2));
-
-            return allSolutions.Take(10);
+            return bestSolutions.Select(t => t.Item1);
         }
 
-        private double GetSolutionWeight(ScheduledTimeSlot[] solution, IEnumerable<Group> groups)
+        private double GetSolutionWeight(IEnumerable<ScheduledTimeSlot> solution, IEnumerable<Group> groups)
         {
             var solutionWeight = solution.Sum(s =>
                 s.subject.teachers.Sum(t =>
@@ -71,14 +67,42 @@ namespace UniProgramGen.Generator
             return solutionWeight;
         }
 
+        private ScheduledTimeSlot[] GetCurrentSolutionArray()
+        {
+            ScheduledTimeSlot[] copy = new ScheduledTimeSlot[currentSolution.Count];
+            currentSolution.CopyTo(copy, 0);
+            return copy;
+        }
+
         private void FindSolutions(IEnumerable<Subject> subjects)
         {
             var subject = subjects.FirstOrDefault();
             if (subject == null)
             {
-                ScheduledTimeSlot[] copy = new ScheduledTimeSlot[currentSolution.Count];
-                currentSolution.CopyTo(copy, 0);
-                allSolutions.Add(copy);
+                double weight = GetSolutionWeight(currentSolution, groups);
+
+                if (bestSolutions.Count == 0)
+                {
+                    bestSolutions.AddFirst(new Tuple<ScheduledTimeSlot[], double>(GetCurrentSolutionArray(), weight));
+                }
+                else
+                {
+                    LinkedListNode<Tuple<ScheduledTimeSlot[], double>> scheduledTimeSlot;
+                    for (scheduledTimeSlot = bestSolutions.First; scheduledTimeSlot != null; scheduledTimeSlot = scheduledTimeSlot.Next)
+                    {
+                        if (weight >= scheduledTimeSlot.Value.Item2)
+                        {
+                            ScheduledTimeSlot[] copy = new ScheduledTimeSlot[currentSolution.Count];
+                            currentSolution.CopyTo(copy, 0);
+                            bestSolutions.AddBefore(scheduledTimeSlot, new Tuple<ScheduledTimeSlot[], double>(copy, weight));
+                            if (bestSolutions.Count > 10)
+                            {
+                                bestSolutions.RemoveLast();
+                            }
+                            break;
+                        }
+                    }
+                }
                 return;
             }
 

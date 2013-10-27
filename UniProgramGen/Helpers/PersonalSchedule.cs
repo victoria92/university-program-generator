@@ -9,12 +9,12 @@ namespace UniProgramGen.Helpers
 {
     public class PersonalSchedule
     {
-        public PersonalSchedule(ScheduledTimeSlot[] schedule)
+        public PersonalSchedule(IEnumerable<ScheduledTimeSlot> schedule)
         {
             Schedule = schedule;
         }
 
-        private ScheduledTimeSlot[] Schedule { get; set; }
+        private IEnumerable<ScheduledTimeSlot >Schedule { get; set; }
 
         public IEnumerable<ScheduledTimeSlot> GetTeacherProgram(Teacher teacher)
         {
