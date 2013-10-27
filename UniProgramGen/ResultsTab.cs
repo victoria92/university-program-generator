@@ -82,10 +82,40 @@ namespace UniProgramGen
         private void listBoxTeachers_DoubleClick(object sender, EventArgs e)
         {
             Teacher selectedTeacher = (Teacher)listBoxTeachers.SelectedItem;
+            listBoxTeachers.SelectedItem = null;
             var selectedSchedule = personalSchedule.GetTeacherProgram(selectedTeacher);
 
-            dumpFirstSchedule("../../datafiles/example_solution.json", selectedSchedule);
-            MessageBox.Show("Генериран е JSON с програмата");
+            DisplaySchedule(selectedSchedule);
         }
+
+        private void listBoxRooms_DoubleClick(object sender, EventArgs e)
+        {
+            Room selectedRoom = (Room)listBoxRooms.SelectedItem;
+            listBoxTeachers.SelectedItem = null;
+            var selectedSchedule = personalSchedule.GetRoomProgram(selectedRoom);
+
+            DisplaySchedule(selectedSchedule);
+        }
+
+        private void listBoxGroups_DoubleClick(object sender, EventArgs e)
+        {
+            Group selectedGroup = (Group)listBoxGroups.SelectedItem;
+            listBoxTeachers.SelectedItem = null;
+            var selectedSchedule = personalSchedule.GetGroupProgram(selectedGroup);
+
+            DisplaySchedule(selectedSchedule);
+        }
+
+        private void DisplaySchedule(IEnumerable<ScheduledTimeSlot> schedule)
+        {
+            dumpFirstSchedule("../../datafiles/example_solution.json", schedule);
+            MessageBox.Show("Генериран е JSON с програмата");
+
+            // TODO: fix!!!
+            //system("ruby ../../../dragons/scripts/run.rb ../../datafiles/example_solution.json");
+        }
+
+        [System.Runtime.InteropServices.DllImport("msvcrt.dll")]
+        private static extern int system(String command);
     }
 }

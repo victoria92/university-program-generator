@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxActions = new System.Windows.Forms.GroupBox();
+            this.buttonDummyData = new System.Windows.Forms.Button();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.splitResults = new System.Windows.Forms.SplitContainer();
             this.groupBoxTeachers = new System.Windows.Forms.GroupBox();
@@ -38,7 +39,6 @@
             this.listBoxRooms = new System.Windows.Forms.ListBox();
             this.groupBoxGroups = new System.Windows.Forms.GroupBox();
             this.listBoxGroups = new System.Windows.Forms.ListBox();
-            this.buttonDummyData = new System.Windows.Forms.Button();
             this.groupBoxActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).BeginInit();
             this.splitResults.Panel1.SuspendLayout();
@@ -65,6 +65,16 @@
             this.groupBoxActions.TabIndex = 3;
             this.groupBoxActions.TabStop = false;
             this.groupBoxActions.Text = "Действия";
+            // 
+            // buttonDummyData
+            // 
+            this.buttonDummyData.Location = new System.Drawing.Point(94, 19);
+            this.buttonDummyData.Name = "buttonDummyData";
+            this.buttonDummyData.Size = new System.Drawing.Size(184, 23);
+            this.buttonDummyData.TabIndex = 2;
+            this.buttonDummyData.Text = "Зареди фалшиви данни";
+            this.buttonDummyData.UseVisualStyleBackColor = true;
+            this.buttonDummyData.Click += new System.EventHandler(this.buttonDummyData_Click);
             // 
             // buttonGenerate
             // 
@@ -154,6 +164,7 @@
             this.listBoxRooms.Name = "listBoxRooms";
             this.listBoxRooms.Size = new System.Drawing.Size(208, 362);
             this.listBoxRooms.TabIndex = 0;
+            this.listBoxRooms.DoubleClick += new System.EventHandler(this.listBoxRooms_DoubleClick);
             // 
             // groupBoxGroups
             // 
@@ -175,16 +186,7 @@
             this.listBoxGroups.Name = "listBoxGroups";
             this.listBoxGroups.Size = new System.Drawing.Size(207, 362);
             this.listBoxGroups.TabIndex = 0;
-            // 
-            // buttonDummyData
-            // 
-            this.buttonDummyData.Location = new System.Drawing.Point(94, 19);
-            this.buttonDummyData.Name = "buttonDummyData";
-            this.buttonDummyData.Size = new System.Drawing.Size(184, 23);
-            this.buttonDummyData.TabIndex = 2;
-            this.buttonDummyData.Text = "Зареди фалшиви данни";
-            this.buttonDummyData.UseVisualStyleBackColor = true;
-            this.buttonDummyData.Click += new System.EventHandler(this.buttonDummyData_Click);
+            this.listBoxGroups.DoubleClick += new System.EventHandler(this.listBoxGroups_DoubleClick);
             // 
             // ResultsTab
             // 
