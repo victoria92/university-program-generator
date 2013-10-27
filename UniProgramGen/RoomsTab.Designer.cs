@@ -82,7 +82,7 @@
             // 
             // buttonAddRoom
             // 
-            this.buttonAddRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAddRoom.Location = new System.Drawing.Point(566, 418);
             this.buttonAddRoom.Name = "buttonAddRoom";
             this.buttonAddRoom.Size = new System.Drawing.Size(81, 26);
