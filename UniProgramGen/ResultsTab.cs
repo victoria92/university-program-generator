@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using UniProgramGen.Data;
+using UniProgramGen.Generator;
 
 namespace UniProgramGen
 {
@@ -36,22 +37,29 @@ namespace UniProgramGen
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            DumpExampleSolution();
-            return;
+            var schedules = new ProgramGenerator().GenerateProgram(rooms, subjects, teachers, groups);
+            var schedule = schedules.First();
 
-            var generator = new Generator.ProgramGenerator();
-            var program = generator.GenerateProgram(rooms, subjects, teachers, groups);
+            string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(schedule, Newtonsoft.Json.Formatting.Indented);
+            System.IO.File.WriteAllText("../../datafiles/example_solution.json", firstSolutionJson);
         }
 
-        private void DumpExampleSolution()
+        private void buttonDummyData_Click(object sender, EventArgs e)
         {
             Data.DBManager db = new DBManager();
-            db.getTestData();
-            var program = db.solutions;
-            var firstSolution = program.First();
+            db.initInputData();
 
-            string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(firstSolution, Newtonsoft.Json.Formatting.Indented);
-            System.IO.File.WriteAllText("../../datafiles/example_solution.json", firstSolutionJson);
+            teachers.RemoveAll(x => true);
+            teachers.AddRange(db.teachers);
+            rooms.RemoveAll(x => true);
+            rooms.AddRange(db.rooms);
+            subjects.RemoveAll(x => true);
+            subjects.AddRange(db.subjects);
+            groups.RemoveAll(x => true);
+            groups.AddRange(db.groups);
+
+            var program = db.solutions;
+            
         }
 
         private void buttonSync_Click(object sender, EventArgs e)
@@ -63,6 +71,12 @@ namespace UniProgramGen
             listBoxTeachers.DisplayMember = "name";
             listBoxRooms.DisplayMember = "nameOrNumber";
             listBoxGroups.DisplayMember = "name";
+        }
+
+        private void listBoxTeachers_Click(object sender, EventArgs e)
+        {
+            Teacher selectedTeacher = (Teacher)listBoxTeachers.SelectedItem;
+            // Helpers.PersonalSchedule personalSchedule = new Helpers.PersonalSchedule(); WIP
         }
     }
 }

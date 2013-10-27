@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBoxActions = new System.Windows.Forms.GroupBox();
+            this.buttonSync = new System.Windows.Forms.Button();
             this.buttonGenerate = new System.Windows.Forms.Button();
             this.splitResults = new System.Windows.Forms.SplitContainer();
             this.groupBoxTeachers = new System.Windows.Forms.GroupBox();
@@ -38,7 +39,7 @@
             this.listBoxRooms = new System.Windows.Forms.ListBox();
             this.groupBoxGroups = new System.Windows.Forms.GroupBox();
             this.listBoxGroups = new System.Windows.Forms.ListBox();
-            this.buttonSync = new System.Windows.Forms.Button();
+            this.buttonDummyData = new System.Windows.Forms.Button();
             this.groupBoxActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).BeginInit();
             this.splitResults.Panel1.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             this.groupBoxActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxActions.Controls.Add(this.buttonDummyData);
             this.groupBoxActions.Controls.Add(this.buttonSync);
             this.groupBoxActions.Controls.Add(this.buttonGenerate);
             this.groupBoxActions.Location = new System.Drawing.Point(0, 0);
@@ -65,6 +67,16 @@
             this.groupBoxActions.TabIndex = 3;
             this.groupBoxActions.TabStop = false;
             this.groupBoxActions.Text = "Действия";
+            // 
+            // buttonSync
+            // 
+            this.buttonSync.Location = new System.Drawing.Point(284, 19);
+            this.buttonSync.Name = "buttonSync";
+            this.buttonSync.Size = new System.Drawing.Size(75, 23);
+            this.buttonSync.TabIndex = 1;
+            this.buttonSync.Text = "Sync!";
+            this.buttonSync.UseVisualStyleBackColor = true;
+            this.buttonSync.Click += new System.EventHandler(this.buttonSync_Click);
             // 
             // buttonGenerate
             // 
@@ -115,6 +127,7 @@
             this.listBoxTeachers.Name = "listBoxTeachers";
             this.listBoxTeachers.Size = new System.Drawing.Size(209, 362);
             this.listBoxTeachers.TabIndex = 0;
+            this.listBoxTeachers.Click += new System.EventHandler(this.listBoxTeachers_Click);
             // 
             // splitContainer1
             // 
@@ -175,15 +188,15 @@
             this.listBoxGroups.Size = new System.Drawing.Size(207, 362);
             this.listBoxGroups.TabIndex = 0;
             // 
-            // buttonSync
+            // buttonDummyData
             // 
-            this.buttonSync.Location = new System.Drawing.Point(284, 19);
-            this.buttonSync.Name = "buttonSync";
-            this.buttonSync.Size = new System.Drawing.Size(75, 23);
-            this.buttonSync.TabIndex = 1;
-            this.buttonSync.Text = "Sync!";
-            this.buttonSync.UseVisualStyleBackColor = true;
-            this.buttonSync.Click += new System.EventHandler(this.buttonSync_Click);
+            this.buttonDummyData.Location = new System.Drawing.Point(94, 19);
+            this.buttonDummyData.Name = "buttonDummyData";
+            this.buttonDummyData.Size = new System.Drawing.Size(184, 23);
+            this.buttonDummyData.TabIndex = 2;
+            this.buttonDummyData.Text = "Зареди фалшиви данни";
+            this.buttonDummyData.UseVisualStyleBackColor = true;
+            this.buttonDummyData.Click += new System.EventHandler(this.buttonDummyData_Click);
             // 
             // ResultsTab
             // 
@@ -222,5 +235,6 @@
         private System.Windows.Forms.ListBox listBoxGroups;
         private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Button buttonSync;
+        private System.Windows.Forms.Button buttonDummyData;
     }
 }
