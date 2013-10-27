@@ -10,7 +10,7 @@ namespace UnitTests
     [TestClass]
     public class UnitTest1
     {
-        private List<RoomType> organic_room_types;
+        private HashSet<RoomType> organic_room_types;
         private List<TimeSlot> available_timeslots;
         private List<Room> rooms;
         private List<Requirements> requirements_list;
@@ -20,7 +20,7 @@ namespace UnitTests
         {
             if(organic_room_types == null)
             {
-                organic_room_types = new List<RoomType>();
+                organic_room_types = new HashSet<RoomType>();
                 organic_room_types.Add(RoomType.Projector);
                 organic_room_types.Add(RoomType.Komin);
             }
