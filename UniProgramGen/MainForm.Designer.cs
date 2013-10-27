@@ -30,13 +30,13 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.teachersTab1 = new UniProgramGen.TeachersTab();
             this.subjectsTab1 = new UniProgramGen.SubjectsTab();
-            this.roomsTab1 = new RoomsTab();
-            this.groupsTab1 = new GroupTab();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.teachersTab1 = new UniProgramGen.TeachersTab();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.roomsTab1 = new UniProgramGen.RoomsTab();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.groupsTab1 = new UniProgramGen.GroupTab();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -46,17 +46,16 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
+            this.tabControl1.MinimumSize = new System.Drawing.Size(650, 450);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(625, 383);
+            this.tabControl1.Size = new System.Drawing.Size(664, 481);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -65,10 +64,22 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(617, 357);
+            this.tabPage1.Size = new System.Drawing.Size(656, 455);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Предмети";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // subjectsTab1
+            // 
+            this.subjectsTab1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.subjectsTab1.Location = new System.Drawing.Point(0, 0);
+            this.subjectsTab1.MinimumSize = new System.Drawing.Size(650, 450);
+            this.subjectsTab1.Name = "subjectsTab1";
+            this.subjectsTab1.Size = new System.Drawing.Size(650, 450);
+            this.subjectsTab1.Subjects = null;
+            this.subjectsTab1.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -76,69 +87,70 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(617, 357);
+            this.tabPage2.Size = new System.Drawing.Size(656, 455);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Преподаватели";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // teachersTab1
+            // 
+            this.teachersTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.teachersTab1.Location = new System.Drawing.Point(3, 3);
+            this.teachersTab1.Name = "teachersTab1";
+            this.teachersTab1.Size = new System.Drawing.Size(650, 449);
+            this.teachersTab1.TabIndex = 0;
+            this.teachersTab1.Teachers = null;
             // 
             // tabPage3
             // 
             this.tabPage3.Controls.Add(this.roomsTab1);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage2";
+            this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(617, 357);
+            this.tabPage3.Size = new System.Drawing.Size(656, 455);
             this.tabPage3.TabIndex = 1;
             this.tabPage3.Text = "Стаи";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // roomsTab1
+            // 
+            this.roomsTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.roomsTab1.Location = new System.Drawing.Point(3, 3);
+            this.roomsTab1.MinimumSize = new System.Drawing.Size(650, 450);
+            this.roomsTab1.Name = "roomsTab1";
+            this.roomsTab1.Size = new System.Drawing.Size(650, 450);
+            this.roomsTab1.TabIndex = 0;
             // 
             // tabPage4
             // 
             this.tabPage4.Controls.Add(this.groupsTab1);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage2";
+            this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(617, 357);
+            this.tabPage4.Size = new System.Drawing.Size(656, 455);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Групи";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
-            // teachersTab1
-            // 
-            this.teachersTab1.Location = new System.Drawing.Point(6, 5);
-            this.teachersTab1.Name = "teachersTab1";
-            this.teachersTab1.Size = new System.Drawing.Size(630, 349);
-            this.teachersTab1.TabIndex = 0;
-            // 
-            // subjectsTab1
-            // 
-            this.subjectsTab1.Location = new System.Drawing.Point(0, 0);
-            this.subjectsTab1.Name = "subjectsTab1";
-            this.subjectsTab1.Size = new System.Drawing.Size(619, 361);
-            this.subjectsTab1.TabIndex = 0;
-            // 
-            // roomsTab1
-            // 
-            this.roomsTab1.Location = new System.Drawing.Point(0, 0);
-            this.roomsTab1.Name = "roomsTab1";
-            this.roomsTab1.Size = new System.Drawing.Size(601, 385);
-            this.roomsTab1.TabIndex = 0;
-            // 
             // groupsTab1
             // 
-            this.groupsTab1.Location = new System.Drawing.Point(0, 0);
+            this.groupsTab1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupsTab1.Groups = null;
+            this.groupsTab1.Location = new System.Drawing.Point(3, 3);
+            this.groupsTab1.MinimumSize = new System.Drawing.Size(650, 450);
             this.groupsTab1.Name = "groupsTab1";
-            this.groupsTab1.Size = new System.Drawing.Size(605, 402);
+            this.groupsTab1.Size = new System.Drawing.Size(650, 450);
             this.groupsTab1.TabIndex = 0;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(623, 380);
+            this.ClientSize = new System.Drawing.Size(664, 481);
             this.Controls.Add(this.tabControl1);
+            this.MinimumSize = new System.Drawing.Size(680, 520);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "Генериране на програма";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
