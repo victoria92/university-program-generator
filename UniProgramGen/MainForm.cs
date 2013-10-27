@@ -21,15 +21,15 @@ namespace UniProgramGen
             BindingSource roomsBindingSource = new BindingSource();
             BindingSource groupsBindingSource = new BindingSource();
 
-            TAB_Subjects.InitializeBindingSources(subjectsBindingSource, teachersBindingSource);
-            TABS_Teachers.SetSubjectsRefreshTeachers(TAB_Subjects.RefreshTeachers);
+            tabSubjects.InitializeBindingSources(subjectsBindingSource, teachersBindingSource);
+            tabTeachers.SetSubjectsRefreshTeachers(tabSubjects.RefreshTeachers);
 
-            TAB_Groups.InitializeBindingSources(groupsBindingSource, subjectsBindingSource);
-            TAB_Subjects.SetSubjectsRefreshTeachers(TAB_Groups.RefreshSubjects);
+            tabGroups.InitializeBindingSources(groupsBindingSource, subjectsBindingSource);
+            tabSubjects.SetSubjectsRefreshTeachers(tabGroups.RefreshSubjects);
 
-            TABS_Teachers.InitializeBindingSources(teachersBindingSource);
+            tabTeachers.InitializeBindingSources(teachersBindingSource);
 
-            TAB_Rooms.InitializeBindingSources(roomsBindingSource);
+            tabRooms.InitializeBindingSources(roomsBindingSource);
         }
     }
 }

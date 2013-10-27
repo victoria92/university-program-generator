@@ -30,15 +30,15 @@
         {
             this.TABS_UniProgram = new System.Windows.Forms.TabControl();
             this.tabPageSubjects = new System.Windows.Forms.TabPage();
-            this.TAB_Subjects = new UniProgramGen.SubjectsTab();
+            this.tabSubjects = new UniProgramGen.SubjectsTab();
             this.tabPageTeachers = new System.Windows.Forms.TabPage();
-            this.TABS_Teachers = new UniProgramGen.TeachersTab();
+            this.tabTeachers = new UniProgramGen.TeachersTab();
             this.tabPageRooms = new System.Windows.Forms.TabPage();
-            this.TAB_Rooms = new UniProgramGen.RoomsTab();
+            this.tabRooms = new UniProgramGen.RoomsTab();
             this.tabPageGroups = new System.Windows.Forms.TabPage();
-            this.TAB_Groups = new UniProgramGen.GroupTab();
+            this.tabGroups = new UniProgramGen.GroupTab();
             this.tabPageResults = new System.Windows.Forms.TabPage();
-            this.resultsTab = new UniProgramGen.ResultsTab();
+            this.tabResults = new UniProgramGen.ResultsTab();
             this.TABS_UniProgram.SuspendLayout();
             this.tabPageSubjects.SuspendLayout();
             this.tabPageTeachers.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // tabPageSubjects
             // 
-            this.tabPageSubjects.Controls.Add(this.TAB_Subjects);
+            this.tabPageSubjects.Controls.Add(this.tabSubjects);
             this.tabPageSubjects.Location = new System.Drawing.Point(4, 22);
             this.tabPageSubjects.Name = "tabPageSubjects";
             this.tabPageSubjects.Padding = new System.Windows.Forms.Padding(3);
@@ -73,18 +73,18 @@
             this.tabPageSubjects.Text = "Предмети";
             this.tabPageSubjects.UseVisualStyleBackColor = true;
             // 
-            // TAB_Subjects
+            // tabSubjects
             // 
-            this.TAB_Subjects.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TAB_Subjects.Location = new System.Drawing.Point(3, 3);
-            this.TAB_Subjects.MinimumSize = new System.Drawing.Size(650, 450);
-            this.TAB_Subjects.Name = "TAB_Subjects";
-            this.TAB_Subjects.Size = new System.Drawing.Size(650, 450);
-            this.TAB_Subjects.TabIndex = 0;
+            this.tabSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabSubjects.Location = new System.Drawing.Point(3, 3);
+            this.tabSubjects.MinimumSize = new System.Drawing.Size(650, 450);
+            this.tabSubjects.Name = "tabSubjects";
+            this.tabSubjects.Size = new System.Drawing.Size(650, 450);
+            this.tabSubjects.TabIndex = 0;
             // 
             // tabPageTeachers
             // 
-            this.tabPageTeachers.Controls.Add(this.TABS_Teachers);
+            this.tabPageTeachers.Controls.Add(this.tabTeachers);
             this.tabPageTeachers.Location = new System.Drawing.Point(4, 22);
             this.tabPageTeachers.Name = "tabPageTeachers";
             this.tabPageTeachers.Padding = new System.Windows.Forms.Padding(3);
@@ -93,17 +93,17 @@
             this.tabPageTeachers.Text = "Преподаватели";
             this.tabPageTeachers.UseVisualStyleBackColor = true;
             // 
-            // TABS_Teachers
+            // tabTeachers
             // 
-            this.TABS_Teachers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TABS_Teachers.Location = new System.Drawing.Point(3, 3);
-            this.TABS_Teachers.Name = "TABS_Teachers";
-            this.TABS_Teachers.Size = new System.Drawing.Size(650, 449);
-            this.TABS_Teachers.TabIndex = 0;
+            this.tabTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabTeachers.Location = new System.Drawing.Point(3, 3);
+            this.tabTeachers.Name = "tabTeachers";
+            this.tabTeachers.Size = new System.Drawing.Size(650, 449);
+            this.tabTeachers.TabIndex = 0;
             // 
             // tabPageRooms
             // 
-            this.tabPageRooms.Controls.Add(this.TAB_Rooms);
+            this.tabPageRooms.Controls.Add(this.tabRooms);
             this.tabPageRooms.Location = new System.Drawing.Point(4, 22);
             this.tabPageRooms.Name = "tabPageRooms";
             this.tabPageRooms.Padding = new System.Windows.Forms.Padding(3);
@@ -112,18 +112,18 @@
             this.tabPageRooms.Text = "Стаи";
             this.tabPageRooms.UseVisualStyleBackColor = true;
             // 
-            // TAB_Rooms
+            // tabRooms
             // 
-            this.TAB_Rooms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TAB_Rooms.Location = new System.Drawing.Point(3, 3);
-            this.TAB_Rooms.MinimumSize = new System.Drawing.Size(650, 450);
-            this.TAB_Rooms.Name = "TAB_Rooms";
-            this.TAB_Rooms.Size = new System.Drawing.Size(650, 450);
-            this.TAB_Rooms.TabIndex = 0;
+            this.tabRooms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabRooms.Location = new System.Drawing.Point(3, 3);
+            this.tabRooms.MinimumSize = new System.Drawing.Size(650, 450);
+            this.tabRooms.Name = "tabRooms";
+            this.tabRooms.Size = new System.Drawing.Size(650, 450);
+            this.tabRooms.TabIndex = 0;
             // 
             // tabPageGroups
             // 
-            this.tabPageGroups.Controls.Add(this.TAB_Groups);
+            this.tabPageGroups.Controls.Add(this.tabGroups);
             this.tabPageGroups.Location = new System.Drawing.Point(4, 22);
             this.tabPageGroups.Name = "tabPageGroups";
             this.tabPageGroups.Padding = new System.Windows.Forms.Padding(3);
@@ -132,18 +132,18 @@
             this.tabPageGroups.Text = "Групи";
             this.tabPageGroups.UseVisualStyleBackColor = true;
             // 
-            // TAB_Groups
+            // tabGroups
             // 
-            this.TAB_Groups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TAB_Groups.Location = new System.Drawing.Point(3, 3);
-            this.TAB_Groups.MinimumSize = new System.Drawing.Size(650, 450);
-            this.TAB_Groups.Name = "TAB_Groups";
-            this.TAB_Groups.Size = new System.Drawing.Size(650, 450);
-            this.TAB_Groups.TabIndex = 0;
+            this.tabGroups.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabGroups.Location = new System.Drawing.Point(3, 3);
+            this.tabGroups.MinimumSize = new System.Drawing.Size(650, 450);
+            this.tabGroups.Name = "tabGroups";
+            this.tabGroups.Size = new System.Drawing.Size(650, 450);
+            this.tabGroups.TabIndex = 0;
             // 
             // tabPageResults
             // 
-            this.tabPageResults.Controls.Add(this.resultsTab);
+            this.tabPageResults.Controls.Add(this.tabResults);
             this.tabPageResults.Location = new System.Drawing.Point(4, 22);
             this.tabPageResults.Name = "tabPageResults";
             this.tabPageResults.Padding = new System.Windows.Forms.Padding(3);
@@ -152,13 +152,13 @@
             this.tabPageResults.Text = "Програма";
             this.tabPageResults.UseVisualStyleBackColor = true;
             // 
-            // resultsTab
+            // tabResults
             // 
-            this.resultsTab.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.resultsTab.Location = new System.Drawing.Point(3, 3);
-            this.resultsTab.Name = "resultsTab";
-            this.resultsTab.Size = new System.Drawing.Size(650, 449);
-            this.resultsTab.TabIndex = 0;
+            this.tabResults.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabResults.Location = new System.Drawing.Point(3, 3);
+            this.tabResults.Name = "tabResults";
+            this.tabResults.Size = new System.Drawing.Size(650, 449);
+            this.tabResults.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -186,12 +186,12 @@
         private System.Windows.Forms.TabPage tabPageTeachers;
         private System.Windows.Forms.TabPage tabPageRooms;
         private System.Windows.Forms.TabPage tabPageGroups;
-        private TeachersTab TABS_Teachers;
-        private SubjectsTab TAB_Subjects;
-        private RoomsTab TAB_Rooms;
-        private GroupTab TAB_Groups;
+        private TeachersTab tabTeachers;
+        private SubjectsTab tabSubjects;
+        private RoomsTab tabRooms;
+        private GroupTab tabGroups;
         private System.Windows.Forms.TabPage tabPageResults;
-        private ResultsTab resultsTab;
+        private ResultsTab tabResults;
     }
 }
 
