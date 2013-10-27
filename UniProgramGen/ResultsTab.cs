@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows.Forms;
 using UniProgramGen.Data;
 using UniProgramGen.Generator;
+using UniProgramGen.Helpers;
 
 namespace UniProgramGen
 {
@@ -18,6 +19,8 @@ namespace UniProgramGen
         private List<Room> rooms;
         private List<Group> groups;
         private List<Subject> subjects;
+
+        private PersonalSchedule personalSchedule;
 
         internal void InitializeBindingSources(
             BindingSource teachersBS,
@@ -38,10 +41,19 @@ namespace UniProgramGen
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
             var schedules = new ProgramGenerator().GenerateProgram(rooms, subjects, teachers, groups);
-            var schedule = schedules.First();
+            personalSchedule = new Helpers.PersonalSchedule(schedules.First());
+            RefreshData();
+        }
 
-            string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(schedule, Newtonsoft.Json.Formatting.Indented);
-            System.IO.File.WriteAllText("../../datafiles/example_solution.json", firstSolutionJson);
+        private void RefreshData()
+        {
+            listBoxTeachers.DisplayMember = "";
+            listBoxRooms.DisplayMember = "";
+            listBoxGroups.DisplayMember = "";
+
+            listBoxTeachers.DisplayMember = "name";
+            listBoxRooms.DisplayMember = "nameOrNumber";
+            listBoxGroups.DisplayMember = "name";
         }
 
         private void buttonDummyData_Click(object sender, EventArgs e)
@@ -59,24 +71,20 @@ namespace UniProgramGen
             groups.AddRange(db.groups);
 
             var program = db.solutions;
-            
         }
 
-        private void buttonSync_Click(object sender, EventArgs e)
+        private void dumpFirstSchedule(string filename, object schedule)
         {
-            listBoxTeachers.DisplayMember = "";
-            listBoxRooms.DisplayMember = "";
-            listBoxGroups.DisplayMember = "";
-
-            listBoxTeachers.DisplayMember = "name";
-            listBoxRooms.DisplayMember = "nameOrNumber";
-            listBoxGroups.DisplayMember = "name";
+            string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(schedule, Newtonsoft.Json.Formatting.Indented);
+            System.IO.File.WriteAllText(filename, firstSolutionJson);
         }
 
-        private void listBoxTeachers_Click(object sender, EventArgs e)
+        private void listBoxTeachers_DoubleClick(object sender, EventArgs e)
         {
             Teacher selectedTeacher = (Teacher)listBoxTeachers.SelectedItem;
-            // Helpers.PersonalSchedule personalSchedule = new Helpers.PersonalSchedule(); WIP
+            var selectedSchedule = personalSchedule.GetTeacherProgram(selectedTeacher);
+
+            dumpFirstSchedule("../../datafiles/example_solution.json", selectedSchedule);
         }
     }
 }
