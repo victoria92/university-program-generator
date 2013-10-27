@@ -17,8 +17,16 @@ namespace UniProgramGen
 
         public void RefreshTeachers()
         {
+            string displayMember = LB_Teachers.DisplayMember;
             LB_Teachers.DisplayMember = "";
-            LB_Teachers.DisplayMember = "name";
+            LB_Teachers.DisplayMember = displayMember;
+        }
+
+        public void RefreshSubjects()
+        {
+            string displayMember = listBoxSubjects.DisplayMember;
+            listBoxSubjects.DisplayMember = "";
+            listBoxSubjects.DisplayMember = displayMember;
         }
 
         public void InitializeBindingSources(BindingSource subjectsBindingSource, BindingSource teachersBindingSource)
@@ -110,8 +118,7 @@ namespace UniProgramGen
             subject.roomTypes = roomTypes;
             subject.teachers = teachers;
 
-            listBoxSubjects.DisplayMember = "";
-            listBoxSubjects.DisplayMember = "name";
+            RefreshSubjects();
 
             refreshGroupsTabSubjects();
         }

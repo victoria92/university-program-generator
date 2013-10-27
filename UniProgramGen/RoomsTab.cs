@@ -125,8 +125,15 @@ namespace UniProgramGen
             room.nameOrNumber = roomName.Text;
             room.types = roomTypes;
 
+            RefreshRooms();
+        }
+
+
+        public void RefreshRooms()
+        {
+            string displayMember = listBoxRooms.DisplayMember;
             listBoxRooms.DisplayMember = "";
-            listBoxRooms.DisplayMember = "nameOrNumber";
+            listBoxRooms.DisplayMember = displayMember;
         }
     }
 }

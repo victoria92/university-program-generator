@@ -99,10 +99,15 @@ namespace UniProgramGen
             teacher.requirements = new Requirements(1, GetTeacherAvailability(), null);
             teacher.name = textBoxTeacherName.Text;
 
-            listBoxTeachers.DisplayMember = "";
-            listBoxTeachers.DisplayMember = "name";
+            RefreshTeachers();
 
             refreshSubjectsTab();
+        }
+
+        public void RefreshTeachers()
+        {
+            listBoxTeachers.DisplayMember = "";
+            listBoxTeachers.DisplayMember = "name";
         }
 
         internal void SetSubjectsRefreshTeachers(Action action)

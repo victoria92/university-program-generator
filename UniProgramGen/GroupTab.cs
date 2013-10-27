@@ -21,8 +21,16 @@ namespace UniProgramGen
 
         public void RefreshSubjects()
         {
+            string displayName = listBoxSubjectsOfGroups.DisplayMember;
             listBoxSubjectsOfGroups.DisplayMember = "";
-            listBoxSubjectsOfGroups.DisplayMember = "name";
+            listBoxSubjectsOfGroups.DisplayMember = displayName;
+        }
+
+        public void RefreshGroups()
+        {
+            string displayMember = listBoxGroups.DisplayMember;
+            listBoxGroups.DisplayMember = "";
+            listBoxGroups.DisplayMember = displayMember;
         }
 
         public void InitializeBindingSources(BindingSource groupsBindingSource, BindingSource subjectsBindingSource)
@@ -79,8 +87,7 @@ namespace UniProgramGen
             group.name = groupName.Text;
             group.size = (uint) numericUpDownStudents.Value;
 
-            listBoxGroups.DisplayMember = "";
-            listBoxGroups.DisplayMember = "name";
+            RefreshGroups();
         }
 
         private void AddGroup_Click(object sender, EventArgs e)
