@@ -37,9 +37,8 @@ namespace UniProgramGen.Helpers
             return result;
         }
 
-        public static void SetObjectTimeSlots(ListBox listBoxRoom, IEnumerable<TimeSlot> timeSlots, ref bool updating)
+        public static void SetObjectTimeSlots(ListBox listBoxRoom, IEnumerable<TimeSlot> timeSlots)
         {
-            updating = true;
             listBoxRoom.ClearSelected();
             foreach (var timeSlot in timeSlots)
             {
@@ -48,7 +47,6 @@ namespace UniProgramGen.Helpers
                     listBoxRoom.SetSelected((int)i - 7, true);
                 }
             }
-            updating = false;
         }
     }
 }

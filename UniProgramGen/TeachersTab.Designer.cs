@@ -97,7 +97,6 @@
             this.listBoxTeacherSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherSaturday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherSaturday.TabIndex = 13;
-            this.listBoxTeacherSaturday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherFriday
             // 
@@ -126,7 +125,6 @@
             this.listBoxTeacherFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherFriday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherFriday.TabIndex = 12;
-            this.listBoxTeacherFriday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherThursday
             // 
@@ -155,7 +153,6 @@
             this.listBoxTeacherThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherThursday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherThursday.TabIndex = 11;
-            this.listBoxTeacherThursday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherWednesday
             // 
@@ -184,7 +181,6 @@
             this.listBoxTeacherWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherWednesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherWednesday.TabIndex = 10;
-            this.listBoxTeacherWednesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherTuesday
             // 
@@ -213,7 +209,6 @@
             this.listBoxTeacherTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherTuesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherTuesday.TabIndex = 9;
-            this.listBoxTeacherTuesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherMonday
             // 
@@ -242,7 +237,6 @@
             this.listBoxTeacherMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherMonday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherMonday.TabIndex = 8;
-            this.listBoxTeacherMonday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // label6
             // 

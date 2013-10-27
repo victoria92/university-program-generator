@@ -135,7 +135,6 @@
             this.listBoxRoomSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomSaturday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomSaturday.TabIndex = 22;
-            this.listBoxRoomSaturday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomFriday
             // 
@@ -166,7 +165,6 @@
             this.listBoxRoomFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomFriday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomFriday.TabIndex = 21;
-            this.listBoxRoomFriday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomThursday
             // 
@@ -197,7 +195,6 @@
             this.listBoxRoomThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomThursday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomThursday.TabIndex = 20;
-            this.listBoxRoomThursday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomWednesday
             // 
@@ -228,7 +225,6 @@
             this.listBoxRoomWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomWednesday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomWednesday.TabIndex = 19;
-            this.listBoxRoomWednesday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomTuesday
             // 
@@ -259,7 +255,6 @@
             this.listBoxRoomTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomTuesday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomTuesday.TabIndex = 18;
-            this.listBoxRoomTuesday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRoomMonday
             // 
@@ -290,7 +285,6 @@
             this.listBoxRoomMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxRoomMonday.Size = new System.Drawing.Size(70, 274);
             this.listBoxRoomMonday.TabIndex = 17;
-            this.listBoxRoomMonday.SelectedIndexChanged += new System.EventHandler(this.listBoxRoom_SelectedIndexChanged);
             // 
             // listBoxRooms
             // 

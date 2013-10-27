@@ -26,8 +26,6 @@ namespace UniProgramGen
 
         public List<Teacher> Teachers { get; private set; }
 
-        private bool updating = false;
-
         public BindingSource bindingSource = new BindingSource();
 
         private void listBoxTeachers_SelectedIndexChanged(object sender, EventArgs e)
@@ -47,27 +45,14 @@ namespace UniProgramGen
                 return;
             }
 
-            UIHelpers.SetObjectTimeSlots(listBoxTeacherMonday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Monday), ref updating);
-            UIHelpers.SetObjectTimeSlots(listBoxTeacherTuesday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Tuesday), ref updating);
-            UIHelpers.SetObjectTimeSlots(listBoxTeacherWednesday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Wednesday), ref updating);
-            UIHelpers.SetObjectTimeSlots(listBoxTeacherThursday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Thursday), ref updating);
-            UIHelpers.SetObjectTimeSlots(listBoxTeacherFriday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Friday), ref updating);
-            UIHelpers.SetObjectTimeSlots(listBoxTeacherSaturday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Saturday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherMonday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Monday));
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherTuesday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Tuesday));
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherWednesday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Wednesday));
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherThursday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Thursday));
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherFriday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Friday));
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherSaturday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Saturday));
 
             textBoxTeacherName.Text = selectedTeacher.name;
-        }
-
-        private void listBoxTeacher_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (updating)
-            {
-                return;
-            }
-            var selectedTeacher = listBoxTeachers.SelectedItem as Teacher;
-            if (selectedTeacher != null)
-            {
-                selectedTeacher.requirements.availableTimeSlots = GetTeacherAvailability();
-            }
         }
 
         private void buttonAddTeacher_Click(object sender, EventArgs e)
