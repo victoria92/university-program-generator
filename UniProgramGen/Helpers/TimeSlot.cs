@@ -30,7 +30,8 @@ namespace UniProgramGen.Helpers
 
         public bool Overlaps(TimeSlot other)
         {
-            return other.Day == Day && (inSlot(other.StartHour) || inSlot(other.EndHour));
+            return other.Day == Day && ((other.StartHour >= StartHour && other.StartHour < EndHour) ||
+                                        (other.EndHour   > StartHour  && other.EndHour  <= EndHour));
         }
 
         public bool Includes(TimeSlot other)
@@ -49,12 +50,6 @@ namespace UniProgramGen.Helpers
                 throw new ArgumentOutOfRangeException("Hour outside of working hours");
             }
         }
-
-        private bool inSlot(uint hour)
-        {
-            return hour > StartHour && hour < EndHour;
-        }
-
 
         internal IEnumerable<TimeSlot> GetAllWindows(uint duration)
         {
