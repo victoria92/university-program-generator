@@ -29,10 +29,10 @@ namespace UniProgramGen.Generator
                     Event evt = iCal.Create<Event>();
 
                 
-                    evt.Start = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.StartHour);
+                    evt.Start = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.StartHour + 1);
                     evt.Start.AddDays((int)(solution[i].timeSlot.Day));
 
-                    evt.End = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.EndHour);
+                    evt.End = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.EndHour + 1);
                     evt.Start.AddDays((int)(solution[i].timeSlot.Day));
 
                     evt.Summary = string.Join(", ", solution[i].groups.Select(g => g.name));
