@@ -17,12 +17,6 @@ namespace UniProgramGen
             InitializeComponent();
             List<Teacher> l = new List<Teacher>();
             HashSet<RoomType> r = new HashSet<RoomType>();
-            Teacher teacher = new Teacher(null, "Dyadov");
-            listBoxTeachers.DisplayMember = "Name";
-            listBoxTeachers.DataSource = new List<Teacher> { teacher };
-
-            listBoxSubjects.DisplayMember = "Name";
-            listBoxSubjects.DataSource = new List<Subject> {  };
         }
 
         private void listBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
@@ -51,6 +45,7 @@ namespace UniProgramGen
         }
 
         private List<Subject> subjects;
+        private List<Teacher> teachers;
 
         public List<Subject> Subjects
         {
@@ -62,6 +57,19 @@ namespace UniProgramGen
             {
                 subjects = value;
                 listBoxSubjects.DataSource = value;
+            }
+        }
+
+        public List<Teacher> Teachers
+        {
+            get
+            {
+                return teachers;
+            }
+            set
+            {
+                teachers = value;
+                listBoxTeachers.DataSource = value;
             }
         }
     }

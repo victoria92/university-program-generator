@@ -49,6 +49,7 @@ namespace UniProgramGen.Data
             result.Teachers = new List<Teacher>
             {
                 new Teacher(null, "Birov"),
+                new Teacher(null, "Babev"),
             };
 
             return result;

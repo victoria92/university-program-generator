@@ -15,6 +15,10 @@ namespace UniProgramGen
         public MainForm()
         {
             InitializeComponent();
+
+            State state = State.ExampleData();
+            TAB_Subjects.Subjects = state.Subjects;
+            TAB_Subjects.Teachers = state.Teachers;
         }
     }
 }
