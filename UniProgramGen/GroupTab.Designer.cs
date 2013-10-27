@@ -53,6 +53,7 @@
             // 
             // numericUpDownStudents
             // 
+            this.numericUpDownStudents.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.numericUpDownStudents.Location = new System.Drawing.Point(193, 84);
             this.numericUpDownStudents.Name = "numericUpDownStudents";
             this.numericUpDownStudents.Size = new System.Drawing.Size(56, 20);
@@ -61,6 +62,7 @@
             // 
             // groupName
             // 
+            this.groupName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.groupName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupName.Location = new System.Drawing.Point(190, 16);
             this.groupName.Name = "groupName";
@@ -80,6 +82,7 @@
             // 
             // size
             // 
+            this.size.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.size.AutoSize = true;
             this.size.Location = new System.Drawing.Point(190, 68);
             this.size.Name = "size";
@@ -89,6 +92,7 @@
             // 
             // listBoxSubjectsOfGroups
             // 
+            this.listBoxSubjectsOfGroups.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxSubjectsOfGroups.FormattingEnabled = true;
             this.listBoxSubjectsOfGroups.Location = new System.Drawing.Point(322, 84);
             this.listBoxSubjectsOfGroups.Name = "listBoxSubjectsOfGroups";
@@ -111,6 +115,7 @@
             // 
             // labelSubjectsOfGroups
             // 
+            this.labelSubjectsOfGroups.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSubjectsOfGroups.AutoSize = true;
             this.labelSubjectsOfGroups.Location = new System.Drawing.Point(319, 68);
             this.labelSubjectsOfGroups.Name = "labelSubjectsOfGroups";
