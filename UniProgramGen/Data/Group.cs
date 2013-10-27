@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace UniProgramGen.Data
 {
     public class Group
     {
+        [JsonIgnore]
         public List<Subject> horarium { get; set; }
         public uint size { get; set; }
         public string name { get; set; }

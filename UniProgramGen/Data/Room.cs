@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace UniProgramGen.Data
 {
@@ -6,6 +7,7 @@ namespace UniProgramGen.Data
     {
         public HashSet<RoomType> types { get; set; }
         public uint capacity { get; set; }
+        [JsonIgnore]
         public List<Helpers.TimeSlot> availability { get; set; }
         public string nameOrNumber { get; set; }
 

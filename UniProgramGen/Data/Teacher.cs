@@ -1,9 +1,11 @@
 ﻿using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace UniProgramGen.Data
 {
     public class Teacher
     {
+        [JsonIgnore]
         public Requirements requirements { get; set; }
         public string name { get; set; }
 
