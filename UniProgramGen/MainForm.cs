@@ -30,6 +30,8 @@ namespace UniProgramGen
             tabTeachers.InitializeBindingSources(teachersBindingSource);
 
             tabRooms.InitializeBindingSources(roomsBindingSource);
+
+            tabResults.InitializeBindingSources(teachersBindingSource, roomsBindingSource, groupsBindingSource);
         }
     }
 }

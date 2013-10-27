@@ -15,5 +15,15 @@ namespace UniProgramGen
         {
             InitializeComponent();
         }
+
+        internal void InitializeBindingSources(
+            BindingSource teachersBS,
+            BindingSource roomsBS,
+            BindingSource groupsBS)
+        {
+            listBoxTeachers.DataSource = teachersBS;
+            listBoxRooms.DataSource = roomsBS;
+            listBoxGroups.DataSource = groupsBS;
+        }
     }
 }

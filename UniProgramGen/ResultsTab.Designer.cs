@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.groupBoxActions = new System.Windows.Forms.GroupBox();
+            this.buttonGenerate = new System.Windows.Forms.Button();
             this.splitResults = new System.Windows.Forms.SplitContainer();
             this.groupBoxTeachers = new System.Windows.Forms.GroupBox();
+            this.listBoxTeachers = new System.Windows.Forms.ListBox();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBoxRooms = new System.Windows.Forms.GroupBox();
-            this.groupBoxGroups = new System.Windows.Forms.GroupBox();
-            this.listBoxTeachers = new System.Windows.Forms.ListBox();
             this.listBoxRooms = new System.Windows.Forms.ListBox();
+            this.groupBoxGroups = new System.Windows.Forms.GroupBox();
             this.listBoxGroups = new System.Windows.Forms.ListBox();
-            this.buttonGenerate = new System.Windows.Forms.Button();
             this.groupBoxActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).BeginInit();
             this.splitResults.Panel1.SuspendLayout();
@@ -63,6 +63,15 @@
             this.groupBoxActions.TabIndex = 3;
             this.groupBoxActions.TabStop = false;
             this.groupBoxActions.Text = "Действия";
+            // 
+            // buttonGenerate
+            // 
+            this.buttonGenerate.Location = new System.Drawing.Point(440, 19);
+            this.buttonGenerate.Name = "buttonGenerate";
+            this.buttonGenerate.Size = new System.Drawing.Size(204, 45);
+            this.buttonGenerate.TabIndex = 0;
+            this.buttonGenerate.Text = "Генерирай Програма";
+            this.buttonGenerate.UseVisualStyleBackColor = true;
             // 
             // splitResults
             // 
@@ -94,6 +103,16 @@
             this.groupBoxTeachers.TabStop = false;
             this.groupBoxTeachers.Text = "Преподаватели";
             // 
+            // listBoxTeachers
+            // 
+            this.listBoxTeachers.DisplayMember = "name";
+            this.listBoxTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxTeachers.FormattingEnabled = true;
+            this.listBoxTeachers.Location = new System.Drawing.Point(3, 16);
+            this.listBoxTeachers.Name = "listBoxTeachers";
+            this.listBoxTeachers.Size = new System.Drawing.Size(209, 362);
+            this.listBoxTeachers.TabIndex = 0;
+            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -122,6 +141,16 @@
             this.groupBoxRooms.TabStop = false;
             this.groupBoxRooms.Text = "Стаи";
             // 
+            // listBoxRooms
+            // 
+            this.listBoxRooms.DisplayMember = "nameOrNumber";
+            this.listBoxRooms.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listBoxRooms.FormattingEnabled = true;
+            this.listBoxRooms.Location = new System.Drawing.Point(3, 16);
+            this.listBoxRooms.Name = "listBoxRooms";
+            this.listBoxRooms.Size = new System.Drawing.Size(208, 362);
+            this.listBoxRooms.TabIndex = 0;
+            // 
             // groupBoxGroups
             // 
             this.groupBoxGroups.Controls.Add(this.listBoxGroups);
@@ -133,41 +162,15 @@
             this.groupBoxGroups.TabStop = false;
             this.groupBoxGroups.Text = "Групи";
             // 
-            // listBoxTeachers
-            // 
-            this.listBoxTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxTeachers.FormattingEnabled = true;
-            this.listBoxTeachers.Location = new System.Drawing.Point(3, 16);
-            this.listBoxTeachers.Name = "listBoxTeachers";
-            this.listBoxTeachers.Size = new System.Drawing.Size(209, 362);
-            this.listBoxTeachers.TabIndex = 0;
-            // 
-            // listBoxRooms
-            // 
-            this.listBoxRooms.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listBoxRooms.FormattingEnabled = true;
-            this.listBoxRooms.Location = new System.Drawing.Point(3, 16);
-            this.listBoxRooms.Name = "listBoxRooms";
-            this.listBoxRooms.Size = new System.Drawing.Size(208, 362);
-            this.listBoxRooms.TabIndex = 0;
-            // 
             // listBoxGroups
             // 
+            this.listBoxGroups.DisplayMember = "name";
             this.listBoxGroups.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxGroups.FormattingEnabled = true;
             this.listBoxGroups.Location = new System.Drawing.Point(3, 16);
             this.listBoxGroups.Name = "listBoxGroups";
             this.listBoxGroups.Size = new System.Drawing.Size(207, 362);
             this.listBoxGroups.TabIndex = 0;
-            // 
-            // buttonGenerate
-            // 
-            this.buttonGenerate.Location = new System.Drawing.Point(440, 19);
-            this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(204, 45);
-            this.buttonGenerate.TabIndex = 0;
-            this.buttonGenerate.Text = "Генерирай Програма";
-            this.buttonGenerate.UseVisualStyleBackColor = true;
             // 
             // ResultsTab
             // 
