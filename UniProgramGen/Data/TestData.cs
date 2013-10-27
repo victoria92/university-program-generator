@@ -167,6 +167,7 @@ namespace UniProgramGen.Data
             teachers = new List<Teacher>();
 
             var teacher1freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
+            teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Monday, 7, 22));
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Tuesday, 7, 22));
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Wednesday, 7, 22));
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));

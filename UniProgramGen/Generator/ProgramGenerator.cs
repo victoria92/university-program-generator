@@ -133,29 +133,32 @@ namespace UniProgramGen.Generator
                 var roomAvailabilities = room.availability.SelectMany(a => a.GetAllWindows(subject.duration)).ToList();
                 foreach (var windowTimeSlot in roomAvailabilities)
                 {
-                    if (subject.teachers.All(t => t.requirements.weight != 1 ||
-                        t.requirements.availableTimeSlots.Any(a => a.Includes(windowTimeSlot))))
+                    int dayOfWeek = (int) windowTimeSlot.Day - 1;
+                    if (subject.GetGroups().All(g => groupAvailabilities[g][dayOfWeek].Any(a => a.Includes(windowTimeSlot))))
                     {
-                        TimeSlot.RemoveTimeSlotFromAvailability(room.availability, windowTimeSlot);
-                        foreach (var group in subject.GetGroups())
-	                    {
-                            TimeSlot.RemoveTimeSlotFromAvailability(groupAvailabilities[group][(int) windowTimeSlot.Day - 1], windowTimeSlot);
-	                    }
-                        currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot, subject.GetGroups()));
-
-                        if (!FindSolutions(subjects.Skip(1)))
+                        if (subject.teachers.All(t => t.requirements.weight != 1 ||
+                            t.requirements.availableTimeSlots.Any(a => a.Includes(windowTimeSlot))))
                         {
-                            return false;
-                        }
+                            TimeSlot.RemoveTimeSlotFromAvailability(room.availability, windowTimeSlot);
+                            foreach (var group in subject.GetGroups())
+                            {
+                                TimeSlot.RemoveTimeSlotFromAvailability(groupAvailabilities[group][dayOfWeek], windowTimeSlot);
+                            }
+                            currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot, subject.GetGroups()));
 
-                        currentSolution.RemoveLast();
-                        foreach (var group in subject.GetGroups())
-                        {
-                            TimeSlot.AddTimeSlotToAvailability(groupAvailabilities[group][(int)windowTimeSlot.Day - 1], windowTimeSlot);
+                            if (!FindSolutions(subjects.Skip(1)))
+                            {
+                                return false;
+                            }
+
+                            currentSolution.RemoveLast();
+                            foreach (var group in subject.GetGroups())
+                            {
+                                TimeSlot.AddTimeSlotToAvailability(groupAvailabilities[group][(int)windowTimeSlot.Day - 1], windowTimeSlot);
+                            }
+                            TimeSlot.AddTimeSlotToAvailability(room.availability, windowTimeSlot);
                         }
-                        TimeSlot.AddTimeSlotToAvailability(room.availability, windowTimeSlot);
                     }
-                    
                 }
             }
 

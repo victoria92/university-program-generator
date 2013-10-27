@@ -62,12 +62,12 @@ namespace UniProgramGen.Helpers
 
         internal IEnumerable<TimeSlot> Remove(TimeSlot timeSlot)
         {
-            if (timeSlot.StartHour != StartHour)
+            if (StartHour < timeSlot.StartHour)
             {
                 yield return new TimeSlot(Day, StartHour, timeSlot.StartHour);
             }
 
-            if (timeSlot.EndHour != EndHour)
+            if (EndHour > timeSlot.EndHour)
             {
                 yield return new TimeSlot(Day, timeSlot.EndHour, EndHour);
             }
@@ -83,32 +83,48 @@ namespace UniProgramGen.Helpers
             StartHour = timeSlot.StartHour;
         }
 
+        // TODO: make this list<timeslots> to a linked list
         public static void RemoveTimeSlotFromAvailability(List<TimeSlot> availability, TimeSlot timeSlot)
         {
             for (int i = 0; i < availability.Count; i++)
             {
-                var ts = availability[i];
-                if (ts.Includes(timeSlot))
+                var availableTimeSlot = availability[i];
+                if (availableTimeSlot.Includes(timeSlot))
                 {
                     availability.RemoveAt(i);
-                    availability.AddRange(ts.Remove(timeSlot));
+                    availability.AddRange(availableTimeSlot.Remove(timeSlot));
                     break;
                 }
-
             }
         }
 
         public static void AddTimeSlotToAvailability(List<TimeSlot> availability, TimeSlot timeSlot)
         {
-            foreach (var ts in availability.Where(a => a.Day == timeSlot.Day))
+            foreach (var availableTimeSlot in availability.Where(a => a.Day == timeSlot.Day))
             {
-                if (ts.EndHour == timeSlot.StartHour)
+                if (availableTimeSlot.EndHour == timeSlot.StartHour)
                 {
-                    ts.AddAfter(timeSlot);
+                    availableTimeSlot.AddAfter(timeSlot);
+
+                    var index = availability.FindIndex(a => a.Day == timeSlot.Day && a.StartHour == availableTimeSlot.EndHour);
+                    if (index != -1)
+                    {
+                        availableTimeSlot.AddAfter(availability[index]);
+                        availability.RemoveAt(index);
+                    }
+                    break;
                 }
-                if (ts.StartHour == timeSlot.EndHour)
+                if (availableTimeSlot.StartHour == timeSlot.EndHour)
                 {
-                    ts.AddBefore(timeSlot);
+                    availableTimeSlot.AddBefore(timeSlot);
+
+                    var index = availability.FindIndex(a => a.Day == timeSlot.Day && a.EndHour == availableTimeSlot.StartHour);
+                    if (index != -1)
+                    {
+                        availableTimeSlot.AddBefore(availability[index]);
+                        availability.RemoveAt(index);
+                    }
+                    break;
                 }
             }
         }
