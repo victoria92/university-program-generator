@@ -39,6 +39,7 @@ namespace UniProgramGen.Generator
 
                     evt.Location = solution[i].room.nameOrNumber;
                 }
+                break;
             }
 
             ISerializationContext ctx = new SerializationContext();

@@ -39,6 +39,7 @@
             this.listBoxRooms = new System.Windows.Forms.ListBox();
             this.groupBoxGroups = new System.Windows.Forms.GroupBox();
             this.listBoxGroups = new System.Windows.Forms.ListBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBoxActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).BeginInit();
             this.splitResults.Panel1.SuspendLayout();
@@ -57,6 +58,7 @@
             // 
             this.groupBoxActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxActions.Controls.Add(this.button1);
             this.groupBoxActions.Controls.Add(this.buttonDummyData);
             this.groupBoxActions.Controls.Add(this.buttonGenerate);
             this.groupBoxActions.Location = new System.Drawing.Point(0, 0);
@@ -68,7 +70,7 @@
             // 
             // buttonDummyData
             // 
-            this.buttonDummyData.Location = new System.Drawing.Point(94, 19);
+            this.buttonDummyData.Location = new System.Drawing.Point(93, 16);
             this.buttonDummyData.Name = "buttonDummyData";
             this.buttonDummyData.Size = new System.Drawing.Size(184, 23);
             this.buttonDummyData.TabIndex = 2;
@@ -78,9 +80,9 @@
             // 
             // buttonGenerate
             // 
-            this.buttonGenerate.Location = new System.Drawing.Point(440, 19);
+            this.buttonGenerate.Location = new System.Drawing.Point(437, 16);
             this.buttonGenerate.Name = "buttonGenerate";
-            this.buttonGenerate.Size = new System.Drawing.Size(204, 45);
+            this.buttonGenerate.Size = new System.Drawing.Size(204, 21);
             this.buttonGenerate.TabIndex = 0;
             this.buttonGenerate.Text = "Генерирай Програма";
             this.buttonGenerate.UseVisualStyleBackColor = true;
@@ -188,6 +190,16 @@
             this.listBoxGroups.TabIndex = 0;
             this.listBoxGroups.DoubleClick += new System.EventHandler(this.listBoxGroups_DoubleClick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(437, 41);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(204, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "Генерирай Календар";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // ResultsTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,5 +237,6 @@
         private System.Windows.Forms.ListBox listBoxGroups;
         private System.Windows.Forms.Button buttonGenerate;
         private System.Windows.Forms.Button buttonDummyData;
+        private System.Windows.Forms.Button button1;
     }
 }

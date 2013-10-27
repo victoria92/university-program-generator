@@ -117,5 +117,13 @@ namespace UniProgramGen
 
         [System.Runtime.InteropServices.DllImport("msvcrt.dll")]
         private static extern int system(String command);
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var iCalGen = new ICalGenerator();
+            iCalGen.ExportSolution();
+            string pr = System.Environment.GetEnvironmentVariable("PROGRAMFILES");
+            System.Diagnostics.Process.Start(pr + @"\Microsoft Office 15\root\office15\OUTLOOK.EXE", "/vcal solution.ics");
+        }
     }
 }
