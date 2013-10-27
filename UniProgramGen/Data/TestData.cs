@@ -171,8 +171,7 @@ namespace UniProgramGen.Data
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher1rooms = new List<Room>();
-            var teacher1requirements = new Requirements(0.3, teacher1freeTime, teacher1rooms);
+            var teacher1requirements = new Requirements(0.3, teacher1freeTime, rooms);
             teachers.Add(new Teacher(teacher1requirements, "G. Aleksandrov"));
 
             var teacher2freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -182,8 +181,7 @@ namespace UniProgramGen.Data
             teacher2freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher2freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher2freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher2rooms = new List<Room>();
-            var teacher2requirements = new Requirements(0.3, teacher2freeTime, teacher2rooms);
+            var teacher2requirements = new Requirements(0.3, teacher2freeTime, rooms);
             teachers.Add(new Teacher(teacher2requirements, "E. Velikova"));
 
             var teacher3freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -205,8 +203,7 @@ namespace UniProgramGen.Data
             teacher4freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher4freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher4freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher4rooms = new List<Room>();
-            var teacher4requirements = new Requirements(0.3, teacher4freeTime, teacher4rooms);
+            var teacher4requirements = new Requirements(0.3, teacher4freeTime, rooms);
             teachers.Add(new Teacher(teacher4requirements, "G. Georgiev"));
 
             var teacher5freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -216,8 +213,7 @@ namespace UniProgramGen.Data
             teacher5freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher5freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher5freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher5rooms = new List<Room>();
-            var teacher5requirements = new Requirements(0.3, teacher5freeTime, teacher5rooms);
+            var teacher5requirements = new Requirements(0.3, teacher5freeTime, rooms);
             teachers.Add(new Teacher(teacher5requirements, "AsistentDis1"));
 
             var teacher6freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -227,8 +223,7 @@ namespace UniProgramGen.Data
             teacher6freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher6freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher6freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher6rooms = new List<Room>();
-            var teacher6requirements = new Requirements(0.3, teacher6freeTime, teacher6rooms);
+            var teacher6requirements = new Requirements(0.3, teacher6freeTime, rooms);
             teachers.Add(new Teacher(teacher6requirements, "AsistentAlgebra1"));
 
             var teacher7freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -238,8 +233,7 @@ namespace UniProgramGen.Data
             teacher7freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher7freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher7freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher7rooms = new List<Room>();
-            var teacher7requirements = new Requirements(0.3, teacher7freeTime, teacher7rooms);
+            var teacher7requirements = new Requirements(0.3, teacher7freeTime, rooms);
             teachers.Add(new Teacher(teacher7requirements, "AsistentUP1"));
 
             var teacher8freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -249,8 +243,7 @@ namespace UniProgramGen.Data
             teacher8freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher8freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher8freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher8rooms = new List<Room>();
-            var teacher8requirements = new Requirements(0.3, teacher8freeTime, teacher8rooms);
+            var teacher8requirements = new Requirements(0.3, teacher8freeTime, rooms);
             teachers.Add(new Teacher(teacher8requirements, "AsistentUPp1"));
 
             var teacher9freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -260,8 +253,7 @@ namespace UniProgramGen.Data
             teacher9freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher9freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher9freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher9rooms = new List<Room>();
-            var teacher9requirements = new Requirements(0.3, teacher9freeTime, teacher9rooms);
+            var teacher9requirements = new Requirements(0.3, teacher9freeTime, rooms);
             teachers.Add(new Teacher(teacher9requirements, "AsistentDStr1"));
 
             var teacher10freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -271,8 +263,7 @@ namespace UniProgramGen.Data
             teacher10freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher10freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher10freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher10rooms = new List<Room>();
-            var teacher10requirements = new Requirements(0.3, teacher10freeTime, teacher10rooms);
+            var teacher10requirements = new Requirements(0.3, teacher10freeTime, rooms);
             teachers.Add(new Teacher(teacher10requirements, "AsistentDis2"));
 
             var teacher11freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -282,8 +273,7 @@ namespace UniProgramGen.Data
             teacher11freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher11freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher11freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher11rooms = new List<Room>();
-            var teacher11requirements = new Requirements(0.3, teacher11freeTime, teacher11rooms);
+            var teacher11requirements = new Requirements(0.3, teacher11freeTime, rooms);
             teachers.Add(new Teacher(teacher11requirements, "AsistentAlgebra2"));
 
             var teacher12freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -293,8 +283,7 @@ namespace UniProgramGen.Data
             teacher12freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher12freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher12freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher12rooms = new List<Room>();
-            var teacher12requirements = new Requirements(0.3, teacher12freeTime, teacher12rooms);
+            var teacher12requirements = new Requirements(0.3, teacher12freeTime, rooms);
             teachers.Add(new Teacher(teacher12requirements, "AsistentUP2"));
 
             var teacher13freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -304,8 +293,7 @@ namespace UniProgramGen.Data
             teacher13freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher13freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher13freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher13rooms = new List<Room>();
-            var teacher13requirements = new Requirements(0.3, teacher13freeTime, teacher13rooms);
+            var teacher13requirements = new Requirements(0.3, teacher13freeTime, rooms);
             teachers.Add(new Teacher(teacher13requirements, "AsistentUPp2"));
 
             var teacher14freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -315,8 +303,7 @@ namespace UniProgramGen.Data
             teacher14freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher14freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher14freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher14rooms = new List<Room>();
-            var teacher14requirements = new Requirements(0.3, teacher14freeTime, teacher14rooms);
+            var teacher14requirements = new Requirements(0.3, teacher14freeTime, rooms);
             teachers.Add(new Teacher(teacher14requirements, "AsistentDStr2"));
 
             var teacher15freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -326,8 +313,7 @@ namespace UniProgramGen.Data
             teacher15freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher15freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher15freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher15rooms = new List<Room>();
-            var teacher15requirements = new Requirements(0.3, teacher15freeTime, teacher15rooms);
+            var teacher15requirements = new Requirements(0.3, teacher15freeTime, rooms);
             teachers.Add(new Teacher(teacher15requirements, "AsistentDis3"));
 
             var teacher16freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -337,8 +323,7 @@ namespace UniProgramGen.Data
             teacher16freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher16freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher16freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher16rooms = new List<Room>();
-            var teacher16requirements = new Requirements(0.3, teacher16freeTime, teacher16rooms);
+            var teacher16requirements = new Requirements(0.3, teacher16freeTime, rooms);
             teachers.Add(new Teacher(teacher16requirements, "AsistentAlgebra3"));
 
             var teacher17freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -348,8 +333,7 @@ namespace UniProgramGen.Data
             teacher17freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher17freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher17freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher17rooms = new List<Room>();
-            var teacher17requirements = new Requirements(0.3, teacher17freeTime, teacher17rooms);
+            var teacher17requirements = new Requirements(0.3, teacher17freeTime, rooms);
             teachers.Add(new Teacher(teacher17requirements, "AsistentUP3"));
 
             var teacher18freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -359,8 +343,7 @@ namespace UniProgramGen.Data
             teacher18freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher18freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher18freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher18rooms = new List<Room>();
-            var teacher18requirements = new Requirements(0.3, teacher18freeTime, teacher18rooms);
+            var teacher18requirements = new Requirements(0.3, teacher18freeTime, rooms);
             teachers.Add(new Teacher(teacher18requirements, "AsistentUPp3"));
 
             var teacher19freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -370,8 +353,7 @@ namespace UniProgramGen.Data
             teacher19freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher19freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher19freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher19rooms = new List<Room>();
-            var teacher19requirements = new Requirements(0.3, teacher19freeTime, teacher19rooms);
+            var teacher19requirements = new Requirements(0.3, teacher19freeTime, rooms);
             teachers.Add(new Teacher(teacher19requirements, "AsistentDStr3"));
 
             var teacher20freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -381,8 +363,7 @@ namespace UniProgramGen.Data
             teacher20freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher20freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher20freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher20rooms = new List<Room>();
-            var teacher20requirements = new Requirements(0.3, teacher20freeTime, teacher20rooms);
+            var teacher20requirements = new Requirements(0.3, teacher20freeTime, rooms);
             teachers.Add(new Teacher(teacher20requirements, "AsistentDis4"));
 
             var teacher21freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -392,8 +373,7 @@ namespace UniProgramGen.Data
             teacher21freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher21freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher21freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher21rooms = new List<Room>();
-            var teacher21requirements = new Requirements(0.3, teacher21freeTime, teacher21rooms);
+            var teacher21requirements = new Requirements(0.3, teacher21freeTime, rooms);
             teachers.Add(new Teacher(teacher21requirements, "AsistentAlgebra4"));
 
             var teacher22freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -403,8 +383,7 @@ namespace UniProgramGen.Data
             teacher22freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher22freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher22freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher22rooms = new List<Room>();
-            var teacher22requirements = new Requirements(0.3, teacher22freeTime, teacher22rooms);
+            var teacher22requirements = new Requirements(0.3, teacher22freeTime, rooms);
             teachers.Add(new Teacher(teacher22requirements, "AsistentUP4"));
 
             var teacher23freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -414,8 +393,7 @@ namespace UniProgramGen.Data
             teacher23freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher23freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher23freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher23rooms = new List<Room>();
-            var teacher23requirements = new Requirements(0.3, teacher23freeTime, teacher23rooms);
+            var teacher23requirements = new Requirements(0.3, teacher23freeTime, rooms);
             teachers.Add(new Teacher(teacher23requirements, "AsistentUPp4"));
 
             var teacher24freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
@@ -425,8 +403,7 @@ namespace UniProgramGen.Data
             teacher24freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             teacher24freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
             teacher24freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Saturday, 7, 22));
-            var teacher24rooms = new List<Room>();
-            var teacher24requirements = new Requirements(0.3, teacher24freeTime, teacher24rooms);
+            var teacher24requirements = new Requirements(0.3, teacher24freeTime, rooms);
             teachers.Add(new Teacher(teacher24requirements, "AsistentDStr4"));
 
             // ---------------------------------------------------------------------------------------------------

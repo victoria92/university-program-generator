@@ -52,6 +52,7 @@ namespace UniProgramGen.Generator
 
             var personalSchedule = new PersonalSchedule(solution);
 
+            var hasHoles = false;
             foreach (var group in groups)
             {
                 var groupSchedule = personalSchedule.GetGroupProgram(group).ToList();
@@ -60,8 +61,14 @@ namespace UniProgramGen.Generator
                 var totalGroupHoleHours = groupByDays.Sum(g => g.Zip(g.Skip(1), (s1, s2) => (int) s2.timeSlot.StartHour - s1.timeSlot.EndHour).Sum());
                 if (totalGroupHoleHours > 5)
                 {
+                    hasHoles = true;
                     solutionWeight -= totalGroupHoleHours / 10;
                 }
+            }
+
+            if (!hasHoles && solutionWeight == solution.Sum(s => s.subject.teachers.Sum(t => 2 * t.requirements.weight)))
+            {
+                return Double.MaxValue;
             }
 
             return solutionWeight;
@@ -74,7 +81,7 @@ namespace UniProgramGen.Generator
             return copy;
         }
 
-        private void FindSolutions(IEnumerable<Subject> subjects)
+        private bool FindSolutions(IEnumerable<Subject> subjects)
         {
             var subject = subjects.FirstOrDefault();
             if (subject == null)
@@ -103,7 +110,7 @@ namespace UniProgramGen.Generator
                         }
                     }
                 }
-                return;
+                return weight != Double.MaxValue;
             }
 
             foreach (var room in rooms.
@@ -119,12 +126,17 @@ namespace UniProgramGen.Generator
                                 !s.timeSlot.Overlaps(windowTimeSlot)))
                         {
                             currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot, subject.GetGroups()));
-                            FindSolutions(subjects.Skip(1));
+                            if (!FindSolutions(subjects.Skip(1)))
+                            {
+                                return false;
+                            }
                             currentSolution.RemoveLast();
                         }
                     }
                 }
             }
+
+            return true;
         }
 
         private void SetSubjectsGroups(List<Subject> subjects, List<Group> groups)
