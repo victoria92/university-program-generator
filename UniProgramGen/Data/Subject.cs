@@ -9,11 +9,6 @@ namespace UniProgramGen.Data
         public string name { get; set; }
         public uint duration { get; set; }
 
-        public string Name
-        {
-            get { return name; }
-        }
-
         private readonly List<Group> groups;
         internal uint attendingPeopleCount;
 

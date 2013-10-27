@@ -20,7 +20,9 @@ namespace UniProgramGen
             Teacher teacher = new Teacher(null, "Dyadov");
             listBoxTeachers.DisplayMember = "Name";
             listBoxTeachers.DataSource = new List<Teacher> { teacher };
+
             listBoxSubjects.DisplayMember = "Name";
+            listBoxSubjects.DataSource = new List<Subject> {  };
         }
 
         private void listBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
