@@ -12,34 +12,32 @@ namespace UniProgramGen.Generator
 {
     public class ICalGenerator
     {
-        
         public ICalGenerator()
         {
-
         }
 
         public void ExportSolution()
         {
             DDay.iCal.iCalendar iCal = new DDay.iCal.iCalendar();
             var t = new DBManager();
-            t.tTestData();
+            t.getTestData();
             foreach(ScheduledTimeSlot[] solution in (t.solutions))
             {
-            for (int i = 0; i < solution.Length; i++)
-            {
-                Event evt = iCal.Create<Event>();
+                for (int i = 0; i < solution.Length; i++)
+                {
+                    Event evt = iCal.Create<Event>();
 
                 
-                evt.Start = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.StartHour);
-                evt.Start.AddDays((int)(solution[i].timeSlot.Day));
+                    evt.Start = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.StartHour);
+                    evt.Start.AddDays((int)(solution[i].timeSlot.Day));
 
-                evt.End = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.EndHour);
-                evt.Start.AddDays((int)(solution[i].timeSlot.Day));
+                    evt.End = iCalDateTime.Today.AddHours((int)solution[i].timeSlot.EndHour);
+                    evt.Start.AddDays((int)(solution[i].timeSlot.Day));
 
-                evt.Summary = string.Join(", ", solution[i].groups.Select(g => g.name));
+                    evt.Summary = string.Join(", ", solution[i].groups.Select(g => g.name));
 
-                evt.Location = solution[i].room.nameOrNumber;
-            }
+                    evt.Location = solution[i].room.nameOrNumber;
+                }
             }
 
             ISerializationContext ctx = new SerializationContext();

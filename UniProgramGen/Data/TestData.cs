@@ -9,16 +9,16 @@ namespace UniProgramGen.Data
     public class DBManager
     {
         // rooms, subjects, teachers, groups
-        public IEnumerable<Room> rooms;
-        public IEnumerable<Subject> subjects;
-        public IEnumerable<Teacher> teachers;
-        public IEnumerable<Group> groups;
+        public List<Room> rooms;
+        public List<Subject> subjects;
+        public List<Teacher> teachers;
+        public List<Group> groups;
 
         public IEnumerable<ScheduledTimeSlot[]> solutions;
 
-        public void tTestData()
+        public void getTestData()
         {
-            List<Room> rooms = new List<Room>();
+            rooms = new List<Room>();
 
             var roomType1 = new HashSet<RoomType>();
             roomType1.Add(RoomType.Computer);
@@ -162,7 +162,7 @@ namespace UniProgramGen.Data
 
             // ---------------------------------------------------------------------------------------------------
 
-            List<Teacher> teachers = new List<Teacher>();
+            teachers = new List<Teacher>();
 
             var teacher1freeTime = new List<UniProgramGen.Helpers.TimeSlot>();
             teacher1freeTime.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Monday, 7, 22));
@@ -431,7 +431,7 @@ namespace UniProgramGen.Data
 
             // ---------------------------------------------------------------------------------------------------
 
-            List<Subject> subjects = new List<Subject>();
+            subjects = new List<Subject>();
 
             var subject1roomtypes = new HashSet<RoomType>();
             subject1roomtypes.Add(RoomType.Lecture);
@@ -579,7 +579,7 @@ namespace UniProgramGen.Data
 
             // ---------------------------------------------------------------------------------------------------
 
-            List<Group> groups = new List<Group>();
+            groups = new List<Group>();
 
             var group1subjects = new List<Subject>();
             group1subjects.Add(subjects[0]);
