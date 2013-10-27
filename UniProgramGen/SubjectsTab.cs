@@ -35,6 +35,13 @@ namespace UniProgramGen
             RefreshSubjects();
         }
 
+        private void LB_Teachers_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedTechers = LB_Teachers.SelectedItems.Cast<Teacher>();
+            CurrentSubject.teachers.RemoveAll(t => true);
+            CurrentSubject.teachers.AddRange(selectedTechers);
+        }
+
         private void checkedListBoxRoomRequirements_SelectedIndexChanged(object sender, EventArgs e)
         {
             //int index = checkedListBoxRoomRequirements.SelectedIndex;
@@ -84,7 +91,7 @@ namespace UniProgramGen
             set
             {
                 teachers = value;
-                listBoxTeachers.DataSource = value;
+                LB_Teachers.DataSource = value;
             }
         }
 

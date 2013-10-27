@@ -30,7 +30,7 @@
         {
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.listBoxTeachers = new System.Windows.Forms.ListBox();
+            this.LB_Teachers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NUM_SubjectDuration = new System.Windows.Forms.NumericUpDown();
             this.TB_SubjectName = new System.Windows.Forms.TextBox();
@@ -60,19 +60,20 @@
             this.label4.TabIndex = 16;
             this.label4.Text = "Преподаватели";
             // 
-            // listBoxTeachers
+            // LB_Teachers
             // 
-            this.listBoxTeachers.DisplayMember = "Name";
-            this.listBoxTeachers.FormattingEnabled = true;
-            this.listBoxTeachers.Items.AddRange(new object[] {
+            this.LB_Teachers.DisplayMember = "Name";
+            this.LB_Teachers.FormattingEnabled = true;
+            this.LB_Teachers.Items.AddRange(new object[] {
             "Биров",
             "Бабев",
             "Добрев"});
-            this.listBoxTeachers.Location = new System.Drawing.Point(213, 95);
-            this.listBoxTeachers.Name = "listBoxTeachers";
-            this.listBoxTeachers.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBoxTeachers.Size = new System.Drawing.Size(120, 95);
-            this.listBoxTeachers.TabIndex = 15;
+            this.LB_Teachers.Location = new System.Drawing.Point(213, 95);
+            this.LB_Teachers.Name = "LB_Teachers";
+            this.LB_Teachers.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.LB_Teachers.Size = new System.Drawing.Size(120, 95);
+            this.LB_Teachers.TabIndex = 15;
+            this.LB_Teachers.SelectedIndexChanged += new System.EventHandler(this.LB_Teachers_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -163,7 +164,7 @@
             this.Controls.Add(this.GB_SubjectNames);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.listBoxTeachers);
+            this.Controls.Add(this.LB_Teachers);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NUM_SubjectDuration);
             this.Controls.Add(this.TB_SubjectName);
@@ -182,7 +183,7 @@
 
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.ListBox listBoxTeachers;
+        private System.Windows.Forms.ListBox LB_Teachers;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.NumericUpDown NUM_SubjectDuration;
         private System.Windows.Forms.TextBox TB_SubjectName;
