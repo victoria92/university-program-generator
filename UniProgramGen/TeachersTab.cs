@@ -14,17 +14,19 @@ namespace UniProgramGen
             InitializeComponent();
 
             Teachers = new List<Teacher>();
-            bindingSource.DataSource = Teachers;
+        }
+
+        internal void InitializeBindingSources(BindingSource teachersBindingSource)
+        {
+            teachersBindingSource.DataSource = Teachers;
 
             listBoxTeachers.DisplayMember = "name";
-            listBoxTeachers.DataSource = bindingSource;
+            listBoxTeachers.DataSource = teachersBindingSource;
         }
 
         private Action refreshSubjectsTab;
 
         public List<Teacher> Teachers { get; private set; }
-
-        public BindingSource bindingSource = new BindingSource();
 
         private Teacher previouslySelectedTeacher = null;
 

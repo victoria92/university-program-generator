@@ -14,15 +14,17 @@ namespace UniProgramGen
             InitializeComponent();
 
             Rooms = new List<Room>();
-            bindingSource.DataSource = Rooms;
+        }
+
+        internal void InitializeBindingSources(BindingSource roomsBindingSource)
+        {
+            roomsBindingSource.DataSource = Rooms;
 
             listBoxRooms.DisplayMember = "nameOrNumber";
-            listBoxRooms.DataSource = bindingSource;
+            listBoxRooms.DataSource = roomsBindingSource;
         }
 
         public List<Room> Rooms { get; private set; }
-
-        private BindingSource bindingSource = new BindingSource();
 
         private Room previouslySelectedRoom = null;
 

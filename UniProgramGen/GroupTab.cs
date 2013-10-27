@@ -13,15 +13,9 @@ namespace UniProgramGen
             InitializeComponent();
 
             Groups = new List<Group>();
-            bindingSource.DataSource = Groups;
-
-            listBoxGroups.DisplayMember = "name";
-            listBoxGroups.DataSource = bindingSource;
         }
 
         public List<Group> Groups { get; private set; }
-
-        private BindingSource bindingSource = new BindingSource();
 
         private Group previouslySelectedGroup = null;
 
@@ -31,8 +25,13 @@ namespace UniProgramGen
             listBoxSubjectsOfGroups.DisplayMember = "name";
         }
 
-        public void InitializeBindingSources(BindingSource subjectsBindingSource)
+        public void InitializeBindingSources(BindingSource groupsBindingSource, BindingSource subjectsBindingSource)
         {
+            groupsBindingSource.DataSource = Groups;
+
+            listBoxGroups.DisplayMember = "name";
+            listBoxGroups.DataSource = groupsBindingSource;
+
             listBoxSubjectsOfGroups.DisplayMember = "name";
             listBoxSubjectsOfGroups.DataSource = subjectsBindingSource;
         }

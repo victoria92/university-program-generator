@@ -16,11 +16,20 @@ namespace UniProgramGen
         {
             InitializeComponent();
 
-            TAB_Subjects.InitializeBindingSources(TABS_Teachers.bindingSource);
+            BindingSource subjectsBindingSource = new BindingSource();
+            BindingSource teachersBindingSource = new BindingSource();
+            BindingSource roomsBindingSource = new BindingSource();
+            BindingSource groupsBindingSource = new BindingSource();
+
+            TAB_Subjects.InitializeBindingSources(subjectsBindingSource, teachersBindingSource);
             TABS_Teachers.SetSubjectsRefreshTeachers(TAB_Subjects.RefreshTeachers);
 
-            TAB_Groups.InitializeBindingSources(TAB_Subjects.subjectsBindingSource);
+            TAB_Groups.InitializeBindingSources(groupsBindingSource, subjectsBindingSource);
             TAB_Subjects.SetSubjectsRefreshTeachers(TAB_Groups.RefreshSubjects);
+
+            TABS_Teachers.InitializeBindingSources(teachersBindingSource);
+
+            TAB_Rooms.InitializeBindingSources(roomsBindingSource);
         }
     }
 }

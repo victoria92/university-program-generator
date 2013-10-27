@@ -13,10 +13,6 @@ namespace UniProgramGen
             InitializeComponent();
 
             Subjects = new List<Subject>();
-            subjectsBindingSource.DataSource = Subjects;
-
-            listBoxSubjects.DisplayMember = "name";
-            listBoxSubjects.DataSource = subjectsBindingSource;
         }
 
         public void RefreshTeachers()
@@ -25,15 +21,18 @@ namespace UniProgramGen
             LB_Teachers.DisplayMember = "name";
         }
 
-        public void InitializeBindingSources(BindingSource teachersBindingSource)
+        public void InitializeBindingSources(BindingSource subjectsBindingSource, BindingSource teachersBindingSource)
         {
+            subjectsBindingSource.DataSource = Subjects;
+
+            listBoxSubjects.DisplayMember = "name";
+            listBoxSubjects.DataSource = subjectsBindingSource;
+
             LB_Teachers.DisplayMember = "name";
             LB_Teachers.DataSource = teachersBindingSource;
         }
 
         private Action refreshGroupsTabSubjects;
-
-        public BindingSource subjectsBindingSource = new BindingSource();
 
         private Subject previouslySelectedSubject = null;
 
