@@ -76,9 +76,9 @@
             // 
             this.TB_SubjectName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TB_SubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TB_SubjectName.Location = new System.Drawing.Point(210, 20);
+            this.TB_SubjectName.Location = new System.Drawing.Point(190, 16);
             this.TB_SubjectName.Name = "TB_SubjectName";
-            this.TB_SubjectName.Size = new System.Drawing.Size(432, 30);
+            this.TB_SubjectName.Size = new System.Drawing.Size(457, 30);
             this.TB_SubjectName.TabIndex = 12;
             // 
             // checkedListBoxRoomRequirements
@@ -98,7 +98,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAdd.Location = new System.Drawing.Point(561, 418);
+            this.buttonAdd.Location = new System.Drawing.Point(566, 418);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(81, 26);
             this.buttonAdd.TabIndex = 9;
@@ -112,24 +112,22 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.GB_SubjectNames.Controls.Add(this.listBoxSubjects);
-            this.GB_SubjectNames.Location = new System.Drawing.Point(4, 4);
+            this.GB_SubjectNames.Location = new System.Drawing.Point(4, 0);
             this.GB_SubjectNames.Name = "GB_SubjectNames";
-            this.GB_SubjectNames.Size = new System.Drawing.Size(200, 443);
+            this.GB_SubjectNames.Size = new System.Drawing.Size(183, 447);
             this.GB_SubjectNames.TabIndex = 18;
             this.GB_SubjectNames.TabStop = false;
             this.GB_SubjectNames.Text = "Курсове";
             // 
             // listBoxSubjects
             // 
-            this.listBoxSubjects.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBoxSubjects.DisplayMember = "Name";
+            this.listBoxSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxSubjects.FormattingEnabled = true;
             this.listBoxSubjects.Location = new System.Drawing.Point(3, 16);
             this.listBoxSubjects.Name = "listBoxSubjects";
             this.listBoxSubjects.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.listBoxSubjects.Size = new System.Drawing.Size(194, 424);
+            this.listBoxSubjects.Size = new System.Drawing.Size(177, 428);
             this.listBoxSubjects.TabIndex = 12;
             this.listBoxSubjects.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjects_SelectedIndexChanged);
             // 
