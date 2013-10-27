@@ -29,8 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxTeacherName = new System.Windows.Forms.TextBox();
             this.listBoxTeachers = new System.Windows.Forms.ListBox();
+            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.listBoxTeacherSaturday = new System.Windows.Forms.ListBox();
             this.listBoxTeacherFriday = new System.Windows.Forms.ListBox();
             this.listBoxTeacherThursday = new System.Windows.Forms.ListBox();
@@ -43,17 +44,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.teacherBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.buttonAddTeacher = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.teacherBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox2
+            // textBoxTeacherName
             // 
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(14, 36);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(262, 30);
-            this.textBox2.TabIndex = 15;
+            this.textBoxTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxTeacherName.Location = new System.Drawing.Point(14, 36);
+            this.textBoxTeacherName.Name = "textBoxTeacherName";
+            this.textBoxTeacherName.ReadOnly = true;
+            this.textBoxTeacherName.Size = new System.Drawing.Size(262, 30);
+            this.textBoxTeacherName.TabIndex = 15;
             // 
             // listBoxTeachers
             // 
@@ -64,9 +66,13 @@
             this.listBoxTeachers.FormattingEnabled = true;
             this.listBoxTeachers.Location = new System.Drawing.Point(493, 13);
             this.listBoxTeachers.Name = "listBoxTeachers";
-            this.listBoxTeachers.Size = new System.Drawing.Size(136, 420);
+            this.listBoxTeachers.Size = new System.Drawing.Size(136, 381);
             this.listBoxTeachers.TabIndex = 14;
             this.listBoxTeachers.SelectedIndexChanged += new System.EventHandler(this.listBoxTeachers_SelectedIndexChanged);
+            // 
+            // teacherBindingSource
+            // 
+            this.teacherBindingSource.DataSource = typeof(UniProgramGen.Data.Teacher);
             // 
             // listBoxTeacherSaturday
             // 
@@ -95,6 +101,7 @@
             this.listBoxTeacherSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTeacherSaturday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherSaturday.TabIndex = 13;
+            this.listBoxTeacherSaturday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherFriday
             // 
@@ -123,6 +130,7 @@
             this.listBoxTeacherFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTeacherFriday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherFriday.TabIndex = 12;
+            this.listBoxTeacherFriday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherThursday
             // 
@@ -151,6 +159,7 @@
             this.listBoxTeacherThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTeacherThursday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherThursday.TabIndex = 11;
+            this.listBoxTeacherThursday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherWednesday
             // 
@@ -179,6 +188,7 @@
             this.listBoxTeacherWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTeacherWednesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherWednesday.TabIndex = 10;
+            this.listBoxTeacherWednesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherTuesday
             // 
@@ -207,6 +217,7 @@
             this.listBoxTeacherTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTeacherTuesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherTuesday.TabIndex = 9;
+            this.listBoxTeacherTuesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // listBoxTeacherMonday
             // 
@@ -235,6 +246,7 @@
             this.listBoxTeacherMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBoxTeacherMonday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherMonday.TabIndex = 8;
+            this.listBoxTeacherMonday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
             // 
             // label6
             // 
@@ -290,21 +302,29 @@
             this.label1.TabIndex = 35;
             this.label1.Text = "Понеделник";
             // 
-            // teacherBindingSource
+            // buttonAddTeacher
             // 
-            this.teacherBindingSource.DataSource = typeof(UniProgramGen.Data.Teacher);
+            this.buttonAddTeacher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonAddTeacher.Location = new System.Drawing.Point(548, 407);
+            this.buttonAddTeacher.Name = "buttonAddTeacher";
+            this.buttonAddTeacher.Size = new System.Drawing.Size(81, 26);
+            this.buttonAddTeacher.TabIndex = 41;
+            this.buttonAddTeacher.Text = "Добави";
+            this.buttonAddTeacher.UseVisualStyleBackColor = true;
+            this.buttonAddTeacher.Click += new System.EventHandler(this.buttonAddTeacher_Click);
             // 
             // TeachersTab
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.buttonAddTeacher);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBoxTeacherName);
             this.Controls.Add(this.listBoxTeachers);
             this.Controls.Add(this.listBoxTeacherSaturday);
             this.Controls.Add(this.listBoxTeacherFriday);
@@ -322,7 +342,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxTeacherName;
         private System.Windows.Forms.ListBox listBoxTeachers;
         private System.Windows.Forms.ListBox listBoxTeacherSaturday;
         private System.Windows.Forms.ListBox listBoxTeacherFriday;
@@ -337,6 +357,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.BindingSource teacherBindingSource;
+        private System.Windows.Forms.Button buttonAddTeacher;
 
 
 
