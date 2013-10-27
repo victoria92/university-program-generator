@@ -85,7 +85,7 @@ namespace UniProgramGen
             listBoxTeachers.SelectedItem = null;
             var selectedSchedule = personalSchedule.GetTeacherProgram(selectedTeacher);
 
-            DisplaySchedule(selectedSchedule);
+            DisplaySchedule(selectedSchedule, "teachers");
         }
 
         private void listBoxRooms_DoubleClick(object sender, EventArgs e)
@@ -94,7 +94,7 @@ namespace UniProgramGen
             listBoxTeachers.SelectedItem = null;
             var selectedSchedule = personalSchedule.GetRoomProgram(selectedRoom);
 
-            DisplaySchedule(selectedSchedule);
+            DisplaySchedule(selectedSchedule, "rooms");
         }
 
         private void listBoxGroups_DoubleClick(object sender, EventArgs e)
@@ -103,15 +103,14 @@ namespace UniProgramGen
             listBoxTeachers.SelectedItem = null;
             var selectedSchedule = personalSchedule.GetGroupProgram(selectedGroup);
 
-            DisplaySchedule(selectedSchedule);
+            DisplaySchedule(selectedSchedule, "groups");
         }
 
-        private void DisplaySchedule(IEnumerable<ScheduledTimeSlot> schedule)
+        private void DisplaySchedule(IEnumerable<ScheduledTimeSlot> schedule, string type)
         {
             dumpFirstSchedule("../../datafiles/example_solution.json", schedule);
 
-            // TODO: fix!!!
-            //system("ruby ../../../dragons/scripts/run.rb ../../datafiles/example_solution.json");
+            system(@"ruby ..\..\..\dragons\scripts\run.rb ..\..\datafiles\example_solution.json " + type + " > ../../datafiles/example_solution.html");
 
             FormSchedule formSchedule = new FormSchedule();
             formSchedule.ShowDialog(this);
