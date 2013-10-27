@@ -71,7 +71,9 @@ namespace UniProgramGen.Generator
                 {
                     if (subject.teachers.All(t => t.requirements.weight != 1 || t.requirements.availableTimeSlots.Any(a => a.Includes(windowTimeSlot))))
                     {
-                        if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
+                        if (currentSolution.All(s =>
+                            (s.room != room && s.groups.Intersect(subject.GetGroups()).FirstOrDefault() == null) ||
+                                !s.timeSlot.Overlaps(windowTimeSlot)))
                         {
                             currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot, subject.GetGroups()));
                             FindSolutions(subjects.Skip(1));
