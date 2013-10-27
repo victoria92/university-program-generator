@@ -80,6 +80,7 @@
     <Compile Include="Data\State.cs" />
     <Compile Include="Data\Subject.cs" />
     <Compile Include="Data\Teacher.cs" />
+    <Compile Include="Data\TestData.cs" />
     <Compile Include="Generator\ICalGenerator.cs" />
     <Compile Include="Generator\ProgramGenerator.cs" />
     <Compile Include="GroupTab.cs">
