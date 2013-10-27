@@ -426,133 +426,133 @@ namespace UniProgramGen.Data
             subject3roomtypes.Add(RoomType.Lecture);
             var subject3teachers = new List<Teacher>();
             subject3teachers.Add(teachers[2]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "UP", 3));
+            subjects.Add(new Subject(subject3roomtypes, subject3teachers, "UP", 3));
 
             var subject4roomtypes = new HashSet<RoomType>();
             subject4roomtypes.Add(RoomType.Lecture);
             var subject4teachers = new List<Teacher>();
             subject4teachers.Add(teachers[3]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "DStr", 3));
+            subjects.Add(new Subject(subject4roomtypes, subject4teachers, "DStr", 3));
 
             var subject5roomtypes = new HashSet<RoomType>();
             subject5roomtypes.Add(RoomType.Lecture);
             var subject5teachers = new List<Teacher>();
             subject5teachers.Add(teachers[4]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DIS-upr-1", 2));
+            subjects.Add(new Subject(subject5roomtypes, subject5teachers, "DIS-upr-1", 2));
 
             var subject6roomtypes = new HashSet<RoomType>();
             subject6roomtypes.Add(RoomType.Lecture);
             var subject6teachers = new List<Teacher>();
             subject6teachers.Add(teachers[5]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "Algebra-upr-1", 2));
+            subjects.Add(new Subject(subject6roomtypes, subject6teachers, "Algebra-upr-1", 2));
 
             var subject7roomtypes = new HashSet<RoomType>();
             subject7roomtypes.Add(RoomType.Computer);
             var subject7teachers = new List<Teacher>();
             subject7teachers.Add(teachers[6]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "UP-upr-1", 2));
+            subjects.Add(new Subject(subject7roomtypes, subject7teachers, "UP-upr-1", 2));
 
             var subject8roomtypes = new HashSet<RoomType>();
             subject8roomtypes.Add(RoomType.Computer);
             var subject8teachers = new List<Teacher>();
             subject8teachers.Add(teachers[7]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "UP-pr-1", 2));
+            subjects.Add(new Subject(subject8roomtypes, subject8teachers, "UP-pr-1", 2));
 
             var subject9roomtypes = new HashSet<RoomType>();
             subject9roomtypes.Add(RoomType.Lecture);
             var subject9teachers = new List<Teacher>();
             subject9teachers.Add(teachers[8]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DStr-upr-1", 2));
+            subjects.Add(new Subject(subject9roomtypes, subject9teachers, "DStr-upr-1", 2));
 
             var subject10roomtypes = new HashSet<RoomType>();
             subject10roomtypes.Add(RoomType.Lecture);
             var subject10teachers = new List<Teacher>();
             subject10teachers.Add(teachers[9]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DIS-upr-2", 2));
+            subjects.Add(new Subject(subject10roomtypes, subject10teachers, "DIS-upr-2", 2));
 
             var subject11roomtypes = new HashSet<RoomType>();
             subject11roomtypes.Add(RoomType.Lecture);
             var subject11teachers = new List<Teacher>();
             subject11teachers.Add(teachers[10]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "Algebra-upr-2", 2));
+            subjects.Add(new Subject(subject11roomtypes, subject11teachers, "Algebra-upr-2", 2));
 
             var subject12roomtypes = new HashSet<RoomType>();
             subject12roomtypes.Add(RoomType.Computer);
             var subject12teachers = new List<Teacher>();
             subject12teachers.Add(teachers[11]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "UP-upr-2", 2));
+            subjects.Add(new Subject(subject12roomtypes, subject12teachers, "UP-upr-2", 2));
 
             var subject13roomtypes = new HashSet<RoomType>();
             subject13roomtypes.Add(RoomType.Computer);
             var subject13teachers = new List<Teacher>();
             subject13teachers.Add(teachers[12]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "UP-pr-2", 2));
+            subjects.Add(new Subject(subject13roomtypes, subject13teachers, "UP-pr-2", 2));
 
             var subject14roomtypes = new HashSet<RoomType>();
             subject14roomtypes.Add(RoomType.Lecture);
             var subject14teachers = new List<Teacher>();
             subject14teachers.Add(teachers[13]);
+            subjects.Add(new Subject(subject14roomtypes, subject14teachers, "DStr-upr-2", 2));
 
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DStr-upr-2", 2));
             var subject15roomtypes = new HashSet<RoomType>();
             subject15roomtypes.Add(RoomType.Lecture);
             var subject15teachers = new List<Teacher>();
             subject15teachers.Add(teachers[14]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DIS-upr-3", 2));
+            subjects.Add(new Subject(subject15roomtypes, subject15teachers, "DIS-upr-3", 2));
 
             var subject16roomtypes = new HashSet<RoomType>();
             subject16roomtypes.Add(RoomType.Lecture);
             var subject16teachers = new List<Teacher>();
             subject16teachers.Add(teachers[15]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "Algebra-upr-3", 2));
+            subjects.Add(new Subject(subject16roomtypes, subject16teachers, "Algebra-upr-3", 2));
 
             var subject17roomtypes = new HashSet<RoomType>();
             subject17roomtypes.Add(RoomType.Computer);
             var subject17teachers = new List<Teacher>();
             subject17teachers.Add(teachers[16]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "UP-upr-3", 2));
+            subjects.Add(new Subject(subject17roomtypes, subject17teachers, "UP-upr-3", 2));
 
             var subject18roomtypes = new HashSet<RoomType>();
             subject18roomtypes.Add(RoomType.Computer);
             var subject18teachers = new List<Teacher>();
             subject18teachers.Add(teachers[17]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "UP-pr-3", 2));
+            subjects.Add(new Subject(subject18roomtypes, subject18teachers, "UP-pr-3", 2));
 
             var subject19roomtypes = new HashSet<RoomType>();
             subject19roomtypes.Add(RoomType.Lecture);
             var subject19teachers = new List<Teacher>();
             subject19teachers.Add(teachers[18]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DStr-upr-3", 2));
+            subjects.Add(new Subject(subject19roomtypes, subject19teachers, "DStr-upr-3", 2));
 
             var subject20roomtypes = new HashSet<RoomType>();
             subject20roomtypes.Add(RoomType.Lecture);
             var subject20teachers = new List<Teacher>();
             subject20teachers.Add(teachers[19]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DIS-upr-4", 2));
+            subjects.Add(new Subject(subject20roomtypes, subject20teachers, "DIS-upr-4", 2));
 
             var subject21roomtypes = new HashSet<RoomType>();
             subject21roomtypes.Add(RoomType.Lecture);
             var subject21teachers = new List<Teacher>();
             subject21teachers.Add(teachers[20]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "Algebra-upr-4", 2));
+            subjects.Add(new Subject(subject21roomtypes, subject21teachers, "Algebra-upr-4", 2));
 
             var subject22roomtypes = new HashSet<RoomType>();
             subject22roomtypes.Add(RoomType.Computer);
             var subject22teachers = new List<Teacher>();
             subject22teachers.Add(teachers[21]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "UP-upr-4", 2));
+            subjects.Add(new Subject(subject22roomtypes, subject22teachers, "UP-upr-4", 2));
 
             var subject23roomtypes = new HashSet<RoomType>();
             subject23roomtypes.Add(RoomType.Computer);
             var subject23teachers = new List<Teacher>();
             subject23teachers.Add(teachers[22]);
-            subjects.Add(new Subject(subject2roomtypes, subject2teachers, "UP-pr-4", 2));
+            subjects.Add(new Subject(subject23roomtypes, subject23teachers, "UP-pr-4", 2));
 
             var subject24roomtypes = new HashSet<RoomType>();
             subject24roomtypes.Add(RoomType.Lecture);
             var subject24teachers = new List<Teacher>();
             subject24teachers.Add(teachers[23]);
-            subjects.Add(new Subject(subject1roomtypes, subject1teachers, "DStr-upr-4", 2));
+            subjects.Add(new Subject(subject24roomtypes, subject24teachers, "DStr-upr-4", 2));
 
             // ---------------------------------------------------------------------------------------------------
 
