@@ -99,7 +99,6 @@
             this.TABS_Teachers.Name = "TABS_Teachers";
             this.TABS_Teachers.Size = new System.Drawing.Size(650, 449);
             this.TABS_Teachers.TabIndex = 0;
-            this.TABS_Teachers.Teachers = null;
             // 
             // tabPage3
             // 

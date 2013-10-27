@@ -53,7 +53,6 @@
             this.textBoxTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTeacherName.Location = new System.Drawing.Point(14, 36);
             this.textBoxTeacherName.Name = "textBoxTeacherName";
-            this.textBoxTeacherName.ReadOnly = true;
             this.textBoxTeacherName.Size = new System.Drawing.Size(262, 30);
             this.textBoxTeacherName.TabIndex = 15;
             // 

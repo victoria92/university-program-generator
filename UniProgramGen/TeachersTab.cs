@@ -17,26 +17,30 @@ namespace UniProgramGen
         {
             InitializeComponent();
 
-            listBoxTeachers.DisplayMember = "name";
             Teachers = new List<Teacher>();
         }
 
-        public List<Teacher> Teachers { get; set; }
+        public List<Teacher> Teachers { get; private set; }
+
+        private bool updating = false;
 
         private void listBoxTeachers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            textBoxTeacherName.Text = ((Teacher) listBoxTeachers.SelectedItem).name;
-
+            var selectedTeacher = listBoxTeachers.SelectedItem as Teacher;
+            if (selectedTeacher != null)
+            {
+                listBoxTeacherMonday.ClearSelected();
+                listBoxTeacherTuesday.ClearSelected();
+                listBoxTeacherWednesday.ClearSelected();
+                listBoxTeacherThursday.ClearSelected();
+                listBoxTeacherFriday.ClearSelected();
+                listBoxTeacherSaturday.ClearSelected();
+                textBoxTeacherName.Text = "";
+            } 
         }
 
         private void listBoxTeacher_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string teacherName = textBoxTeacherName.Text;
-            var teacher = Teachers.Find(t => t.name == teacherName);
-            
-            teacher.requirements.availableTimeSlots.Clear();
-
-            FillTeacherTimeTable(teacher);
         }
 
         private void FillTeacherTimeTable(Teacher teacher)
@@ -75,7 +79,7 @@ namespace UniProgramGen
 
             Teachers.Add(new Teacher(new Requirements(1, teacherAvailability, null), textBoxTeacherName.Text));
 
-            listBoxTeachers.DisplayMember = "NameOrNumber";
+            listBoxTeachers.DisplayMember = "name";
             listBoxTeachers.DataSource = Teachers;
         }
     }
