@@ -72,6 +72,7 @@
             this.buttonGenerate.TabIndex = 0;
             this.buttonGenerate.Text = "Генерирай Програма";
             this.buttonGenerate.UseVisualStyleBackColor = true;
+            this.buttonGenerate.Click += new System.EventHandler(this.buttonGenerate_Click);
             // 
             // splitResults
             // 
