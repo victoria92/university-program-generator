@@ -70,7 +70,7 @@ namespace UniProgramGen
             groups.RemoveAll(x => true);
             groups.AddRange(db.groups);
 
-            var program = db.solutions;
+            MessageBox.Show("Фалшивите данни са заредени");
         }
 
         private void dumpFirstSchedule(string filename, object schedule)
@@ -85,6 +85,7 @@ namespace UniProgramGen
             var selectedSchedule = personalSchedule.GetTeacherProgram(selectedTeacher);
 
             dumpFirstSchedule("../../datafiles/example_solution.json", selectedSchedule);
+            MessageBox.Show("Генериран е JSON с програмата");
         }
     }
 }
