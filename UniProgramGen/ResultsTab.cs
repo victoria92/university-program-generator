@@ -47,10 +47,10 @@ namespace UniProgramGen
         {
             Data.DBManager db = new DBManager();
             db.getTestData();
-            var program = new Generator.ProgramGenerator().GenerateProgram(db.rooms, db.subjects, db.teachers, db.groups);
+            var program = db.solutions;
             var firstSolution = program.First();
 
-            string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(firstSolution);
+            string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(firstSolution, Newtonsoft.Json.Formatting.Indented);
             System.IO.File.WriteAllText("../../datafiles/example_solution.json", firstSolutionJson);
         }
     }
