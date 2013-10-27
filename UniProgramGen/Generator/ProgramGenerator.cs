@@ -38,18 +38,37 @@ namespace UniProgramGen.Generator
 
             FindSolutions(subjects);
 
-            allSolutions.Sort((solution1, solution2) =>
-                Math.Sign(SumTeachersWeights(solution2) - SumTeachersWeights(solution1)));
+            var solutionsWeightsList = allSolutions.Select(s =>
+                new Tuple<ScheduledTimeSlot[], double>(s, GetSolutionWeight(s, groups))).ToList();
+
+            solutionsWeightsList.Sort((solution1, solution2) =>
+                Math.Sign(solution2.Item2 - solution1.Item2));
 
             return allSolutions.Take(10);
         }
 
-        private double SumTeachersWeights(ScheduledTimeSlot[] solution)
+        private double GetSolutionWeight(ScheduledTimeSlot[] solution, IEnumerable<Group> groups)
         {
-            return solution.Sum(s =>
+            var solutionWeight = solution.Sum(s =>
                 s.subject.teachers.Sum(t =>
                     (t.requirements.availableTimeSlots.Any(a => a.Includes(s.timeSlot)) ? t.requirements.weight : 0) +
                     (t.requirements.requiredRooms.Any(r => r == s.room)                 ? t.requirements.weight : 0)));
+
+            var personalSchedule = new PersonalSchedule(solution);
+
+            foreach (var group in groups)
+            {
+                var groupSchedule = personalSchedule.GetGroupProgram(group).ToList();
+                groupSchedule.Sort((s1, s2) => s1.timeSlot.StartHour.CompareTo(s2.timeSlot.StartHour));
+                var groupByDays = groupSchedule.GroupBy(s => s.timeSlot.Day);
+                var totalGroupHoleHours = groupByDays.Sum(g => g.Zip(g.Skip(1), (s1, s2) => (int) s2.timeSlot.StartHour - s1.timeSlot.EndHour).Sum());
+                if (totalGroupHoleHours > 5)
+                {
+                    solutionWeight -= totalGroupHoleHours / 10;
+                }
+            }
+
+            return solutionWeight;
         }
 
         private void FindSolutions(IEnumerable<Subject> subjects)
