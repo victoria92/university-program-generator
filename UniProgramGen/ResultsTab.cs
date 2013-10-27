@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using UniProgramGen.Data;
 
@@ -35,7 +36,22 @@ namespace UniProgramGen
 
         private void buttonGenerate_Click(object sender, EventArgs e)
         {
-            //new Generator.ProgramGenerator().GenerateProgram();
+            DumpExampleSolution();
+            return;
+
+            var generator = new Generator.ProgramGenerator();
+            var program = generator.GenerateProgram(rooms, subjects, teachers, groups);
+        }
+
+        private void DumpExampleSolution()
+        {
+            Data.DBManager db = new DBManager();
+            db.getTestData();
+            var program = new Generator.ProgramGenerator().GenerateProgram(db.rooms, db.subjects, db.teachers, db.groups);
+            var firstSolution = program.First();
+
+            string firstSolutionJson = Newtonsoft.Json.JsonConvert.SerializeObject(firstSolution);
+            System.IO.File.WriteAllText("../../datafiles/example_solution.json", firstSolutionJson);
         }
     }
 }
