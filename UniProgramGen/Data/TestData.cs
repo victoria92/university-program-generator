@@ -158,7 +158,7 @@ namespace UniProgramGen.Data
             availabilityRoom14.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Wednesday, 7, 22));
             availabilityRoom14.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Thursday, 7, 22));
             availabilityRoom14.Add(new UniProgramGen.Helpers.TimeSlot(DayOfWeek.Friday, 7, 22));
-            rooms.Add(new Room(roomType14, 20, availabilityRoom14, "101"));
+            rooms.Add(new Room(roomType14, 100, availabilityRoom14, "101"));
 
             // ---------------------------------------------------------------------------------------------------
 

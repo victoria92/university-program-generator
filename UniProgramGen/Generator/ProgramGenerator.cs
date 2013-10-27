@@ -115,11 +115,13 @@ namespace UniProgramGen.Generator
 
             foreach (var room in rooms.
                 Where(r => r.types.IsSupersetOf(subject.roomTypes)).
-                Where(r => r.capacity >= subject.attendingPeopleCount))
+                Where(r => r.capacity >= subject.attendingPeopleCount).
+                Where(r => subject.teachers.All(t => t.requirements.requiredRooms.IndexOf(r) != -1)))
             {
                 foreach (var windowTimeSlot in room.availability.SelectMany(a => a.GetAllWindows(subject.duration)))
                 {
-                    if (subject.teachers.All(t => t.requirements.weight != 1 || t.requirements.availableTimeSlots.Any(a => a.Includes(windowTimeSlot))))
+                    if (subject.teachers.All(t => t.requirements.weight != 1 ||
+                        t.requirements.availableTimeSlots.Any(a => a.Includes(windowTimeSlot))))
                     {
                         if (currentSolution.All(s =>
                             (s.room != room && s.groups.Intersect(subject.GetGroups()).FirstOrDefault() == null) ||
