@@ -15,13 +15,24 @@ namespace UniProgramGen
         public SubjectsTab()
         {
             InitializeComponent();
-            List<Teacher> l = new List<Teacher>();
             HashSet<RoomType> r = new HashSet<RoomType>();
         }
 
         private void listBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Subject curItem = (Subject)listBoxSubjects.SelectedItem;
+            NUM_SubjectDuration.Value = CurrentSubject.duration;
+            TB_SubjectName.Text = CurrentSubject.name;
+        }
+
+        private void NUM_SubjectDuration_ValueChanged(object sender, EventArgs e)
+        {
+            CurrentSubject.duration = (uint) NUM_SubjectDuration.Value;
+        }
+
+        private void TB_SubjectName_TextChanged(object sender, EventArgs e)
+        {
+            CurrentSubject.name = TB_SubjectName.Text;
+            RefreshSubjects();
         }
 
         private void checkedListBoxRoomRequirements_SelectedIndexChanged(object sender, EventArgs e)
@@ -42,6 +53,10 @@ namespace UniProgramGen
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
+            var roomTypes = new HashSet<RoomType>();
+            var teachers = new List<Teacher>();
+            subjects.Add(new Subject(roomTypes, teachers, "New", 2));
+            RefreshSubjects();
         }
 
         private List<Subject> subjects;
@@ -71,6 +86,21 @@ namespace UniProgramGen
                 teachers = value;
                 listBoxTeachers.DataSource = value;
             }
+        }
+
+        public Subject CurrentSubject
+        {
+            get
+            {
+                return (Subject)listBoxSubjects.SelectedItem;
+            }
+        }
+
+        private void RefreshSubjects()
+        {
+            string displayMember = listBoxSubjects.DisplayMember;
+            listBoxSubjects.DisplayMember = null;
+            listBoxSubjects.DisplayMember = displayMember;
         }
     }
 }

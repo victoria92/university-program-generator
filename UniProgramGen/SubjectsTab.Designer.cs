@@ -32,13 +32,13 @@
             this.label4 = new System.Windows.Forms.Label();
             this.listBoxTeachers = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.numericUpDownDuration = new System.Windows.Forms.NumericUpDown();
-            this.textBoxSubjectName = new System.Windows.Forms.TextBox();
+            this.NUM_SubjectDuration = new System.Windows.Forms.NumericUpDown();
+            this.TB_SubjectName = new System.Windows.Forms.TextBox();
             this.checkedListBoxRoomRequirements = new System.Windows.Forms.CheckedListBox();
             this.buttonAdd = new System.Windows.Forms.Button();
             this.GB_SubjectNames = new System.Windows.Forms.GroupBox();
             this.listBoxSubjects = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDuration)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_SubjectDuration)).BeginInit();
             this.GB_SubjectNames.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,19 +83,21 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Продължителност";
             // 
-            // numericUpDownDuration
+            // NUM_SubjectDuration
             // 
-            this.numericUpDownDuration.Location = new System.Drawing.Point(487, 255);
-            this.numericUpDownDuration.Name = "numericUpDownDuration";
-            this.numericUpDownDuration.Size = new System.Drawing.Size(48, 20);
-            this.numericUpDownDuration.TabIndex = 13;
+            this.NUM_SubjectDuration.Location = new System.Drawing.Point(487, 255);
+            this.NUM_SubjectDuration.Name = "NUM_SubjectDuration";
+            this.NUM_SubjectDuration.Size = new System.Drawing.Size(48, 20);
+            this.NUM_SubjectDuration.TabIndex = 13;
+            this.NUM_SubjectDuration.ValueChanged += new System.EventHandler(this.NUM_SubjectDuration_ValueChanged);
             // 
-            // textBoxSubjectName
+            // TB_SubjectName
             // 
-            this.textBoxSubjectName.Location = new System.Drawing.Point(210, 20);
-            this.textBoxSubjectName.Name = "textBoxSubjectName";
-            this.textBoxSubjectName.Size = new System.Drawing.Size(313, 20);
-            this.textBoxSubjectName.TabIndex = 12;
+            this.TB_SubjectName.Location = new System.Drawing.Point(210, 20);
+            this.TB_SubjectName.Name = "TB_SubjectName";
+            this.TB_SubjectName.Size = new System.Drawing.Size(313, 20);
+            this.TB_SubjectName.TabIndex = 12;
+            this.TB_SubjectName.TextChanged += new System.EventHandler(this.TB_SubjectName_TextChanged);
             // 
             // checkedListBoxRoomRequirements
             // 
@@ -152,6 +154,7 @@
             this.listBoxSubjects.Name = "listBoxSubjects";
             this.listBoxSubjects.Size = new System.Drawing.Size(194, 424);
             this.listBoxSubjects.TabIndex = 12;
+            this.listBoxSubjects.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjects_SelectedIndexChanged);
             // 
             // SubjectsTab
             // 
@@ -162,13 +165,13 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.listBoxTeachers);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDownDuration);
-            this.Controls.Add(this.textBoxSubjectName);
+            this.Controls.Add(this.NUM_SubjectDuration);
+            this.Controls.Add(this.TB_SubjectName);
             this.Controls.Add(this.checkedListBoxRoomRequirements);
             this.Controls.Add(this.buttonAdd);
             this.Name = "SubjectsTab";
             this.Size = new System.Drawing.Size(650, 450);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownDuration)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NUM_SubjectDuration)).EndInit();
             this.GB_SubjectNames.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -181,8 +184,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ListBox listBoxTeachers;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown numericUpDownDuration;
-        private System.Windows.Forms.TextBox textBoxSubjectName;
+        private System.Windows.Forms.NumericUpDown NUM_SubjectDuration;
+        private System.Windows.Forms.TextBox TB_SubjectName;
         private System.Windows.Forms.CheckedListBox checkedListBoxRoomRequirements;
         private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.GroupBox GB_SubjectNames;
