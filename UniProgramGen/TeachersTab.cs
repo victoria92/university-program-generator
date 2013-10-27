@@ -100,5 +100,10 @@ namespace UniProgramGen
             teacherAvailability.AddRange(saturdayAvailableTime);
             return teacherAvailability;
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
