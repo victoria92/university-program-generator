@@ -15,99 +15,99 @@ namespace UniProgramGen
         public SubjectsTab()
         {
             InitializeComponent();
-            HashSet<RoomType> r = new HashSet<RoomType>();
+
+            Subjects = new List<Subject>();
+            subjectsBindingSource.DataSource = Subjects;
+
+            listBoxSubjects.DisplayMember = "name";
+            listBoxSubjects.DataSource = subjectsBindingSource;
+        }
+
+        public void InitializeBindingSources(BindingSource teachersBindingSource)
+        {
+            LB_Teachers.DataSource = teachersBindingSource;
+        }
+
+        public BindingSource subjectsBindingSource = new BindingSource();
+
+        private Subject previouslySelectedSubject = null;
+
+        private void ClearCheckedListRoomTypes()
+        {
+            foreach (int selectedIndices in checkedListBoxRoomRequirements.CheckedIndices)
+            {
+                checkedListBoxRoomRequirements.SetItemChecked(selectedIndices, false);
+            }
         }
 
         private void listBoxSubjects_SelectedIndexChanged(object sender, EventArgs e)
         {
-            NUM_SubjectDuration.Value = CurrentSubject.duration;
-            TB_SubjectName.Text = CurrentSubject.name;
-        }
+            var selectedSubject = listBoxSubjects.SelectedItem as Subject;
+            if (selectedSubject == null)
+            {
+                if (previouslySelectedSubject != null)
+                {
+                    UpdateSubject(previouslySelectedSubject);
+                    previouslySelectedSubject = null;
+                }
 
-        private void NUM_SubjectDuration_ValueChanged(object sender, EventArgs e)
-        {
-            CurrentSubject.duration = (uint) NUM_SubjectDuration.Value;
-        }
+                ClearCheckedListRoomTypes();
+                LB_Teachers.ClearSelected();
+                TB_SubjectName.Text = "";
+                NUM_SubjectDuration.Value = 0;
+                return;
+            }
 
-        private void TB_SubjectName_TextChanged(object sender, EventArgs e)
-        {
-            CurrentSubject.name = TB_SubjectName.Text;
-            RefreshSubjects();
-        }
+            previouslySelectedSubject = selectedSubject;
 
-        private void LB_Teachers_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            var selectedTechers = LB_Teachers.SelectedItems.Cast<Teacher>();
-            CurrentSubject.teachers.RemoveAll(t => true);
-            CurrentSubject.teachers.AddRange(selectedTechers);
-        }
+            ClearCheckedListRoomTypes();
+            foreach (var roomType in selectedSubject.roomTypes)
+            {
+                checkedListBoxRoomRequirements.SetItemChecked((int)roomType, true);
+            }
 
-        private void checkedListBoxRoomRequirements_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //int index = checkedListBoxRoomRequirements.SelectedIndex;
-            //CheckState state = checkedListBoxRoomRequirements.GetItemCheckState(index);
-            //if (state == CheckState.Unchecked)
-            //{
-            //    subject.roomTypes.Add((RoomType)index);
-            //    checkedListBoxRoomRequirements.SetItemCheckState(index, CheckState.Checked);
-            //}
-            //else
-            //{
-            //    subject.roomTypes.Remove((RoomType)index);
-            //    checkedListBoxRoomRequirements.SetItemCheckState(index, CheckState.Unchecked);
-            //}
+            LB_Teachers.ClearSelected();
+            foreach (var teacher in selectedSubject.teachers)
+            {
+                LB_Teachers.SetSelected(LB_Teachers.Items.IndexOf(teacher), true);
+            }
+
+            TB_SubjectName.Text = selectedSubject.name;
+            NUM_SubjectDuration.Value = selectedSubject.duration;
         }
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            var roomTypes = new HashSet<RoomType>();
+            Subjects.Add(new Subject(null, null, null, 0));
+            UpdateSubject(Subjects.Last());
+
+            listBoxSubjects.ClearSelected();
+            listBoxSubjects_SelectedIndexChanged(null, null);
+        }
+
+        private void UpdateSubject(Subject subject)
+        {
+            HashSet<RoomType> roomTypes = new HashSet<RoomType>();
+            foreach (int selectedIndex in checkedListBoxRoomRequirements.CheckedIndices)
+            {
+                roomTypes.Add((RoomType)selectedIndex);
+            }
+
             var teachers = new List<Teacher>();
-            subjects.Add(new Subject(roomTypes, teachers, "New", 2));
-            RefreshSubjects();
+            foreach (Teacher teacher in LB_Teachers.SelectedItems)
+            {
+                teachers.Add(teacher);
+            }
+
+            subject.duration = (uint) NUM_SubjectDuration.Value;
+            subject.name = TB_SubjectName.Text;
+            subject.roomTypes = roomTypes;
+            subject.teachers = teachers;
+
+            listBoxSubjects.DisplayMember = "";
+            listBoxSubjects.DisplayMember = "name";
         }
 
-        private List<Subject> subjects;
-        private List<Teacher> teachers;
-
-        public List<Subject> Subjects
-        {
-            get
-            {
-                return subjects;
-            }
-            set
-            {
-                subjects = value;
-                listBoxSubjects.DataSource = value;
-            }
-        }
-
-        public List<Teacher> Teachers
-        {
-            get
-            {
-                return teachers;
-            }
-            set
-            {
-                teachers = value;
-                LB_Teachers.DataSource = value;
-            }
-        }
-
-        public Subject CurrentSubject
-        {
-            get
-            {
-                return (Subject)listBoxSubjects.SelectedItem;
-            }
-        }
-
-        private void RefreshSubjects()
-        {
-            string displayMember = listBoxSubjects.DisplayMember;
-            listBoxSubjects.DisplayMember = null;
-            listBoxSubjects.DisplayMember = displayMember;
-        }
+        public List<Subject> Subjects { get; private set; }
     }
 }

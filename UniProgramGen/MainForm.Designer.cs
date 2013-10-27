@@ -78,7 +78,6 @@
             this.TAB_Subjects.MinimumSize = new System.Drawing.Size(650, 450);
             this.TAB_Subjects.Name = "TAB_Subjects";
             this.TAB_Subjects.Size = new System.Drawing.Size(650, 450);
-            this.TAB_Subjects.Subjects = null;
             this.TAB_Subjects.TabIndex = 0;
             // 
             // tabPage2

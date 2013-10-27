@@ -64,16 +64,11 @@
             // 
             this.LB_Teachers.DisplayMember = "Name";
             this.LB_Teachers.FormattingEnabled = true;
-            this.LB_Teachers.Items.AddRange(new object[] {
-            "Биров",
-            "Бабев",
-            "Добрев"});
             this.LB_Teachers.Location = new System.Drawing.Point(213, 95);
             this.LB_Teachers.Name = "LB_Teachers";
-            this.LB_Teachers.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.LB_Teachers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.LB_Teachers.Size = new System.Drawing.Size(120, 95);
             this.LB_Teachers.TabIndex = 15;
-            this.LB_Teachers.SelectedIndexChanged += new System.EventHandler(this.LB_Teachers_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -90,7 +85,6 @@
             this.NUM_SubjectDuration.Name = "NUM_SubjectDuration";
             this.NUM_SubjectDuration.Size = new System.Drawing.Size(48, 20);
             this.NUM_SubjectDuration.TabIndex = 13;
-            this.NUM_SubjectDuration.ValueChanged += new System.EventHandler(this.NUM_SubjectDuration_ValueChanged);
             // 
             // TB_SubjectName
             // 
@@ -98,10 +92,10 @@
             this.TB_SubjectName.Name = "TB_SubjectName";
             this.TB_SubjectName.Size = new System.Drawing.Size(313, 20);
             this.TB_SubjectName.TabIndex = 12;
-            this.TB_SubjectName.TextChanged += new System.EventHandler(this.TB_SubjectName_TextChanged);
             // 
             // checkedListBoxRoomRequirements
             // 
+            this.checkedListBoxRoomRequirements.CheckOnClick = true;
             this.checkedListBoxRoomRequirements.FormattingEnabled = true;
             this.checkedListBoxRoomRequirements.Items.AddRange(new object[] {
             "Лекционна зала",
@@ -112,7 +106,6 @@
             this.checkedListBoxRoomRequirements.Name = "checkedListBoxRoomRequirements";
             this.checkedListBoxRoomRequirements.Size = new System.Drawing.Size(120, 64);
             this.checkedListBoxRoomRequirements.TabIndex = 10;
-            this.checkedListBoxRoomRequirements.SelectedIndexChanged += new System.EventHandler(this.checkedListBoxRoomRequirements_SelectedIndexChanged);
             // 
             // buttonAdd
             // 
@@ -143,16 +136,9 @@
             this.listBoxSubjects.DisplayMember = "Name";
             this.listBoxSubjects.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listBoxSubjects.FormattingEnabled = true;
-            this.listBoxSubjects.Items.AddRange(new object[] {
-            "УП, Биров, Инф, 1курс лекции",
-            "УП, Биров, Инф, 2курс лекции",
-            "УП, Биров, Инф, 3курс лекции",
-            "УП, Биров, Инф, 4курс лекции",
-            "УП, Биров, Инф, 5курс лекции",
-            "УП, Биров, Инф, 6курс лекции",
-            "УП, Биров, Инф, 7курс лекции"});
             this.listBoxSubjects.Location = new System.Drawing.Point(3, 16);
             this.listBoxSubjects.Name = "listBoxSubjects";
+            this.listBoxSubjects.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxSubjects.Size = new System.Drawing.Size(194, 424);
             this.listBoxSubjects.TabIndex = 12;
             this.listBoxSubjects.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjects_SelectedIndexChanged);

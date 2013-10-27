@@ -21,14 +21,14 @@ namespace UniProgramGen
             bindingSource.DataSource = Teachers;
 
             listBoxTeachers.DisplayMember = "name";
-            listBoxTeachers.DataSource = Teachers;
+            listBoxTeachers.DataSource = bindingSource;
         }
 
         public List<Teacher> Teachers { get; private set; }
 
         private bool updating = false;
 
-        private BindingSource bindingSource = new BindingSource();
+        public BindingSource bindingSource = new BindingSource();
 
         private void listBoxTeachers_SelectedIndexChanged(object sender, EventArgs e)
         {

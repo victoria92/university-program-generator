@@ -16,9 +16,7 @@ namespace UniProgramGen
         {
             InitializeComponent();
 
-            State state = State.ExampleData();
-            TAB_Subjects.Subjects = state.Subjects;
-            TAB_Subjects.Teachers = state.Teachers;
+            TAB_Subjects.InitializeBindingSources(TABS_Teachers.bindingSource);
         }
     }
 }
