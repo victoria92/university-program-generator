@@ -53,10 +53,10 @@
             // textBoxTeacherName
             // 
             this.textBoxTeacherName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxTeacherName.Location = new System.Drawing.Point(192, 12);
+            this.textBoxTeacherName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            this.textBoxTeacherName.Location = new System.Drawing.Point(190, 16);
             this.textBoxTeacherName.Name = "textBoxTeacherName";
-            this.textBoxTeacherName.Size = new System.Drawing.Size(450, 30);
+            this.textBoxTeacherName.Size = new System.Drawing.Size(457, 29);
             this.textBoxTeacherName.TabIndex = 15;
             // 
             // listBoxTeachers
@@ -92,7 +92,7 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBoxTeacherSaturday.Location = new System.Drawing.Point(572, 86);
+            this.listBoxTeacherSaturday.Location = new System.Drawing.Point(572, 64);
             this.listBoxTeacherSaturday.Name = "listBoxTeacherSaturday";
             this.listBoxTeacherSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherSaturday.Size = new System.Drawing.Size(70, 310);
@@ -120,7 +120,7 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBoxTeacherFriday.Location = new System.Drawing.Point(496, 86);
+            this.listBoxTeacherFriday.Location = new System.Drawing.Point(496, 64);
             this.listBoxTeacherFriday.Name = "listBoxTeacherFriday";
             this.listBoxTeacherFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherFriday.Size = new System.Drawing.Size(70, 310);
@@ -148,7 +148,7 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBoxTeacherThursday.Location = new System.Drawing.Point(420, 86);
+            this.listBoxTeacherThursday.Location = new System.Drawing.Point(420, 64);
             this.listBoxTeacherThursday.Name = "listBoxTeacherThursday";
             this.listBoxTeacherThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherThursday.Size = new System.Drawing.Size(70, 310);
@@ -176,7 +176,7 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBoxTeacherWednesday.Location = new System.Drawing.Point(344, 86);
+            this.listBoxTeacherWednesday.Location = new System.Drawing.Point(344, 64);
             this.listBoxTeacherWednesday.Name = "listBoxTeacherWednesday";
             this.listBoxTeacherWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherWednesday.Size = new System.Drawing.Size(70, 310);
@@ -204,7 +204,7 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBoxTeacherTuesday.Location = new System.Drawing.Point(268, 86);
+            this.listBoxTeacherTuesday.Location = new System.Drawing.Point(268, 64);
             this.listBoxTeacherTuesday.Name = "listBoxTeacherTuesday";
             this.listBoxTeacherTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherTuesday.Size = new System.Drawing.Size(70, 310);
@@ -232,7 +232,7 @@
             "19:00",
             "20:00",
             "21:00"});
-            this.listBoxTeacherMonday.Location = new System.Drawing.Point(192, 86);
+            this.listBoxTeacherMonday.Location = new System.Drawing.Point(192, 64);
             this.listBoxTeacherMonday.Name = "listBoxTeacherMonday";
             this.listBoxTeacherMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherMonday.Size = new System.Drawing.Size(70, 310);
@@ -242,7 +242,7 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(586, 58);
+            this.label6.Location = new System.Drawing.Point(586, 48);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 13);
             this.label6.TabIndex = 40;
@@ -252,7 +252,7 @@
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(511, 58);
+            this.label5.Location = new System.Drawing.Point(511, 48);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 39;
@@ -262,7 +262,7 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(427, 58);
+            this.label4.Location = new System.Drawing.Point(427, 48);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 38;
@@ -272,7 +272,7 @@
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(361, 58);
+            this.label3.Location = new System.Drawing.Point(361, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(38, 13);
             this.label3.TabIndex = 37;
@@ -282,7 +282,7 @@
             // 
             this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(280, 58);
+            this.label2.Location = new System.Drawing.Point(280, 48);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 13);
             this.label2.TabIndex = 36;
@@ -292,7 +292,7 @@
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(193, 58);
+            this.label1.Location = new System.Drawing.Point(193, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 35;
@@ -301,7 +301,7 @@
             // buttonAddTeacher
             // 
             this.buttonAddTeacher.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonAddTeacher.Location = new System.Drawing.Point(566, 411);
+            this.buttonAddTeacher.Location = new System.Drawing.Point(566, 419);
             this.buttonAddTeacher.Name = "buttonAddTeacher";
             this.buttonAddTeacher.Size = new System.Drawing.Size(81, 26);
             this.buttonAddTeacher.TabIndex = 41;
@@ -315,7 +315,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxTeachers.Controls.Add(this.listBoxTeachers);
-            this.groupBoxTeachers.Location = new System.Drawing.Point(3, 3);
+            this.groupBoxTeachers.Location = new System.Drawing.Point(4, 0);
             this.groupBoxTeachers.Name = "groupBoxTeachers";
             this.groupBoxTeachers.Size = new System.Drawing.Size(183, 447);
             this.groupBoxTeachers.TabIndex = 42;

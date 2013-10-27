@@ -75,10 +75,10 @@
             // TB_SubjectName
             // 
             this.TB_SubjectName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TB_SubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TB_SubjectName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.TB_SubjectName.Location = new System.Drawing.Point(190, 16);
             this.TB_SubjectName.Name = "TB_SubjectName";
-            this.TB_SubjectName.Size = new System.Drawing.Size(457, 30);
+            this.TB_SubjectName.Size = new System.Drawing.Size(457, 29);
             this.TB_SubjectName.TabIndex = 12;
             // 
             // checkedListBoxRoomRequirements
