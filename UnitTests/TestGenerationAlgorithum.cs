@@ -98,8 +98,21 @@ namespace UnitTests
             var ser = new Newtonsoft.Json.JsonSerializer();
             
             var ser_string = Newtonsoft.Json.JsonConvert.SerializeObject(generatorRessult);
-            System.IO.File.WriteAllText(@"..\..\program_generated_test.js", ser_string);
+            //System.IO.File.WriteAllText(@"..\..\program_generated_test.js", ser_string);
                         
+        }
+
+        [TestMethod]
+        public void writeTestData()
+        {
+            var d = new DBManager();
+
+            d.getTestData();
+
+            var ser = new Newtonsoft.Json.JsonSerializer();
+
+            var ser_string = Newtonsoft.Json.JsonConvert.SerializeObject(d.solutions);
+            System.IO.File.WriteAllText(@"..\..\program_generated_test.js", ser_string);
         }
     }
 }
