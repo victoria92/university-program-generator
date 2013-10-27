@@ -109,8 +109,8 @@
     },
     "timeSlot": {
       "Day": 1,
-      "StartHour": 11,
-      "EndHour": 14
+      "StartHour": 14,
+      "EndHour": 17
     },
     "groups": [
       {
@@ -153,8 +153,8 @@
     },
     "timeSlot": {
       "Day": 1,
-      "StartHour": 11,
-      "EndHour": 14
+      "StartHour": 17,
+      "EndHour": 20
     },
     "groups": [
       {
@@ -197,8 +197,8 @@
     },
     "timeSlot": {
       "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "StartHour": 20,
+      "EndHour": 22
     },
     "groups": [
       {
@@ -228,9 +228,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 2,
+      "StartHour": 7,
+      "EndHour": 9
     },
     "groups": [
       {
@@ -260,9 +260,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 2,
+      "StartHour": 9,
+      "EndHour": 11
     },
     "groups": [
       {
@@ -292,9 +292,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 2,
+      "StartHour": 11,
+      "EndHour": 13
     },
     "groups": [
       {
@@ -324,9 +324,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 2,
+      "StartHour": 13,
+      "EndHour": 15
     },
     "groups": [
       {
@@ -356,9 +356,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 2,
+      "StartHour": 15,
+      "EndHour": 17
     },
     "groups": [
       {
@@ -388,9 +388,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 2,
+      "StartHour": 17,
+      "EndHour": 19
     },
     "groups": [
       {
@@ -420,9 +420,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 2,
+      "StartHour": 19,
+      "EndHour": 21
     },
     "groups": [
       {
@@ -452,9 +452,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 3,
+      "StartHour": 7,
+      "EndHour": 9
     },
     "groups": [
       {
@@ -484,9 +484,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 3,
+      "StartHour": 9,
+      "EndHour": 11
     },
     "groups": [
       {
@@ -516,9 +516,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 3,
+      "StartHour": 11,
+      "EndHour": 13
     },
     "groups": [
       {
@@ -548,9 +548,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 3,
+      "StartHour": 13,
+      "EndHour": 15
     },
     "groups": [
       {
@@ -580,9 +580,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 3,
+      "StartHour": 15,
+      "EndHour": 17
     },
     "groups": [
       {
@@ -612,9 +612,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 3,
+      "StartHour": 17,
+      "EndHour": 19
     },
     "groups": [
       {
@@ -644,9 +644,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 3,
+      "StartHour": 19,
+      "EndHour": 21
     },
     "groups": [
       {
@@ -676,9 +676,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 4,
+      "StartHour": 7,
+      "EndHour": 9
     },
     "groups": [
       {
@@ -708,9 +708,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 4,
+      "StartHour": 9,
+      "EndHour": 11
     },
     "groups": [
       {
@@ -740,9 +740,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 4,
+      "StartHour": 11,
+      "EndHour": 13
     },
     "groups": [
       {
@@ -772,9 +772,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 4,
+      "StartHour": 13,
+      "EndHour": 15
     },
     "groups": [
       {
@@ -804,9 +804,9 @@
       "nameOrNumber": "229"
     },
     "timeSlot": {
-      "Day": 1,
-      "StartHour": 14,
-      "EndHour": 16
+      "Day": 4,
+      "StartHour": 15,
+      "EndHour": 17
     },
     "groups": [
       {
