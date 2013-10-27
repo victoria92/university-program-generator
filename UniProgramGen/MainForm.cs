@@ -37,5 +37,27 @@ namespace UniProgramGen
                 groupsBindingSource,
                 subjectsBindingSource);
         }
+
+        private void tabPageSubjects_Enter(object sender, EventArgs e)
+        {
+            tabSubjects.RefreshSubjects();
+            tabSubjects.RefreshTeachers();
+        }
+
+        private void tabPageTeachers_Enter(object sender, EventArgs e)
+        {
+            tabTeachers.RefreshTeachers();
+        }
+
+        private void tabPageRooms_Enter(object sender, EventArgs e)
+        {
+            tabRooms.RefreshRooms();
+        }
+
+        private void tabPageGroups_Enter(object sender, EventArgs e)
+        {
+            tabGroups.RefreshGroups();
+            tabGroups.RefreshSubjects();
+        }
     }
 }

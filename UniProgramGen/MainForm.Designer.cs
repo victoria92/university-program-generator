@@ -72,6 +72,7 @@
             this.tabPageSubjects.TabIndex = 0;
             this.tabPageSubjects.Text = "Предмети";
             this.tabPageSubjects.UseVisualStyleBackColor = true;
+            this.tabPageSubjects.Enter += new System.EventHandler(this.tabPageSubjects_Enter);
             // 
             // tabSubjects
             // 
@@ -92,6 +93,7 @@
             this.tabPageTeachers.TabIndex = 1;
             this.tabPageTeachers.Text = "Преподаватели";
             this.tabPageTeachers.UseVisualStyleBackColor = true;
+            this.tabPageTeachers.Enter += new System.EventHandler(this.tabPageTeachers_Enter);
             // 
             // tabTeachers
             // 
@@ -111,6 +113,7 @@
             this.tabPageRooms.TabIndex = 1;
             this.tabPageRooms.Text = "Стаи";
             this.tabPageRooms.UseVisualStyleBackColor = true;
+            this.tabPageRooms.Enter += new System.EventHandler(this.tabPageRooms_Enter);
             // 
             // tabRooms
             // 
@@ -131,6 +134,7 @@
             this.tabPageGroups.TabIndex = 1;
             this.tabPageGroups.Text = "Групи";
             this.tabPageGroups.UseVisualStyleBackColor = true;
+            this.tabPageGroups.Enter += new System.EventHandler(this.tabPageGroups_Enter);
             // 
             // tabGroups
             // 
