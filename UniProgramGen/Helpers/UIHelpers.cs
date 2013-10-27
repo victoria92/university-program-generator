@@ -6,7 +6,7 @@ namespace UniProgramGen.Helpers
 {
     public static class UIHelpers
     {
-        public static List<TimeSlot> getListBoxRoomDayTimeSlot(ListBox listBox, DayOfWeek dayOfWeek)
+        public static List<TimeSlot> GetListBoxRoomDayTimeSlot(ListBox listBox, DayOfWeek dayOfWeek)
         {
             uint startHour = 0;
             uint endHour = 0;
@@ -35,6 +35,20 @@ namespace UniProgramGen.Helpers
             }
 
             return result;
+        }
+
+        public static void SetObjectTimeSlots(ListBox listBoxRoom, IEnumerable<TimeSlot> timeSlots, ref bool updating)
+        {
+            updating = true;
+            listBoxRoom.ClearSelected();
+            foreach (var timeSlot in timeSlots)
+            {
+                for (uint i = timeSlot.StartHour; i < timeSlot.EndHour; i++)
+                {
+                    listBoxRoom.SetSelected((int)i - 7, true);
+                }
+            }
+            updating = false;
         }
     }
 }

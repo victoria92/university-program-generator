@@ -18,11 +18,17 @@ namespace UniProgramGen
             InitializeComponent();
 
             Rooms = new List<Room>();
+            bindingSource.DataSource = Rooms;
+
+            listBoxRooms.DisplayMember = "NameOrNumber";
+            listBoxRooms.DataSource = bindingSource;
         }
 
         public List<Room> Rooms { get; private set; }
 
         private bool updating = false;
+
+        private BindingSource bindingSource = new BindingSource();
 
         private void ClearCheckedListRoomTypes()
         {
@@ -53,12 +59,12 @@ namespace UniProgramGen
                 return;
             }
 
-            SetRoomTimeSlots(listBoxRoomMonday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Monday));
-            SetRoomTimeSlots(listBoxRoomTuesday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Tuesday));
-            SetRoomTimeSlots(listBoxRoomWednesday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Wednesday));
-            SetRoomTimeSlots(listBoxRoomThursday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Thursday));
-            SetRoomTimeSlots(listBoxRoomFriday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Friday));
-            SetRoomTimeSlots(listBoxRoomSaturday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Saturday));
+            UIHelpers.SetObjectTimeSlots(listBoxRoomMonday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Monday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxRoomTuesday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Tuesday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxRoomWednesday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Wednesday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxRoomThursday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Thursday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxRoomFriday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Friday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxRoomSaturday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Saturday), ref updating);
 
             ClearCheckedListRoomTypes();
             foreach (var roomType in selectedRoom.types)
@@ -69,28 +75,14 @@ namespace UniProgramGen
             roomName.Text = selectedRoom.nameOrNumber;
         }
 
-        private void SetRoomTimeSlots(ListBox listBoxRoom, IEnumerable<TimeSlot> timeSlots)
+        private List<TimeSlot> GetRoomAvailability()
         {
-            updating = true;
-            listBoxRoom.ClearSelected();
-            foreach (var timeSlot in timeSlots)
-            {
-                for (uint i = timeSlot.StartHour; i < timeSlot.EndHour; i++)
-			    {
-                    listBoxRoom.SetSelected((int) i - 7, true);
-			    }
-            }
-            updating = false;
-        }
-
-        private List<TimeSlot> getRoomAvailability()
-        {
-            var mondayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxRoomMonday, DayOfWeek.Monday);
-            var tuesdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxRoomTuesday, DayOfWeek.Tuesday);
-            var wednesdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxRoomWednesday, DayOfWeek.Wednesday);
-            var thursdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxRoomThursday, DayOfWeek.Thursday);
-            var fridayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxRoomFriday, DayOfWeek.Friday);
-            var saturdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxRoomSaturday, DayOfWeek.Saturday);
+            var mondayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxRoomMonday, DayOfWeek.Monday);
+            var tuesdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxRoomTuesday, DayOfWeek.Tuesday);
+            var wednesdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxRoomWednesday, DayOfWeek.Wednesday);
+            var thursdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxRoomThursday, DayOfWeek.Thursday);
+            var fridayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxRoomFriday, DayOfWeek.Friday);
+            var saturdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxRoomSaturday, DayOfWeek.Saturday);
 
             var roomAvailability = new List<TimeSlot>();
             roomAvailability.AddRange(mondayAvailableTime);
@@ -105,7 +97,7 @@ namespace UniProgramGen
 
         private void buttonAddRoom_Click(object sender, EventArgs e)
         {
-            var roomAvailability = getRoomAvailability();
+            var roomAvailability = GetRoomAvailability();
 
             HashSet<RoomType> roomTypes = new HashSet<RoomType>();
             foreach (int selectedIndex in checkedListRoomTypes.CheckedIndices)
@@ -115,10 +107,10 @@ namespace UniProgramGen
 
             Rooms.Add(new Room(roomTypes, (uint) numericUpDownCapacity.Value, roomAvailability, roomName.Text));
 
-            listBoxRooms.DisplayMember = "NameOrNumber";
-            listBoxRooms.DataSource = Rooms;
+            bindingSource.ResetBindings(false);
 
             listBoxRooms.ClearSelected();
+            listBoxRooms_SelectedIndexChanged(null, null);
         }
 
         private void listBoxRoom_SelectedIndexChanged(object sender, EventArgs e)
@@ -130,7 +122,7 @@ namespace UniProgramGen
             var selectedRoom = listBoxRooms.SelectedItem as Room;
             if (selectedRoom != null)
             {
-                selectedRoom.availability = getRoomAvailability();
+                selectedRoom.availability = GetRoomAvailability();
             }
         }
     }

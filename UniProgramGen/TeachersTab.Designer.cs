@@ -60,11 +60,10 @@
             // 
             this.listBoxTeachers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.listBoxTeachers.DataSource = this.teacherBindingSource;
-            this.listBoxTeachers.DisplayMember = "Name";
             this.listBoxTeachers.FormattingEnabled = true;
             this.listBoxTeachers.Location = new System.Drawing.Point(493, 13);
             this.listBoxTeachers.Name = "listBoxTeachers";
+            this.listBoxTeachers.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeachers.Size = new System.Drawing.Size(136, 381);
             this.listBoxTeachers.TabIndex = 14;
             this.listBoxTeachers.SelectedIndexChanged += new System.EventHandler(this.listBoxTeachers_SelectedIndexChanged);
@@ -97,7 +96,7 @@
             "21:00"});
             this.listBoxTeacherSaturday.Location = new System.Drawing.Point(390, 123);
             this.listBoxTeacherSaturday.Name = "listBoxTeacherSaturday";
-            this.listBoxTeacherSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxTeacherSaturday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherSaturday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherSaturday.TabIndex = 13;
             this.listBoxTeacherSaturday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
@@ -126,7 +125,7 @@
             "21:00"});
             this.listBoxTeacherFriday.Location = new System.Drawing.Point(314, 123);
             this.listBoxTeacherFriday.Name = "listBoxTeacherFriday";
-            this.listBoxTeacherFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxTeacherFriday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherFriday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherFriday.TabIndex = 12;
             this.listBoxTeacherFriday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
@@ -155,7 +154,7 @@
             "21:00"});
             this.listBoxTeacherThursday.Location = new System.Drawing.Point(238, 123);
             this.listBoxTeacherThursday.Name = "listBoxTeacherThursday";
-            this.listBoxTeacherThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxTeacherThursday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherThursday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherThursday.TabIndex = 11;
             this.listBoxTeacherThursday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
@@ -184,7 +183,7 @@
             "21:00"});
             this.listBoxTeacherWednesday.Location = new System.Drawing.Point(162, 123);
             this.listBoxTeacherWednesday.Name = "listBoxTeacherWednesday";
-            this.listBoxTeacherWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxTeacherWednesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherWednesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherWednesday.TabIndex = 10;
             this.listBoxTeacherWednesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
@@ -213,7 +212,7 @@
             "21:00"});
             this.listBoxTeacherTuesday.Location = new System.Drawing.Point(86, 123);
             this.listBoxTeacherTuesday.Name = "listBoxTeacherTuesday";
-            this.listBoxTeacherTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxTeacherTuesday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherTuesday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherTuesday.TabIndex = 9;
             this.listBoxTeacherTuesday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);
@@ -242,7 +241,7 @@
             "21:00"});
             this.listBoxTeacherMonday.Location = new System.Drawing.Point(10, 123);
             this.listBoxTeacherMonday.Name = "listBoxTeacherMonday";
-            this.listBoxTeacherMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBoxTeacherMonday.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxTeacherMonday.Size = new System.Drawing.Size(70, 310);
             this.listBoxTeacherMonday.TabIndex = 8;
             this.listBoxTeacherMonday.SelectedIndexChanged += new System.EventHandler(this.listBoxTeacher_SelectedIndexChanged);

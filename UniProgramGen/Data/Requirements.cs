@@ -8,7 +8,7 @@ namespace UniProgramGen.Data
         public const uint TOTAL_WEEK_HOURS = 7 * TimeSlot.TOTAL_DAY_HOURS;
 
         public readonly double weight;
-        public readonly List<Helpers.TimeSlot> availableTimeSlots;
+        public List<Helpers.TimeSlot> availableTimeSlots;
         public readonly List<Room> requiredRooms;
 
         public Requirements(double weight, List<Helpers.TimeSlot> availableTimeSlots, List<Room> requiredRooms)

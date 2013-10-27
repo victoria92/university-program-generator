@@ -287,7 +287,6 @@
             // 
             // listBoxRooms
             // 
-            this.listBoxRooms.DataSource = this.listBoxRoomTuesday.CustomTabOffsets;
             this.listBoxRooms.FormattingEnabled = true;
             this.listBoxRooms.Location = new System.Drawing.Point(535, 24);
             this.listBoxRooms.Name = "listBoxRooms";

@@ -18,16 +18,23 @@ namespace UniProgramGen
             InitializeComponent();
 
             Teachers = new List<Teacher>();
+            bindingSource.DataSource = Teachers;
+
+            listBoxTeachers.DisplayMember = "name";
+            listBoxTeachers.DataSource = Teachers;
         }
 
         public List<Teacher> Teachers { get; private set; }
 
         private bool updating = false;
 
+        private BindingSource bindingSource = new BindingSource();
+
         private void listBoxTeachers_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedTeacher = listBoxTeachers.SelectedItem as Teacher;
-            if (selectedTeacher != null)
+
+            if (selectedTeacher == null)
             {
                 listBoxTeacherMonday.ClearSelected();
                 listBoxTeacherTuesday.ClearSelected();
@@ -35,52 +42,63 @@ namespace UniProgramGen
                 listBoxTeacherThursday.ClearSelected();
                 listBoxTeacherFriday.ClearSelected();
                 listBoxTeacherSaturday.ClearSelected();
+
                 textBoxTeacherName.Text = "";
-            } 
+                return;
+            }
+
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherMonday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Monday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherTuesday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Tuesday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherWednesday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Wednesday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherThursday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Thursday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherFriday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Friday), ref updating);
+            UIHelpers.SetObjectTimeSlots(listBoxTeacherSaturday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Saturday), ref updating);
+
+            textBoxTeacherName.Text = selectedTeacher.name;
         }
 
         private void listBoxTeacher_SelectedIndexChanged(object sender, EventArgs e)
         {
-        }
-
-        private void FillTeacherTimeTable(Teacher teacher)
-        {
-            var mondayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherMonday, DayOfWeek.Monday);
-            var tuesdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherTuesday, DayOfWeek.Tuesday);
-            var wednesdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherWednesday, DayOfWeek.Wednesday);
-            var thursdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherMonday, DayOfWeek.Thursday);
-            var fridayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherTuesday, DayOfWeek.Friday);
-            var saturdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherWednesday, DayOfWeek.Saturday);
-
-            teacher.requirements.availableTimeSlots.AddRange(mondayAvailableTime);
-            teacher.requirements.availableTimeSlots.AddRange(tuesdayAvailableTime);
-            teacher.requirements.availableTimeSlots.AddRange(wednesdayAvailableTime);
-            teacher.requirements.availableTimeSlots.AddRange(thursdayAvailableTime);
-            teacher.requirements.availableTimeSlots.AddRange(fridayAvailableTime);
-            teacher.requirements.availableTimeSlots.AddRange(saturdayAvailableTime);
+            if (updating)
+            {
+                return;
+            }
+            var selectedTeacher = listBoxTeachers.SelectedItem as Teacher;
+            if (selectedTeacher != null)
+            {
+                selectedTeacher.requirements.availableTimeSlots = GetTeacherAvailability();
+            }
         }
 
         private void buttonAddTeacher_Click(object sender, EventArgs e)
         {
-            var mondayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherMonday, DayOfWeek.Monday);
-            var tuesdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherTuesday, DayOfWeek.Monday);
-            var wednesdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherWednesday, DayOfWeek.Monday);
-            var thursdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherThursday, DayOfWeek.Monday);
-            var fridayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherFriday, DayOfWeek.Monday);
-            var saturdayAvailableTime = UIHelpers.getListBoxRoomDayTimeSlot(listBoxTeacherSaturday, DayOfWeek.Monday);
-
-            List<TimeSlot> teacherAvailability = new List<TimeSlot>();
-            teacherAvailability.AddRange(mondayAvailableTime);
-            teacherAvailability.AddRange(mondayAvailableTime);
-            teacherAvailability.AddRange(mondayAvailableTime);
-            teacherAvailability.AddRange(mondayAvailableTime);
-            teacherAvailability.AddRange(mondayAvailableTime);
-            teacherAvailability.AddRange(mondayAvailableTime);
+            List<TimeSlot> teacherAvailability = GetTeacherAvailability();
 
             Teachers.Add(new Teacher(new Requirements(1, teacherAvailability, null), textBoxTeacherName.Text));
 
-            listBoxTeachers.DisplayMember = "name";
-            listBoxTeachers.DataSource = Teachers;
+            bindingSource.ResetBindings(false);
+
+            listBoxTeachers.ClearSelected();
+            listBoxTeachers_SelectedIndexChanged(null, null);
+        }
+
+        private List<TimeSlot> GetTeacherAvailability()
+        {
+            var mondayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherMonday, DayOfWeek.Monday);
+            var tuesdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherTuesday, DayOfWeek.Tuesday);
+            var wednesdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherWednesday, DayOfWeek.Wednesday);
+            var thursdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherThursday, DayOfWeek.Thursday);
+            var fridayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherFriday, DayOfWeek.Friday);
+            var saturdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherSaturday, DayOfWeek.Saturday);
+
+            List<TimeSlot> teacherAvailability = new List<TimeSlot>();
+            teacherAvailability.AddRange(mondayAvailableTime);
+            teacherAvailability.AddRange(tuesdayAvailableTime);
+            teacherAvailability.AddRange(wednesdayAvailableTime);
+            teacherAvailability.AddRange(thursdayAvailableTime);
+            teacherAvailability.AddRange(fridayAvailableTime);
+            teacherAvailability.AddRange(saturdayAvailableTime);
+            return teacherAvailability;
         }
     }
 }
