@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UniProgramGen.Data;
@@ -11,12 +12,14 @@ namespace UniProgramGen.Generator
         public Subject subject;
         public Room room;
         public TimeSlot timeSlot;
+        public IEnumerable<Group> groups;
 
-        public ScheduledTimeSlot(Subject subject, Room room, TimeSlot timeSlot)
+        public ScheduledTimeSlot(Subject subject, Room room, TimeSlot timeSlot, IEnumerable<Group> groups)
         {
             this.subject = subject;
             this.room = room;
             this.timeSlot = timeSlot;
+            this.groups = groups;
         }
     }
 
@@ -70,7 +73,7 @@ namespace UniProgramGen.Generator
                     {
                         if (currentSolution.All(s => s.room != room || !s.timeSlot.Overlaps(windowTimeSlot)))
                         {
-                            currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot));
+                            currentSolution.AddLast(new ScheduledTimeSlot(subject, room, windowTimeSlot, subject.GetGroups()));
                             FindSolutions(subjects.Skip(1));
                             currentSolution.RemoveLast();
                         }
