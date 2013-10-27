@@ -49,7 +49,7 @@ namespace UniProgramGen.Generator
             return solution.Sum(s =>
                 s.subject.teachers.Sum(t =>
                     (t.requirements.availableTimeSlots.Any(a => a.Includes(s.timeSlot)) ? t.requirements.weight : 0) +
-                    (t.requirements.requiredRooms.Any(r => r == s.room) ? t.requirements.weight : 0)));
+                    (t.requirements.requiredRooms.Any(r => r == s.room)                 ? t.requirements.weight : 0)));
         }
 
         private void FindSolutions(IEnumerable<Subject> subjects)
