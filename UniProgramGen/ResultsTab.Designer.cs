@@ -30,8 +30,8 @@
         {
             this.groupBoxActions = new System.Windows.Forms.GroupBox();
             this.splitResults = new System.Windows.Forms.SplitContainer();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBoxTeachers = new System.Windows.Forms.GroupBox();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.groupBoxRooms = new System.Windows.Forms.GroupBox();
             this.groupBoxGroups = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitResults)).BeginInit();
@@ -46,9 +46,9 @@
             // 
             // groupBoxActions
             // 
-            this.groupBoxActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.groupBoxActions.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxActions.Location = new System.Drawing.Point(0, 380);
+            this.groupBoxActions.Location = new System.Drawing.Point(0, 0);
             this.groupBoxActions.Name = "groupBoxActions";
             this.groupBoxActions.Size = new System.Drawing.Size(650, 70);
             this.groupBoxActions.TabIndex = 3;
@@ -60,7 +60,7 @@
             this.splitResults.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.splitResults.Location = new System.Drawing.Point(0, 0);
+            this.splitResults.Location = new System.Drawing.Point(0, 70);
             this.splitResults.Name = "splitResults";
             // 
             // splitResults.Panel1
@@ -73,6 +73,16 @@
             this.splitResults.Size = new System.Drawing.Size(650, 381);
             this.splitResults.SplitterDistance = 215;
             this.splitResults.TabIndex = 2;
+            // 
+            // groupBoxTeachers
+            // 
+            this.groupBoxTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxTeachers.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxTeachers.Name = "groupBoxTeachers";
+            this.groupBoxTeachers.Size = new System.Drawing.Size(215, 381);
+            this.groupBoxTeachers.TabIndex = 0;
+            this.groupBoxTeachers.TabStop = false;
+            this.groupBoxTeachers.Text = "Преподаватели";
             // 
             // splitContainer1
             // 
@@ -90,16 +100,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(431, 381);
             this.splitContainer1.SplitterDistance = 214;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // groupBoxTeachers
-            // 
-            this.groupBoxTeachers.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxTeachers.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxTeachers.Name = "groupBoxTeachers";
-            this.groupBoxTeachers.Size = new System.Drawing.Size(215, 381);
-            this.groupBoxTeachers.TabIndex = 0;
-            this.groupBoxTeachers.TabStop = false;
-            this.groupBoxTeachers.Text = "Преподаватели";
             // 
             // groupBoxRooms
             // 
