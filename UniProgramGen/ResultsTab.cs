@@ -109,10 +109,12 @@ namespace UniProgramGen
         private void DisplaySchedule(IEnumerable<ScheduledTimeSlot> schedule)
         {
             dumpFirstSchedule("../../datafiles/example_solution.json", schedule);
-            MessageBox.Show("Генериран е JSON с програмата");
 
             // TODO: fix!!!
             //system("ruby ../../../dragons/scripts/run.rb ../../datafiles/example_solution.json");
+
+            FormSchedule formSchedule = new FormSchedule();
+            formSchedule.ShowDialog(this);
         }
 
         [System.Runtime.InteropServices.DllImport("msvcrt.dll")]

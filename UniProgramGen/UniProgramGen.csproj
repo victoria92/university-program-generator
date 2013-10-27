@@ -89,6 +89,12 @@
     <Compile Include="Data\Subject.cs" />
     <Compile Include="Data\Teacher.cs" />
     <Compile Include="Data\TestData.cs" />
+    <Compile Include="FormSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSchedule.Designer.cs">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Generator\ICalGenerator.cs" />
     <Compile Include="Generator\ProgramGenerator.cs" />
     <Compile Include="GroupTab.cs">
@@ -131,6 +137,9 @@
     <Compile Include="TeachersTab.Designer.cs">
       <DependentUpon>TeachersTab.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FormSchedule.resx">
+      <DependentUpon>FormSchedule.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GroupTab.resx">
       <DependentUpon>GroupTab.cs</DependentUpon>
     </EmbeddedResource>
