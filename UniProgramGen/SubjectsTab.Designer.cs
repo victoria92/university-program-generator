@@ -62,7 +62,6 @@
             // 
             // LB_Teachers
             // 
-            this.LB_Teachers.DisplayMember = "Name";
             this.LB_Teachers.FormattingEnabled = true;
             this.LB_Teachers.Location = new System.Drawing.Point(213, 95);
             this.LB_Teachers.Name = "LB_Teachers";

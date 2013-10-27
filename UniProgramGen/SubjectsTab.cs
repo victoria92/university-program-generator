@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using UniProgramGen.Data;
 
@@ -25,6 +21,7 @@ namespace UniProgramGen
 
         public void InitializeBindingSources(BindingSource teachersBindingSource)
         {
+            LB_Teachers.DisplayMember = "name";
             LB_Teachers.DataSource = teachersBindingSource;
         }
 

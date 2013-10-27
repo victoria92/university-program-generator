@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using UniProgramGen.Data;
 using UniProgramGen.Helpers;
@@ -20,7 +16,7 @@ namespace UniProgramGen
             Rooms = new List<Room>();
             bindingSource.DataSource = Rooms;
 
-            listBoxRooms.DisplayMember = "NameOrNumber";
+            listBoxRooms.DisplayMember = "nameOrNumber";
             listBoxRooms.DataSource = bindingSource;
         }
 
@@ -128,7 +124,7 @@ namespace UniProgramGen
             room.types = roomTypes;
 
             listBoxRooms.DisplayMember = "";
-            listBoxRooms.DisplayMember = "NameOrNumber";
+            listBoxRooms.DisplayMember = "nameOrNumber";
         }
     }
 }

@@ -321,7 +321,6 @@
             this.groupBoxTeachers.TabIndex = 42;
             this.groupBoxTeachers.TabStop = false;
             this.groupBoxTeachers.Text = "Преподаватели";
-            this.groupBoxTeachers.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // teacherBindingSource
             // 

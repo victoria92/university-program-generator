@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using UniProgramGen.Data;
 using UniProgramGen.Helpers;
@@ -28,12 +24,20 @@ namespace UniProgramGen
 
         public BindingSource bindingSource = new BindingSource();
 
+        private Teacher previouslySelectedTeacher = null;
+
         private void listBoxTeachers_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedTeacher = listBoxTeachers.SelectedItem as Teacher;
 
             if (selectedTeacher == null)
             {
+                if (previouslySelectedTeacher!= null)
+                {
+                    UpdateTeacher(previouslySelectedTeacher);
+                    previouslySelectedTeacher = null;
+                }
+
                 listBoxTeacherMonday.ClearSelected();
                 listBoxTeacherTuesday.ClearSelected();
                 listBoxTeacherWednesday.ClearSelected();
@@ -44,6 +48,8 @@ namespace UniProgramGen
                 textBoxTeacherName.Text = "";
                 return;
             }
+
+            previouslySelectedTeacher = selectedTeacher;
 
             UIHelpers.SetObjectTimeSlots(listBoxTeacherMonday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Monday));
             UIHelpers.SetObjectTimeSlots(listBoxTeacherTuesday, selectedTeacher.requirements.availableTimeSlots.Where(t => t.Day == DayOfWeek.Tuesday));
@@ -57,11 +63,8 @@ namespace UniProgramGen
 
         private void buttonAddTeacher_Click(object sender, EventArgs e)
         {
-            List<TimeSlot> teacherAvailability = GetTeacherAvailability();
-
-            Teachers.Add(new Teacher(new Requirements(1, teacherAvailability, null), textBoxTeacherName.Text));
-
-            bindingSource.ResetBindings(false);
+            Teachers.Add(new Teacher(null, null));
+            UpdateTeacher(Teachers.Last());
 
             listBoxTeachers.ClearSelected();
             listBoxTeachers_SelectedIndexChanged(null, null);
@@ -76,7 +79,7 @@ namespace UniProgramGen
             var fridayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherFriday, DayOfWeek.Friday);
             var saturdayAvailableTime = UIHelpers.GetListBoxRoomDayTimeSlot(listBoxTeacherSaturday, DayOfWeek.Saturday);
 
-            List<TimeSlot> teacherAvailability = new List<TimeSlot>();
+            var teacherAvailability = new List<TimeSlot>();
             teacherAvailability.AddRange(mondayAvailableTime);
             teacherAvailability.AddRange(tuesdayAvailableTime);
             teacherAvailability.AddRange(wednesdayAvailableTime);
@@ -86,9 +89,13 @@ namespace UniProgramGen
             return teacherAvailability;
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void UpdateTeacher(Teacher teacher)
         {
+            teacher.requirements = new Requirements(1, GetTeacherAvailability(), null);
+            teacher.name = textBoxTeacherName.Text;
 
+            listBoxTeachers.DisplayMember = "";
+            listBoxTeachers.DisplayMember = "name";
         }
     }
 }

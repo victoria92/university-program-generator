@@ -58,7 +58,6 @@
             this.numericUpDownStudents.Name = "numericUpDownStudents";
             this.numericUpDownStudents.Size = new System.Drawing.Size(56, 20);
             this.numericUpDownStudents.TabIndex = 23;
-            this.numericUpDownStudents.ValueChanged += new System.EventHandler(this.numericUpDownStudents_ValueChanged);
             // 
             // groupName
             // 
@@ -68,7 +67,6 @@
             this.groupName.Name = "groupName";
             this.groupName.Size = new System.Drawing.Size(457, 29);
             this.groupName.TabIndex = 22;
-            this.groupName.TextChanged += new System.EventHandler(this.groupName_TextChanged);
             // 
             // listBoxGroups
             // 
@@ -76,9 +74,9 @@
             this.listBoxGroups.FormattingEnabled = true;
             this.listBoxGroups.Location = new System.Drawing.Point(3, 16);
             this.listBoxGroups.Name = "listBoxGroups";
+            this.listBoxGroups.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxGroups.Size = new System.Drawing.Size(177, 428);
             this.listBoxGroups.TabIndex = 25;
-            this.listBoxGroups.SelectedIndexChanged += new System.EventHandler(this.listBoxGroups_SelectedIndexChanged);
             // 
             // size
             // 
@@ -96,6 +94,7 @@
             this.listBoxSubjectsOfGroups.FormattingEnabled = true;
             this.listBoxSubjectsOfGroups.Location = new System.Drawing.Point(322, 84);
             this.listBoxSubjectsOfGroups.Name = "listBoxSubjectsOfGroups";
+            this.listBoxSubjectsOfGroups.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.listBoxSubjectsOfGroups.Size = new System.Drawing.Size(325, 316);
             this.listBoxSubjectsOfGroups.TabIndex = 27;
             this.listBoxSubjectsOfGroups.SelectedIndexChanged += new System.EventHandler(this.listBoxSubjectsOfGroups_SelectedIndexChanged);
@@ -136,7 +135,6 @@
             this.Controls.Add(this.groupName);
             this.Name = "GroupTab";
             this.Size = new System.Drawing.Size(650, 450);
-            this.Load += new System.EventHandler(this.GroupTab_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownStudents)).EndInit();
             this.groupBoxGroups.ResumeLayout(false);
             this.ResumeLayout(false);

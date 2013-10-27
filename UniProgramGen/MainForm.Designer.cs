@@ -133,7 +133,6 @@
             // TAB_Groups
             // 
             this.TAB_Groups.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TAB_Groups.Groups = null;
             this.TAB_Groups.Location = new System.Drawing.Point(3, 3);
             this.TAB_Groups.MinimumSize = new System.Drawing.Size(650, 450);
             this.TAB_Groups.Name = "TAB_Groups";

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using UniProgramGen.Data;
 
@@ -10,59 +11,72 @@ namespace UniProgramGen
         public GroupTab()
         {
             InitializeComponent();
-            Group gr = new Group(null, 20, "Group_6");
-            listBoxGroups.DisplayMember = "Name";
-            listBoxGroups.DataSource = new List<Group> { gr };
+            bindingSource.DataSource = Groups;
+
+            listBoxSubjectsOfGroups.DisplayMember = "name";
+            listBoxSubjectsOfGroups.DataSource = bindingSource;
         }
 
-        Group group;
+        public List<Group> Groups { get; private set; }
 
-        private void GroupTab_Load(object sender, EventArgs e)
-        {
+        private BindingSource bindingSource = new BindingSource();
 
-        }
-
-        private void groupName_TextChanged(object sender, EventArgs e)
-        {
-            string curItem = groupName.Text;
-            group.name = curItem;
-        }
+        private Group previouslySelectedGroup = null;
 
         private void listBoxSubjectsOfGroups_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Subject curItem = (Subject)listBoxSubjectsOfGroups.SelectedItem;
-            group.horarium.Add(curItem);
+            var selectedGroup = listBoxGroups.SelectedItem as Group;
+
+            if (selectedGroup == null)
+            {
+                if (previouslySelectedGroup != null)
+                {
+                    UpdateGroup(previouslySelectedGroup);
+                    previouslySelectedGroup = null;
+                }
+
+                listBoxSubjectsOfGroups.ClearSelected();
+                numericUpDownStudents.Value = 0;
+                groupName.Text = "";
+                return;
+            }
+
+            previouslySelectedGroup = selectedGroup;
+
+            listBoxSubjectsOfGroups.ClearSelected();
+            foreach (var subject in selectedGroup.horarium)
+            {
+                var index = listBoxSubjectsOfGroups.Items.IndexOf(subject);
+                listBoxSubjectsOfGroups.SetSelected(index, true);
+            }
+
+            numericUpDownStudents.Value = selectedGroup.size;
+            groupName.Text = selectedGroup.name;
         }
 
-        private void numericUpDownStudents_ValueChanged(object sender, EventArgs e)
+        private void UpdateGroup(Group group)
         {
-            group.size = (UInt32)numericUpDownStudents.Value;
-        }
+            var subjects = new List<Subject>();
+            foreach (Subject subject in listBoxSubjectsOfGroups.SelectedItems)
+            {
+                subjects.Add(subject);
+            }
 
-        private void listBoxGroups_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            Group curItem = (Group)listBoxSubjectsOfGroups.SelectedItem;
-            group = curItem;
+            group.horarium = subjects;
+            group.name = groupName.Text;
+            group.size = (uint) numericUpDownStudents.Value;
+
+            listBoxSubjectsOfGroups.DisplayMember = "";
+            listBoxSubjectsOfGroups.DisplayMember = "name";
         }
 
         private void AddGroup_Click(object sender, EventArgs e)
         {
-            Groups.Add(group);
-        }
+            Groups.Add(new Group(null, 0, null));
+            UpdateGroup(Groups.Last());
 
-        private List<Group> groups;
-
-        public List<Group> Groups
-        {
-            get
-            {
-                return groups;
-            }
-            set
-            {
-                groups = value;
-                listBoxGroups.DataSource = value;
-            }
+            listBoxSubjectsOfGroups.ClearSelected();
+            listBoxSubjectsOfGroups_SelectedIndexChanged(null, null);
         }
     }
 }
