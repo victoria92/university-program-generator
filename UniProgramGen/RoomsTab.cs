@@ -20,11 +20,36 @@ namespace UniProgramGen
             Rooms = new List<Room>();
         }
 
+        public List<Room> Rooms { get; private set; }
+
         private void listBoxRooms_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var selectedRoom = listBoxRooms.SelectedItem as Room;
+
+            if (selectedRoom == null)
+            {
+                return;
+            }
+
+            SetRoomTimeSlots(listBoxRoomMonday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Monday));
+            SetRoomTimeSlots(listBoxRoomTuesday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Tuesday));
+            SetRoomTimeSlots(listBoxRoomWednesday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Wednesday));
+            SetRoomTimeSlots(listBoxRoomThursday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Thursday));
+            SetRoomTimeSlots(listBoxRoomFriday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Friday));
+            SetRoomTimeSlots(listBoxRoomSaturday, selectedRoom.availability.Where(t => t.Day == DayOfWeek.Saturday));
         }
 
-        public List<Room> Rooms { get; private set; }
+        private void SetRoomTimeSlots(ListBox listBoxRoom, IEnumerable<TimeSlot> timeSlots)
+        {
+            listBoxRoom.ClearSelected();
+            foreach (var timeSlot in timeSlots)
+            {
+                for (uint i = timeSlot.StartHour; i < timeSlot.EndHour; i++)
+			    {
+                    listBoxRoom.SetSelected((int) i - 7, true);
+			    }
+            }
+        }
 
         private void buttonAddRoom_Click(object sender, EventArgs e)
         {
